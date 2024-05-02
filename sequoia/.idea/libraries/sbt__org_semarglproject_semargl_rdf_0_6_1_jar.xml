@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.semarglproject:semargl-rdf:0.6.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.semarglproject/semargl-rdf/jars/semargl-rdf-0.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.semarglproject/semargl-rdf/srcs/semargl-rdf-0.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

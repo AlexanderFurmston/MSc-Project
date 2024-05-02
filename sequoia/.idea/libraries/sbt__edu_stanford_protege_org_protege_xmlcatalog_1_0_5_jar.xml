@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: edu.stanford.protege:org.protege.xmlcatalog:1.0.5:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.protege/org.protege.xmlcatalog/bundles/org.protege.xmlcatalog-1.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.protege/org.protege.xmlcatalog/srcs/org.protege.xmlcatalog-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,3238 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base=""
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <SubClassOf>
+        <Class IRI="april"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="april"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="30-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="august"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="august"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="binary-relation"/>
+        <Class IRI="relation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="calendar-date"/>
+        <Class IRI="time-point"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="class"/>
+        <Class IRI="unary-relation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="class-partition"/>
+        <Class IRI="enumerated-set"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="day"/>
+        <Class IRI="time-interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="day"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="24-hour-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="day-in-time"/>
+        <Class IRI="positive-integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="december"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="december"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="duration"/>
+        <Class IRI="physical-quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="enumerated-set"/>
+        <Class IRI="set"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="february"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="february-in-leap-years"/>
+        <Class IRI="february"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="february-in-leap-years"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="29-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="function"/>
+        <Class IRI="set"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="hour-in-time"/>
+        <Class IRI="non-negative-integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="individual"/>
+        <Class IRI="thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="intangible-thing"/>
+        <Class IRI="thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="integer"/>
+        <Class IRI="real-number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="january"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="january"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="july"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="july"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="june"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="june"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="30-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="list"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="march"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="march"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="may"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="may"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="minute-in-time"/>
+        <Class IRI="non-negative-integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="month"/>
+        <Class IRI="time-interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="month-in-time"/>
+        <Class IRI="positive-integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="negative-integer"/>
+        <Class IRI="integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="negative-number"/>
+        <Class IRI="number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="non-negative-integer"/>
+        <Class IRI="integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="non-negative-number"/>
+        <Class IRI="number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="november"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="november"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="30-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="number"/>
+        <Class IRI="quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="october"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="october"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="31-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="physical-quantity"/>
+        <Class IRI="quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="positive-integer"/>
+        <Class IRI="integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="positive-number"/>
+        <Class IRI="number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="quantity"/>
+        <Class IRI="individual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="quantity"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="real-number"/>
+        <Class IRI="number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="relation"/>
+        <Class IRI="set"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="second-in-time"/>
+        <Class IRI="real-number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="september"/>
+        <Class IRI="month"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="september"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="30-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="set"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="string"/>
+        <Class IRI="individual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="string"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="tangible-thing"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="temporal-thing"/>
+        <Class IRI="thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-interval"/>
+        <Class IRI="time-position"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-interval"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="begins-at-time-point"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-interval"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="ends-at-time-point"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-interval"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="has-duration"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-measure"/>
+        <Class IRI="unit-of-measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <Class IRI="time-position"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="day-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="hour-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="minute-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="month-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="second-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-point"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="year-of"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="time-position"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="timezone"/>
+        <Class IRI="string"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="unary-relation"/>
+        <Class IRI="relation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="unit-of-measure"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="week"/>
+        <Class IRI="time-interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="week"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="7-day-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="year"/>
+        <Class IRI="time-interval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="year"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-duration"/>
+            <NamedIndividual IRI="12-month-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="year-in-time"/>
+        <Class IRI="integer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="abstract-information"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-admin-staff-member"/>
+        <Class IRI="academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-admin-staff-member"/>
+        <Class IRI="administrative-staff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-degree"/>
+        <Class IRI="degree"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-staff-member"/>
+        <Class IRI="higher-educational-organization-employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-support-staff-member"/>
+        <Class IRI="higher-educational-organization-employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-support-unit"/>
+        <Class IRI="educational-organization-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="academic-unit"/>
+        <Class IRI="educational-organization-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="activity"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="activity-status"/>
+        <Class IRI="string"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="address"/>
+        <Class IRI="abstract-information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="administrative-staff"/>
+        <Class IRI="employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="affiliated-person"/>
+        <Class IRI="person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="affiliated-person"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="has-affiliation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="agent-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="agent-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="agent-based-computing"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="amount-of-money"/>
+        <Class IRI="physical-quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="appellation"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="article-in-a-composite-publication"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="article-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="assisted-person"/>
+        <Class IRI="person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="attending-a-conference"/>
+        <Class IRI="attending-an-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="attending-an-event"/>
+        <Class IRI="event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="award"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="awarding-body"/>
+        <Class IRI="legal-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="book"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="book-publishing"/>
+        <Class IRI="publication-type-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="book-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="book-section-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="business-area"/>
+        <Class IRI="generic-area-of-interest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="capital-city"/>
+        <Class IRI="city"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="charitable-organization"/>
+        <Class IRI="non-profit-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="city"/>
+        <Class IRI="municipal-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="civil-service"/>
+        <Class IRI="government-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="company"/>
+        <Class IRI="profit-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="composite-publication"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="composite-publication"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="contains-publication"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="computing-technology"/>
+        <Class IRI="technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="conference"/>
+        <Class IRI="meeting-taking-place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="conference"/>
+        <Class IRI="publication-type-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="conference-proceedings-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="conferring-an-award"/>
+        <Class IRI="generalized-transfer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="coordinate-location"/>
+        <Class IRI="geographical-region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="country"/>
+        <Class IRI="geopolitical-entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="currency"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="daily-newspaper"/>
+        <Class IRI="newspaper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="daily-newspaper"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-periodicity"/>
+            <NamedIndividual IRI="24-hour-duration"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="degree"/>
+        <Class IRI="award"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="distance-teaching-university"/>
+        <Class IRI="university"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="edited-book"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="edited-book-reference"/>
+        <Class IRI="book-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="editor"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="educational-employee"/>
+        <Class IRI="employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="educational-organization"/>
+        <Class IRI="learning-centred-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="educational-organization-unit"/>
+        <Class IRI="organization-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="electronic-publication"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="email-address"/>
+        <Class IRI="string"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="email-address"/>
+        <Class IRI="address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="email-message"/>
+        <Class IRI="message"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="employee"/>
+        <Class IRI="affiliated-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="employee"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="employment-contract-type"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="event"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="event-involving-movement"/>
+        <Class IRI="event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="event-involving-movement"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="location-at-end"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="event-involving-movement"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="location-at-start"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="event-involving-production"/>
+        <Class IRI="event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="financial-award"/>
+        <Class IRI="award"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="freelance-software-developer"/>
+        <Class IRI="self-employed-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="freelance-software-developer"/>
+        <Class IRI="software-developer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="gender"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="generalised-means-of-transport"/>
+        <Class IRI="thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="generalized-transfer"/>
+        <Class IRI="event-involving-movement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="generic-agent"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="generic-area-of-interest"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="geographical-datum"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="geographical-region"/>
+        <Class IRI="tangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="geographical-region"/>
+        <Class IRI="location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="geopolitical-entity"/>
+        <Class IRI="generic-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="geopolitical-entity"/>
+        <Class IRI="geographical-region"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="giving-a-talk"/>
+        <Class IRI="information-transfer-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="government"/>
+        <Class IRI="government-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="government-organization"/>
+        <Class IRI="non-profit-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="grant"/>
+        <Class IRI="financial-award"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="graphic-designer"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="hardware-platform"/>
+        <Class IRI="hardware-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="hardware-technology"/>
+        <Class IRI="computing-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="higher-educational-organization"/>
+        <Class IRI="educational-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="higher-educational-organization-employee"/>
+        <Class IRI="educational-employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="implemented-system"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="industrial-organization"/>
+        <Class IRI="profit-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information-bearing-object"/>
+        <Class IRI="tangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information-extraction-technology"/>
+        <Class IRI="language-engineering-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information-extraction-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="information-extraction"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information-transfer-event"/>
+        <Class IRI="generalized-transfer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="information-transfer-medium"/>
+        <Class IRI="generalised-means-of-transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="isbn-number"/>
+        <Class IRI="string"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="journal"/>
+        <Class IRI="composite-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="journal"/>
+        <Class IRI="serial-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="knowledge-modelling-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="knowledge-modelling-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="knowledge-modelling"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="knowledge-programming-language"/>
+        <Class IRI="programming-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="language-engineering-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="language-engineering-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="language-engineering"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="learning-centred-organization"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="lecturer-in-academia"/>
+        <Class IRI="academic-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="legal-agent"/>
+        <Class IRI="generic-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="letter"/>
+        <Class IRI="message"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="local-district"/>
+        <Class IRI="geopolitical-entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="location"/>
+        <Class IRI="tangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="magazine"/>
+        <Class IRI="composite-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="magazine"/>
+        <Class IRI="serial-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="meeting-taking-place"/>
+        <Class IRI="social-gathering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="message"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="method"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="multimedia-designer"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="multimedia-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="multimedia-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="multimedia-research-area"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="municipal-unit"/>
+        <Class IRI="geopolitical-entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="news-item"/>
+        <Class IRI="article-in-a-composite-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="newsletter"/>
+        <Class IRI="composite-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="newsletter"/>
+        <Class IRI="serial-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="newspaper"/>
+        <Class IRI="composite-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="newspaper"/>
+        <Class IRI="periodical-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="non-profit-organization"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ontology-specification-language"/>
+        <Class IRI="specification-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ontology-specification-language"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="ontologies"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="operating-system"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="operational-ontology-specification-language"/>
+        <Class IRI="ontology-specification-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organization"/>
+        <Class IRI="legal-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organization"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="has-size"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organization-size"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="organization-unit"/>
+        <Class IRI="generic-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="partnership"/>
+        <Class IRI="profit-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="periodical-publication"/>
+        <Class IRI="serial-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="periodical-publication"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="has-periodicity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="person"/>
+        <Class IRI="tangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="person"/>
+        <Class IRI="legal-agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="phd-student"/>
+        <Class IRI="student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="political-organization"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="postal-address"/>
+        <Class IRI="address"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="private-company"/>
+        <Class IRI="company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="proceedings-paper-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="professor-in-academia"/>
+        <Class IRI="academic-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="profit-organization"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="programming-environment"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="programming-language"/>
+        <Class IRI="specification-or-computing-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project"/>
+        <Class IRI="activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="has-project-member"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="involves-organization"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="involves-organization-unit"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project-officer-in-academia"/>
+        <Class IRI="academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="project-output"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="public-company"/>
+        <Class IRI="company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publication"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publication"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="has-publication-reference"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publication-reference"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publication-reference"/>
+        <Class IRI="abstract-information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publication-type-event"/>
+        <Class IRI="event-involving-production"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="publishing-house"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="r-and-d-institute"/>
+        <Class IRI="learning-centred-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="r-and-d-institute-within-educational-organization"/>
+        <Class IRI="r-and-d-institute-within-larger-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="reader-in-academia"/>
+        <Class IRI="academic-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="recorded-audio"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="recorded-video"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="research-area"/>
+        <Class IRI="generic-area-of-interest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="research-assistant-in-academia"/>
+        <Class IRI="research-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="research-fellow-in-academia"/>
+        <Class IRI="research-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="research-staff-member"/>
+        <Class IRI="higher-educational-organization-employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="research-staff-member"/>
+        <Class IRI="researcher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="researcher"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="school"/>
+        <Class IRI="educational-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="scripting-language"/>
+        <Class IRI="programming-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="secretary"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="self-employed-person"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="sending-an-email"/>
+        <Class IRI="information-transfer-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="sending-an-email"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="information-transfer-medium-used"/>
+            <NamedIndividual IRI="email-medium"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="senior-lecturer-in-academia"/>
+        <Class IRI="academic-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="senior-research-fellow-in-academia"/>
+        <Class IRI="research-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="serial-publication"/>
+        <Class IRI="publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="server-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="server-technology"/>
+        <Class IRI="web-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="small-or-medium-sized-organization"/>
+        <Class IRI="organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="social-gathering"/>
+        <Class IRI="event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="software-developer"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="software-status"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="software-technology"/>
+        <Class IRI="computing-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="software-visualization-technology"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="software-visualization-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI=""/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="specification-language"/>
+        <Class IRI="specification-or-computing-language"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="specification-or-computing-language"/>
+        <Class IRI="software-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="student"/>
+        <Class IRI="affiliated-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="student"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="studies-at"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="student"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="studies-in-unit"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="system-administrator"/>
+        <Class IRI="working-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="technical-report-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="technology"/>
+        <Class IRI="temporal-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="thesis-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="town"/>
+        <Class IRI="municipal-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="transportation-device"/>
+        <Class IRI="tangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="transportation-device"/>
+        <Class IRI="generalised-means-of-transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="university"/>
+        <Class IRI="higher-educational-organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="university-faculty"/>
+        <Class IRI="academic-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="url"/>
+        <Class IRI="string"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="village"/>
+        <Class IRI="municipal-unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="visiting-researcher"/>
+        <Class IRI="affiliated-person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="visiting-researcher"/>
+        <Class IRI="researcher"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-based-editor"/>
+        <Class IRI="editor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-based-editor"/>
+        <Class IRI="web-based-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-based-system"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-browser"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-site"/>
+        <Class IRI="implemented-system"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-site"/>
+        <Class IRI="information-bearing-object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-technology"/>
+        <Class IRI="computing-technology"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="web-technology"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+            <NamedIndividual IRI="web-research-area"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="work-status"/>
+        <Class IRI="intangible-thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="working-person"/>
+        <Class IRI="person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="workshop"/>
+        <Class IRI="meeting-taking-place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="workshop"/>
+        <Class IRI="publication-type-event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="workshop-proceedings-reference"/>
+        <Class IRI="publication-reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="electronic-newsletter"/>
+        <Class IRI="electronic-publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="electronic-newsletter"/>
+        <Class IRI="newsletter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-academic-staff-member"/>
+        <Class IRI="academic-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-academic-staff-member"/>
+        <Class IRI="kmi-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-academic-support-staff-member"/>
+        <Class IRI="academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-academic-support-staff-member"/>
+        <Class IRI="kmi-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-graphic-designer"/>
+        <Class IRI="graphic-designer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-graphic-designer"/>
+        <Class IRI="kmi-academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-multimedia-designer"/>
+        <Class IRI="multimedia-designer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-multimedia-designer"/>
+        <Class IRI="kmi-academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-phd-student"/>
+        <Class IRI="phd-student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-phd-student"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-postal-address"/>
+            <NamedIndividual IRI="translated_kmi-postal-address"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-phd-student"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="studies-at"/>
+            <NamedIndividual IRI="the-open-university"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-phd-student"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="studies-in-unit"/>
+            <NamedIndividual IRI="knowledge-media-institute-at-the-open-university"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-planet-news-item"/>
+        <Class IRI="news-item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-planet-news-item"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="included-in-publication"/>
+            <NamedIndividual IRI="kmi-planet-newsletter"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-planet-news-item"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="mentions-organization"/>
+            <NamedIndividual IRI="knowledge-media-institute-at-the-open-university"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-research-staff-member"/>
+        <Class IRI="research-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-research-staff-member"/>
+        <Class IRI="kmi-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-staff-member"/>
+        <Class IRI="higher-educational-organization-employee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-staff-member"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="has-postal-address"/>
+            <NamedIndividual IRI="translated_kmi-postal-address"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-staff-member"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="works-for"/>
+            <NamedIndividual IRI="the-open-university"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-staff-member"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="works-in-unit"/>
+            <NamedIndividual IRI="knowledge-media-institute-at-the-open-university"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-system-administrator"/>
+        <Class IRI="system-administrator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="kmi-system-administrator"/>
+        <Class IRI="kmi-academic-support-staff-member"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nothing"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="begins-at-time-point"/>
+        <Class IRI="time-interval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="day-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="day-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="def-axiom"/>
+        <Class IRI="set"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="def-axiom"/>
+        <Class IRI="tangible-thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="ends-at-time-point"/>
+        <Class IRI="time-interval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="april"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="august"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="day"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="december"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="february"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="february-in-leap-years"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="january"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="july"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="june"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="march"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="may"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="november"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="october"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="september"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="time-interval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="week"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="year"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-magnitude"/>
+        <Class IRI="physical-quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-pretty-name"/>
+        <Class IRI="thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-time-interval"/>
+        <Class IRI="temporal-thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-unit-of-measure"/>
+        <Class IRI="duration"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-unit-of-measure"/>
+        <Class IRI="physical-quantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-variant-name"/>
+        <Class IRI="thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hour-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hour-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="in-timezone"/>
+        <Class IRI="time-position"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="class"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="function"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="integer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="number"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="real-number"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="relation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="let"/>
+        <Class IRI="string"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="minute-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="minute-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="month-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="month-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="second-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="second-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="subclass-partition"/>
+        <Class IRI="set"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="subclass-partition"/>
+        <Class IRI="tangible-thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="year-of"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="year-of"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-area"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-building"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-city-or-village"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-country"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-number"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-postcode"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-pretty-label"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-region"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="address-street"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="agent-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="information-extraction-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="knowledge-modelling-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="language-engineering-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="multimedia-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="ontology-specification-language"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="software-visualization-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="web-technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="article-of-journal"/>
+        <Class IRI="article-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="cites-publication-reference"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="confers-award"/>
+        <Class IRI="conferring-an-award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contains-article"/>
+        <Class IRI="journal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contains-article"/>
+        <Class IRI="magazine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contains-news-item"/>
+        <Class IRI="newsletter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contains-news-item"/>
+        <Class IRI="newspaper"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contains-publication"/>
+        <Class IRI="composite-publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="contributes-to-output"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="degree-of-thesis"/>
+        <Class IRI="thesis-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="edited-by"/>
+        <Class IRI="conference-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="edited-by"/>
+        <Class IRI="edited-book-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="edited-by"/>
+        <Class IRI="workshop-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="event-attended"/>
+        <Class IRI="attending-a-conference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="event-attended"/>
+        <Class IRI="attending-an-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="event-product"/>
+        <Class IRI="event-involving-production"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="event-product"/>
+        <Class IRI="publication-type-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="government-of-country"/>
+        <Class IRI="government"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-abstract"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-academic-degree"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-academic-unit"/>
+        <Class IRI="higher-educational-organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-affiliated-person"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-affiliated-person"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-affiliation"/>
+        <Class IRI="affiliated-person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-affiliation-to-unit"/>
+        <Class IRI="affiliated-person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-amount"/>
+        <Class IRI="amount-of-money"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-amount"/>
+        <Class IRI="financial-award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-appellation"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="information-bearing-object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-award-rationale"/>
+        <Class IRI="conferring-an-award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-awarding-body"/>
+        <Class IRI="conferring-an-award"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-capital"/>
+        <Class IRI="country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-contact-person"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-contract-type"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-currency"/>
+        <Class IRI="country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-currency-symbol"/>
+        <Class IRI="currency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-date"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-date"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-email-address"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-email-address"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-email-address"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-faculty"/>
+        <Class IRI="university"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-family-name"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-fax-number"/>
+        <Class IRI="legal-agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-fax-number"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-full-name"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-funding"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-funding-source"/>
+        <Class IRI="grant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-gender"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-geographical-datum"/>
+        <Class IRI="coordinate-location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-given-name"/>
+        <Class IRI="person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-goals"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-government"/>
+        <Class IRI="country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-grant-reference"/>
+        <Class IRI="grant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-grant-value"/>
+        <Class IRI="grant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-impact-factor"/>
+        <Class IRI="serial-publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-isbn-number"/>
+        <Class IRI="book-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-iso4217-code"/>
+        <Class IRI="currency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-job-title"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-key-publication"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-key-publication"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-key-publication"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-latitude"/>
+        <Class IRI="coordinate-location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-leading-organization"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-line-manager"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-location"/>
+        <Class IRI="event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-longitude"/>
+        <Class IRI="coordinate-location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-main-agent"/>
+        <Class IRI="event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-other-agents-involved"/>
+        <Class IRI="event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="article-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="book-section-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="conference-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="proceedings-paper-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="workshop-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-periodicity"/>
+        <Class IRI="daily-newspaper"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-periodicity"/>
+        <Class IRI="periodical-publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-place-of-publication"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-postal-address"/>
+        <Class IRI="legal-agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-postal-address"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-project-leader"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-project-member"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication-reference"/>
+        <Class IRI="book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication-reference"/>
+        <Class IRI="edited-book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-publication-reference"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-research-interest"/>
+        <Class IRI="academic-staff-member"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-research-interest"/>
+        <Class IRI="phd-student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-research-interest"/>
+        <Class IRI="researcher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-size"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-size"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-speaker"/>
+        <Class IRI="giving-a-talk"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-status"/>
+        <Class IRI="activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-status"/>
+        <Class IRI="implemented-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-sub-activity"/>
+        <Class IRI="activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-sub-event"/>
+        <Class IRI="event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-sub-unit"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-sub-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-supervisor"/>
+        <Class IRI="phd-student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-support-unit"/>
+        <Class IRI="higher-educational-organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-tech-report-number"/>
+        <Class IRI="technical-report-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-telephone-number"/>
+        <Class IRI="legal-agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-telephone-number"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-title"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-title"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-url"/>
+        <Class IRI="web-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-url"/>
+        <Class IRI="web-site"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-vice-chancellor"/>
+        <Class IRI="university"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-web-address"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-web-address"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-web-address"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-web-address"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-work-status"/>
+        <Class IRI="working-person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="headed-by"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="headed-by"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="included-in-publication"/>
+        <Class IRI="article-in-a-composite-publication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="information-being-transferred"/>
+        <Class IRI="information-transfer-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="information-object-being-transferred"/>
+        <Class IRI="information-transfer-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="information-object-being-transferred"/>
+        <Class IRI="sending-an-email"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="information-transfer-medium-used"/>
+        <Class IRI="information-transfer-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="information-transfer-medium-used"/>
+        <Class IRI="sending-an-email"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="institute-of-thesis"/>
+        <Class IRI="thesis-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="involves-organization"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="involves-organization-unit"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is-capital-of"/>
+        <Class IRI="capital-city"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="is-secretary-of"/>
+        <Class IRI="secretary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="issue-number"/>
+        <Class IRI="article-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="issue-volume"/>
+        <Class IRI="article-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="issued-by"/>
+        <Class IRI="currency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="location-at-end"/>
+        <Class IRI="event-involving-movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="location-at-start"/>
+        <Class IRI="event-involving-movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="means-of-transport-used"/>
+        <Class IRI="event-involving-movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="meeting-attendee"/>
+        <Class IRI="meeting-taking-place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="meeting-organizer"/>
+        <Class IRI="meeting-taking-place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="method-builds-on"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="organization-being-visited"/>
+        <Class IRI="visiting-researcher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="organization-part-of"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="organization-unit-being-visited"/>
+        <Class IRI="visiting-researcher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="owned-by"/>
+        <Class IRI="information-bearing-object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="owned-by"/>
+        <Class IRI="method"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="owned-by"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="paper-in-proceedings"/>
+        <Class IRI="proceedings-paper-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="person-being-visited"/>
+        <Class IRI="visiting-researcher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="produces-output"/>
+        <Class IRI="activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="produces-output"/>
+        <Class IRI="project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-book"/>
+        <Class IRI="book-publishing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-by"/>
+        <Class IRI="book-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-by"/>
+        <Class IRI="technical-report-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-in-conference"/>
+        <Class IRI="conference-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-in-workshop"/>
+        <Class IRI="workshop-proceedings-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-proceedings"/>
+        <Class IRI="conference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="published-proceedings"/>
+        <Class IRI="workshop"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="r-and-d-institute"/>
+        <Class IRI="r-and-d-institute-within-larger-organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="recipient-agents"/>
+        <Class IRI="generalized-transfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="recipient-of-message"/>
+        <Class IRI="message"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-hardware-platform"/>
+        <Class IRI="implemented-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-hardware-platform-on-client-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-hardware-platform-on-server-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-software-technology"/>
+        <Class IRI="implemented-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-software-technology-on-client-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="requires-software-technology-on-server-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="runs-on-operating-system"/>
+        <Class IRI="implemented-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="runs-on-operating-system-on-client-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="runs-on-operating-system-on-server-side"/>
+        <Class IRI="web-based-system"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="section-of-book"/>
+        <Class IRI="book-section-reference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sender-of-information"/>
+        <Class IRI="information-transfer-event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sender-of-information"/>
+        <Class IRI="sending-an-email"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sender-of-message"/>
+        <Class IRI="message"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="studies-at"/>
+        <Class IRI="phd-student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="studies-at"/>
+        <Class IRI="student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="studies-in-unit"/>
+        <Class IRI="student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sub-area-of"/>
+        <Class IRI="generic-area-of-interest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sub-area-of"/>
+        <Class IRI="research-area"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sub-unit-of-organization-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="subsidiary-of"/>
+        <Class IRI="profit-organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supports-language"/>
+        <Class IRI="editor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supports-language"/>
+        <Class IRI="programming-environment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="supports-method"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="technology-builds-on"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="thing-acted-on"/>
+        <Class IRI="generalized-transfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="time-of-message"/>
+        <Class IRI="message"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="unit-of-organization"/>
+        <Class IRI="academic-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="unit-of-organization"/>
+        <Class IRI="educational-organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="unit-of-organization"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="uses-resource"/>
+        <Class IRI="activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="works-for"/>
+        <Class IRI="academic-admin-staff-member"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="works-for"/>
+        <Class IRI="educational-employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="works-for"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="works-for"/>
+        <Class IRI="higher-educational-organization-employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="works-in-unit"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-story-category"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has-story-content"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions-organization"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions-person"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions-project"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions-research-area"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mentions-technology"/>
+        <Class IRI="kmi-planet-news-item"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="begins-at-time-point"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="day-of"/>
+        <Class IRI="day-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="ends-at-time-point"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-duration"/>
+        <Class IRI="duration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-magnitude"/>
+        <Class IRI="number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-pretty-name"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-time-interval"/>
+        <Class IRI="time-interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-unit-of-measure"/>
+        <Class IRI="unit-of-measure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-variant-name"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hour-of"/>
+        <Class IRI="hour-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="in-timezone"/>
+        <Class IRI="timezone"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="minute-of"/>
+        <Class IRI="minute-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="month-of"/>
+        <Class IRI="month-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="second-of"/>
+        <Class IRI="second-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="year-of"/>
+        <Class IRI="year-in-time"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-area"/>
+        <Class IRI="local-district"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-building"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-city-or-village"/>
+        <Class IRI="municipal-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-country"/>
+        <Class IRI="country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-number"/>
+        <Class IRI="integer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-postcode"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-pretty-label"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-region"/>
+        <Class IRI="geographical-region"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="address-street"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="addresses-generic-area-of-interest"/>
+        <Class IRI="generic-area-of-interest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="article-of-journal"/>
+        <Class IRI="journal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="cites-publication-reference"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="confers-award"/>
+        <Class IRI="award"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contains-article"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contains-news-item"/>
+        <Class IRI="news-item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contains-publication"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="contributes-to-output"/>
+        <Class IRI="project-output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="degree-of-thesis"/>
+        <Class IRI="academic-degree"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="edited-by"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="event-attended"/>
+        <Class IRI="event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="event-product"/>
+        <Class IRI="individual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="government-of-country"/>
+        <Class IRI="country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-abstract"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-academic-degree"/>
+        <Class IRI="academic-degree"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-academic-unit"/>
+        <Class IRI="academic-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-affiliated-person"/>
+        <Class IRI="affiliated-person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-affiliation"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-affiliation-to-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-amount"/>
+        <Class IRI="number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-appellation"/>
+        <Class IRI="appellation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-author"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-award-rationale"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-awarding-body"/>
+        <Class IRI="awarding-body"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-capital"/>
+        <Class IRI="capital-city"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-contact-person"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-contract-type"/>
+        <Class IRI="employment-contract-type"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-currency"/>
+        <Class IRI="currency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-currency-symbol"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-date"/>
+        <Class IRI="calendar-date"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-email-address"/>
+        <Class IRI="email-address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-faculty"/>
+        <Class IRI="university-faculty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-family-name"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-fax-number"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-full-name"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-funding"/>
+        <Class IRI="grant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-funding-source"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-gender"/>
+        <Class IRI="gender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-geographical-datum"/>
+        <Class IRI="geographical-datum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-given-name"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-goals"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-government"/>
+        <Class IRI="government"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-grant-reference"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-grant-value"/>
+        <Class IRI="amount-of-money"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-impact-factor"/>
+        <Class IRI="positive-number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-isbn-number"/>
+        <Class IRI="isbn-number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-iso4217-code"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-job-title"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-key-publication"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-latitude"/>
+        <Class IRI="number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-leading-organization"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-line-manager"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-location"/>
+        <Class IRI="location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-longitude"/>
+        <Class IRI="number"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-main-agent"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-other-agents-involved"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-page-numbers"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-periodicity"/>
+        <Class IRI="duration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-place-of-publication"/>
+        <Class IRI="location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-postal-address"/>
+        <Class IRI="postal-address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-project-leader"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-project-member"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-publication"/>
+        <Class IRI="publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-publication-reference"/>
+        <Class IRI="publication-reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-research-interest"/>
+        <Class IRI="research-area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-size"/>
+        <Class IRI="organization-size"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-speaker"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-status"/>
+        <Class IRI="software-status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-sub-activity"/>
+        <Class IRI="activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-sub-event"/>
+        <Class IRI="event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-sub-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-supervisor"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-support-unit"/>
+        <Class IRI="academic-support-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-tech-report-number"/>
+        <Class IRI="integer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-telephone-number"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-title"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-url"/>
+        <Class IRI="url"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-vice-chancellor"/>
+        <Class IRI="educational-employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-web-address"/>
+        <Class IRI="url"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-work-status"/>
+        <Class IRI="work-status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="headed-by"/>
+        <Class IRI="affiliated-person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="included-in-publication"/>
+        <Class IRI="composite-publication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="information-being-transferred"/>
+        <Class IRI="abstract-information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="information-object-being-transferred"/>
+        <Class IRI="information-bearing-object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="information-transfer-medium-used"/>
+        <Class IRI="information-transfer-medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="institute-of-thesis"/>
+        <Class IRI="academic-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="involves-organization"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="involves-organization-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is-capital-of"/>
+        <Class IRI="country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="is-secretary-of"/>
+        <Class IRI="assisted-person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="issue-number"/>
+        <Class IRI="integer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="issue-volume"/>
+        <Class IRI="integer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="issued-by"/>
+        <Class IRI="government"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="location-at-end"/>
+        <Class IRI="location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="location-at-start"/>
+        <Class IRI="location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="means-of-transport-used"/>
+        <Class IRI="generalised-means-of-transport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="meeting-attendee"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="meeting-organizer"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="method-builds-on"/>
+        <Class IRI="method"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="organization-being-visited"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="organization-part-of"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="organization-unit-being-visited"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="owned-by"/>
+        <Class IRI="legal-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="paper-in-proceedings"/>
+        <Class IRI="conference-proceedings-reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="person-being-visited"/>
+        <Class IRI="employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="produces-output"/>
+        <Class IRI="thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="published-book"/>
+        <Class IRI="book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="published-by"/>
+        <Class IRI="publishing-house"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="published-in-conference"/>
+        <Class IRI="conference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="published-in-workshop"/>
+        <Class IRI="workshop"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="published-proceedings"/>
+        <Class IRI="conference-proceedings-reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="recipient-agents"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="recipient-of-message"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-hardware-platform"/>
+        <Class IRI="hardware-platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-hardware-platform-on-client-side"/>
+        <Class IRI="hardware-platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-hardware-platform-on-server-side"/>
+        <Class IRI="hardware-platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-software-technology"/>
+        <Class IRI="software-technology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-software-technology-on-client-side"/>
+        <Class IRI="software-technology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="requires-software-technology-on-server-side"/>
+        <Class IRI="software-technology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="runs-on-operating-system"/>
+        <Class IRI="operating-system"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="runs-on-operating-system-on-client-side"/>
+        <Class IRI="operating-system"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="runs-on-operating-system-on-server-side"/>
+        <Class IRI="operating-system"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="section-of-book"/>
+        <Class IRI="book-reference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sender-of-information"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sender-of-message"/>
+        <Class IRI="generic-agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="studies-at"/>
+        <Class IRI="educational-organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="studies-in-unit"/>
+        <Class IRI="educational-organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sub-area-of"/>
+        <Class IRI="generic-area-of-interest"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sub-unit-of-organization-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="subsidiary-of"/>
+        <Class IRI="profit-organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supports-language"/>
+        <Class IRI="programming-language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="supports-method"/>
+        <Class IRI="method"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="technology-builds-on"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="thing-acted-on"/>
+        <Class IRI="individual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="time-of-message"/>
+        <Class IRI="time-point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="unit-of-organization"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="uses-resource"/>
+        <Class IRI="thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="works-for"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="works-in-unit"/>
+        <Class IRI="organization-unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-story-category"/>
+        <Class IRI="kmi-story-category"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has-story-content"/>
+        <Class IRI="string"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions-organization"/>
+        <Class IRI="organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions-person"/>
+        <Class IRI="person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions-project"/>
+        <Class IRI="project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions-research-area"/>
+        <Class IRI="research-area"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mentions-technology"/>
+        <Class IRI="technology"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 0.1.0) http://owlapi.sourceforge.net -->
+

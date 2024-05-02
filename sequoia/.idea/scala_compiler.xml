@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="2019-05-sequoia_2227,root" />
+    <profile name="sbt 2" modules="Sequoia Command-Line Interface,Sequoia Kernel,Sequoia Macros,Sequoia OWL API Bindings,Sequoia Protege Plugin">
+      <option name="deprecationWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-opt:l:inline" />
+        <parameter value="-opt-inline-from:**" />
+        <parameter value="-Ydelambdafy:method" />
+        <parameter value="-target:jvm-1.8" />
+        <parameter value="-encoding" />
+        <parameter value="UTF-8" />
+      </parameters>
+    </profile>
+  </component>
+</project>

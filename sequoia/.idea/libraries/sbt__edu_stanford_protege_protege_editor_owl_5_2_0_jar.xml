@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: edu.stanford.protege:protege-editor-owl:5.2.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.protege/protege-editor-owl/bundles/protege-editor-owl-5.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/edu.stanford.protege/protege-editor-owl/srcs/protege-editor-owl-5.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

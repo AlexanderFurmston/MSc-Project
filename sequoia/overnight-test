@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Create and send the Harness for Sequoia
+
+# Move fat jar to harness library.
+mv /Users/davala/Documents/DPhil/2019-05-sequoia/reasoner-owl-api/target/scala-2.12/Sequoia-OWL-API-fat-jar.jar /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/lib/Sequoia-OWL-API-fat-jar.jar
+
+# Compile harness
+cd /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/
+sbt clean
+sbt assembly
+
+# Remove old harness
+rm /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/target/scala-2.12/sequoia-chinensis.jar
+
+# Rename harness
+mv /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/target/scala-2.12/sequoia-chinensis-harness-assembly-0.1.0.jar /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/target/scala-2.12/sequoia-chinensis.jar 
+
+# Copy harness to server
+scp /Users/davala/Documents/DPhil/0000-Sequoia-testing/individual-harnesses/sequoia-chinensis/target/scala-2.12/sequoia-chinensis.jar davala@krr-linux-2.cs.ox.ac.uk:/home/davala/new/sequoia-tests/harnesses

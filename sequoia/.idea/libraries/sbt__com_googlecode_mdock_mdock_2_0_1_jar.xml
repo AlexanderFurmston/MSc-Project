@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.googlecode.mdock:mdock:2.0.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.googlecode.mdock/mdock/bundles/mdock-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.googlecode.mdock/mdock/srcs/mdock-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

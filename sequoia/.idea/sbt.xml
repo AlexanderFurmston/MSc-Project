@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customVMPath" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/reasoner-cli" />
+            <option value="$PROJECT_DIR$/reasoner-kernel" />
+            <option value="$PROJECT_DIR$/reasoner-macros" />
+            <option value="$PROJECT_DIR$/reasoner-owl-api" />
+            <option value="$PROJECT_DIR$/reasoner-protege-plugin" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.0.4" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>
