@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sequoia-chinensis-harness-assembly-0.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/sequoia-chinensis-harness-assembly-0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

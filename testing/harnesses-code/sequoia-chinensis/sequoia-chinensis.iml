@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="aopalliance-1.0" level="project" />
+    <orderEntry type="library" name="commons-codec-1.6" level="project" />
+    <orderEntry type="library" name="commons-io-2.5" level="project" />
+    <orderEntry type="library" name="guava-20.0" level="project" />
+    <orderEntry type="library" name="guice-4.1.0" level="project" />
+    <orderEntry type="library" name="guice-assistedinject-4.1.0" level="project" />
+    <orderEntry type="library" name="guice-multibindings-4.1.0" level="project" />
+    <orderEntry type="library" name="httpclient-4.2.5" level="project" />
+    <orderEntry type="library" name="httpclient-cache-4.2.5" level="project" />
+    <orderEntry type="library" name="httpcore-4.2.4" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.8.5" level="project" />
+    <orderEntry type="library" name="jackson-core-2.8.5" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.8.5" level="project" />
+    <orderEntry type="library" name="javax.inject-1" level="project" />
+    <orderEntry type="library" name="jcl-over-slf4j-1.7.22" level="project" />
+    <orderEntry type="library" name="jsonld-java-0.5.1" level="project" />
+    <orderEntry type="library" name="jsonld-java-sesame-0.5.1" level="project" />
+    <orderEntry type="library" name="jsr305-3.0.1" level="project" />
+    <orderEntry type="library" name="owlapi-distribution-4.5.0" level="project" />
+    <orderEntry type="library" name="semargl-core-0.7" level="project" />
+    <orderEntry type="library" name="semargl-rdf-0.7" level="project" />
+    <orderEntry type="library" name="semargl-rdfa-0.7" level="project" />
+    <orderEntry type="library" name="semargl-sesame-0.7" level="project" />
+    <orderEntry type="library" name="Sequoia-OWL-API-fat-jar" level="project" />
+    <orderEntry type="library" name="xz-1.6" level="project" />
+    <orderEntry type="library" name="sesame-model-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-api-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-binary-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-datatypes-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-languages-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-nquads-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-n3-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-ntriples-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-rdfjson-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-rdfxml-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-trig-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-trix-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-rio-turtle-2.7.16" level="project" />
+    <orderEntry type="library" name="sesame-util-2.7.16" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.22" level="project" />
+    <orderEntry type="library" name="trove4j-3.0.3" level="project" />
+  </component>
+</module>

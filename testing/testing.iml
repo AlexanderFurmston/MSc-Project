@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/harnesses-code/sequoia-chinensis/src/main/java" isTestSource="false" packagePrefix="org.semanticweb.reasoner" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="Sequoia-OWL-API-fat-jar1" level="project" />
+    <orderEntry type="library" name="sequoia-chinensis-harness-assembly-0.1.0" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="Sequoia-OWL-API-fat-jar" level="project" />
+    <orderEntry type="library" name="owlapi-distribution-4.5.0" level="project" />
+    <orderEntry type="library" name="sequoia-chinensis" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lib3" level="project" />
+  </component>
+</module>
