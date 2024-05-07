@@ -191,7 +191,7 @@ object Context {
               isEqualityReasoningEnabled: Boolean,
               order: ContextLiteralOrdering,
               contextStructureManager: ContextStructureManager,
-              incoming: UnboundedChannel[InterContextMessage]): Proc = proc (state.core.mkString("[",", ","]")) {
+              incoming: UnboundedChannel[InterContextMessage]): Runnable = () => {
 
 //    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
 //    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
