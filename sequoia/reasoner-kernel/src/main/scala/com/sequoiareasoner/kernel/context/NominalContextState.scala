@@ -28,6 +28,7 @@ import com.sequoiareasoner.kernel.owl.iri.IRI
 import com.sequoiareasoner.kernel.structural.DLOntology
 import io.cso._
 
+import java.util.concurrent.LinkedTransferQueue
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
@@ -80,11 +81,11 @@ class NominalContextState(override val queryConcepts: Set[Int],
 
   /** PREDECESSOR OPERATIONS */  //--------------------------------------------------------------------------
 
-  val constantPredecessors = mutable.HashSet[UnboundedChannel[InterContextMessage]]()
-  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, UnboundedChannel[InterContextMessage]]
-  def getRootPredecessor(p: Predicate): Option[UnboundedChannel[InterContextMessage]] = rootPredecessors.get(p)
-  def getAllRootPredecessors(): Iterable[UnboundedChannel[InterContextMessage]] = rootPredecessors.values
-  def addRootPredecessor(incomingEdge: UnboundedChannel[InterContextMessage], edgeLabel: Predicate): Unit = {
+  val constantPredecessors = mutable.HashSet[LinkedTransferQueue[InterContextMessage]]()
+  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, LinkedTransferQueue[InterContextMessage]]
+  def getRootPredecessor(p: Predicate): Option[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.get(p)
+  def getAllRootPredecessors(): Iterable[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.values
+  def addRootPredecessor(incomingEdge: LinkedTransferQueue[InterContextMessage], edgeLabel: Predicate): Unit = {
     rootPredecessors.getOrElseUpdate(edgeLabel, incomingEdge)
   }
 

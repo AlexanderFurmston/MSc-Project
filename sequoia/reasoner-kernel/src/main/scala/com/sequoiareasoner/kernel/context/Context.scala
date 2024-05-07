@@ -28,6 +28,7 @@ import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.logging.DerivationObserver
 import com.sequoiareasoner.kernel.owl.iri.IRI
 
+import java.util.concurrent.LinkedTransferQueue
 import scala.language.postfixOps
 import com.sequoiareasoner.kernel.context.RuleSaturator._
 import com.sequoiareasoner.kernel.context.ClausePusher._
@@ -156,7 +157,7 @@ object Context {
 
  @inline def saturateAndPush(state: ContextState, ontology: DLOntology, isEqualityReasoningEnabled: Boolean,
                              order: ContextLiteralOrdering, contextStructureManager: ContextStructureManager,
-                             incoming: UnboundedChannel[InterContextMessage], hornPhase: Boolean )  {
+                             incoming: LinkedTransferQueue[InterContextMessage], hornPhase: Boolean )  {
     rulesToSaturation(state, ontology, isEqualityReasoningEnabled, order, hornPhase = hornPhase)
     // if (ontology.havocTriggered) contextStructureManager.interrupt
     /** Push certain ground clauses to all relevant contexts */
@@ -191,7 +192,7 @@ object Context {
               isEqualityReasoningEnabled: Boolean,
               order: ContextLiteralOrdering,
               contextStructureManager: ContextStructureManager,
-              incoming: UnboundedChannel[InterContextMessage]): Runnable = () => {
+              incoming: LinkedTransferQueue[InterContextMessage]): Runnable = () => {
 
 //    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
 //    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
@@ -242,7 +243,7 @@ object Context {
 
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
     repeat {
-      incoming ? match {
+      incoming.poll() match {
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
           state.hornPhaseActive = false
@@ -261,7 +262,7 @@ object Context {
 
 
         /** Message received: SuccPush - a clause pushed from a predecessor context.  */
-        case SuccPush(contextChannel: UnboundedChannel[InterContextMessage],
+        case SuccPush(contextChannel: LinkedTransferQueue[InterContextMessage],
         edgeLabel: Term,
         predicate: Predicate, parentCore: ImmutableSet[Predicate]) =>
           //if (state.isSelectedCore2() && state.isSelectedPredicate(predicate) && state.isSelectedCore(parentCore)) {
@@ -335,7 +336,7 @@ object Context {
             incoming, state.hornPhaseActive)
 
         /** Message received: A(o) -> A(o) from a predecessor context.  */
-        case PossibleGroundFactPush(contextChannel: UnboundedChannel[InterContextMessage], edgeLabel: Term,
+        case PossibleGroundFactPush(contextChannel: LinkedTransferQueue[InterContextMessage], edgeLabel: Term,
         predicate: Predicate) =>
           predicate match {
             /** Let us exclude propagations of type conceptFor:a(a), since these may not always be prevented by the optimisation,
@@ -368,7 +369,7 @@ object Context {
          /** If a potential collapse to a nominal `o` is detected in a query context with core A(x), we push the
             * clause A(x) -> A(x) to the corresponding nominal context for `o`, and add an edge labelled `A(x)` from
             * that query context, to the nominal context for `o`. This is the detection of such push in a nominal context. */
-        case CollPush(contextChannel: UnboundedChannel[InterContextMessage], edgeLabel: Predicate) => {
+        case CollPush(contextChannel: LinkedTransferQueue[InterContextMessage], edgeLabel: Predicate) => {
           state match {
             case nomState: NominalContextState => {
               /** The corresponding root predecessor is added */
@@ -428,7 +429,7 @@ object Context {
             case _ => {
               if (state.addConstantToMentionedConstantSet(coreConstant)) {
                 contextStructureManager.contextRoundStarted()
-                originContext ! ConstantMentionedPush(incoming)
+                originContext.put(ConstantMentionedPush(incoming))
               }
             }
           }
