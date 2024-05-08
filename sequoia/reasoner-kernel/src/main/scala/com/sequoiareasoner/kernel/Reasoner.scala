@@ -93,7 +93,7 @@ class Reasoner(config: ReasonerConfiguration,
   /** MULTITHREADING */
 
   //D if (!config.enableMultithreading) io.cso.runtime.Scheduler.setNumWorkerThreads(1)
-  io.cso.runtime.Scheduler.setNumWorkerThreads(1)
+  //  io.cso.runtime.Scheduler.setNumWorkerThreads(1)
 
 
   /** ------------------------ AXIOMS IN DL FORM [SEQUOIA API, not OWL API] ------------- */

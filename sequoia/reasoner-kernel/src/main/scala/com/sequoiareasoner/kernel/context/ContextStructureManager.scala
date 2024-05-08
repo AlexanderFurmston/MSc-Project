@@ -31,7 +31,6 @@ import com.sequoiareasoner.kernel.owl.iri.IRI
 import com.sequoiareasoner.kernel.owl.model.{NamedIndividual, OWLClass}
 import com.sequoiareasoner.kernel.structural.DLOntology
 import com.sequoiareasoner.kernel.taxonomy.Taxonomy
-import io.cso._
 import org.semanticweb.owlapi.model.OWLNamedIndividual
 
 import scala.collection.mutable
@@ -118,9 +117,9 @@ final class ContextStructureManager(ontology: DLOntology,
 //    /** Non-horn phase */
     hornPhaseActive = false
     activeCount.set(contexts.values.size)
-    synchronized {
+//    synchronized {
       for (context <- getAllContexts) context.put(StartNonHornPhase())
-    }
+//    }
     secondLatch.await()
  }
   /** Stop ASAP the construction of the context structure */

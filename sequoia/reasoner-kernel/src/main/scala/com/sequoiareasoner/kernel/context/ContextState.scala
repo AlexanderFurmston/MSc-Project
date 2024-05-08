@@ -22,7 +22,6 @@ package com.sequoiareasoner.kernel.context
 
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index._
-import io.cso._
 import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.context.inferenceRule._
 import com.sequoiareasoner.kernel.owl.iri.IRI

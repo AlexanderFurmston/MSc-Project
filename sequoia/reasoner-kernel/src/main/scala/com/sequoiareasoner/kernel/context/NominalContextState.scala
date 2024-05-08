@@ -26,7 +26,6 @@ import com.sequoiareasoner.kernel.context.inferenceRule._
 import com.sequoiareasoner.kernel.index._
 import com.sequoiareasoner.kernel.owl.iri.IRI
 import com.sequoiareasoner.kernel.structural.DLOntology
-import io.cso._
 
 import java.util.concurrent.LinkedTransferQueue
 import scala.collection.mutable

@@ -23,7 +23,6 @@ package com.sequoiareasoner.kernel.context
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index._
 import com.sequoiareasoner.kernel.structural.DLOntology
-//import io.cso._
 import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.logging.DerivationObserver
 import com.sequoiareasoner.kernel.owl.iri.IRI

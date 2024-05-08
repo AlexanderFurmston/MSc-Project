@@ -54,7 +54,7 @@ package com.sequoiareasoner.kernel.reasoner
 
 import com.sequoiareasoner.kernel.CommonNames
 import com.sequoiareasoner.kernel.taxonomy.{ImmutableIRISet, Taxonomy, TaxonomyNode}
-import io.cso._
+//import io.cso._
 import com.sequoiareasoner.kernel.owl.iri.IRI
 
 import org.scalatest.FunSuite
