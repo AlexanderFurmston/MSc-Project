@@ -23,7 +23,7 @@ package com.sequoiareasoner.kernel.context
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index._
 import com.sequoiareasoner.kernel.structural.DLOntology
-import io.cso._
+//import io.cso._
 import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.logging.DerivationObserver
 import com.sequoiareasoner.kernel.owl.iri.IRI
@@ -192,7 +192,7 @@ object Context {
               isEqualityReasoningEnabled: Boolean,
               order: ContextLiteralOrdering,
               contextStructureManager: ContextStructureManager,
-              incoming: LinkedTransferQueue[InterContextMessage]): Runnable = () => {
+              incoming: LinkedTransferQueue[InterContextMessage]): Thread = new Thread(() => {
 
 //    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
 //    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
@@ -242,7 +242,7 @@ object Context {
     contextStructureManager.contextRoundFinished()
 
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
-    repeat {
+    while (true) {
       incoming.poll() match {
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
@@ -459,8 +459,9 @@ object Context {
       }
       contextStructureManager.contextRoundFinished()
     }
+    Thread.`yield`()
 
-  }
+  })
 
 
 }

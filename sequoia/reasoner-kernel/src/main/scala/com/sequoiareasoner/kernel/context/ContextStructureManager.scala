@@ -155,7 +155,7 @@ final class ContextStructureManager(ontology: DLOntology,
                                  workedOffClauseIndex: ContextClauseIndex,
                                  edge: LinkedTransferQueue[InterContextMessage],
                                  ordering: ContextLiteralOrdering,
-                                 hornPhaseActive: Boolean): Runnable = {
+                                 hornPhaseActive: Boolean): Thread = {
    // Ignore this parameter for the moment. Require(ordering.verifyQuery(queryConcepts))
     val state = if (core.toSeq.head.iri.isInternalIndividual) {
       new NominalContextState(queryConcepts, core, rootContext, workedOffClauseIndex,
@@ -180,9 +180,9 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Thread = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
       contextRoundStarted()
-      newContext.run()
+      newContext.start()
       edge
     })
   }
@@ -198,9 +198,9 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since nominal contexts have no query, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Thread = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
       contextRoundStarted()
-      newContext.run()
+      newContext.start()
       edge
     })
   }
@@ -236,7 +236,7 @@ final class ContextStructureManager(ontology: DLOntology,
   /** -------------------- Saturation of the Context Structure (ON CREATION) ------------------- */
 
 
-  synchronized {
+  // synchronized {
     beginTime = System.currentTimeMillis
     /** This process creates a context for each relevant concept, and initialises such concepts) */
     implicit val theOntology = ontology
@@ -246,13 +246,13 @@ final class ContextStructureManager(ontology: DLOntology,
         /** Creates the context index, which is a special case since these contexts are query contexts. */
         val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
         val edge = new LinkedTransferQueue[InterContextMessage]()
-        val newContext: Runnable = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
+        val newContext: Thread = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
           ContextLiteralOrdering(), hornPhaseActive)
-        newContext.run()
+        newContext.start()
         edge
       })
     }
-  }
+  // }
    waitForSaturation
 }
 
