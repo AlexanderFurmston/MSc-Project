@@ -354,7 +354,7 @@ class Reasoner(config: ReasonerConfiguration,
   def havocTriggered: Boolean = dlOntology.havocTriggered
   /** Requests that the reasoner aborts the currently running reasoning task. */
   def interrupt: Unit = ???
-  /** Shuts down the reasoner. Return `true` if the operation was successful. */
-  def shutdown: Boolean = io.cso.shutdown
+  /** Shuts down the reasoner */
+  def shutdown: Unit = Thread.getAllStackTraces().keySet().forEach(t => t.interrupt())
 
 }
