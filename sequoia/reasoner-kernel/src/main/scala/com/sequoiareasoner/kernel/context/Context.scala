@@ -457,8 +457,8 @@ object Context {
 
       }
       contextStructureManager.contextRoundFinished()
+      Thread.`yield`()
     }
-    Thread.`yield`()
 
   })
 

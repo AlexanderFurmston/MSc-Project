@@ -117,9 +117,9 @@ final class ContextStructureManager(ontology: DLOntology,
 //    /** Non-horn phase */
     hornPhaseActive = false
     activeCount.set(contexts.values.size)
-//    synchronized {
+    synchronized {
       for (context <- getAllContexts) context.put(StartNonHornPhase())
-//    }
+    }
     secondLatch.await()
  }
   /** Stop ASAP the construction of the context structure */
@@ -170,7 +170,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** Given a conjunction of known predicates, this method identifies the successor given by the _strategy_ of this
     * context structure, and then retrieves it or creates it; in the latter case, it initialises the first round */
-  def getSuccessor(K1: ImmutableSet[Predicate]): LinkedTransferQueue[InterContextMessage] = synchronized {
+  def getSuccessor(K1: ImmutableSet[Predicate]): LinkedTransferQueue[InterContextMessage] = {
     val core: ImmutableSet[Predicate] = strategy(K1)
     if (core.isEmpty) logger.warn(s"WARNING: trivial context is active! (K1 = $K1)")
     contexts.getOrElseUpdate(core, {
@@ -187,7 +187,7 @@ final class ContextStructureManager(ontology: DLOntology,
   }
   /** Given a constant, retrieve or create the nominal context corresponding to that constant. If it is created,
     * the initialisation round is started.*/
-  protected[context] def getNominalContext(individual: Constant) : LinkedTransferQueue[InterContextMessage] = synchronized {
+  protected[context] def getNominalContext(individual: Constant) : LinkedTransferQueue[InterContextMessage] = {
     implicit val theOntology = ontology
     val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI.nominalConcept(individual.toString),CentralVariable))
     contexts.getOrElseUpdate(core, {
