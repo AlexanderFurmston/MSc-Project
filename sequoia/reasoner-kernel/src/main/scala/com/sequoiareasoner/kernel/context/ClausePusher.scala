@@ -40,6 +40,7 @@ object ClausePusher {
           contextStructureManager.contextRoundStarted()
           /** Push the clause to each node; the core of the current context is added for debug purposes; the edgeLabel so that the predecessor knows who sent this message */
           incomingEdge.put(PredPush(edgeLabel, state.core, IndexedSequence(clause)))
+          incomingEdge.synchronized { incomingEdge.notifyAll() }
         }
       }
 
@@ -74,6 +75,7 @@ object ClausePusher {
       // }
       contextStructureManager.contextRoundStarted()
       contextChannel.put(PredPush(edgeLabel, state.core, predClauses)) // !!! TODO rename contextChannel
+      contextChannel.synchronized { contextChannel.notifyAll() }
     }
   }
 
@@ -117,6 +119,7 @@ object ClausePusher {
         })
       // TODO: Undo the addition of the core to the SuccPush message
       edge.put(SuccPush(contextChannel, t, pSigma, state.core))
+      edge.synchronized { edge.notifyAll() }
     }
   }
 
@@ -156,6 +159,7 @@ object ClausePusher {
           contextStructureManager.getNominalContext(v)
         })
       edge.put(SuccPush(contextChannel, v, pSigma, state.core))
+      edge.synchronized { edge.notifyAll() }
       nominals._2.foreach(x => {
         val sigma = new ForwardsInterContextMapping(x,comesFromNominalCore)
         val pSigma = p.applySubstitution(sigma)
@@ -166,6 +170,7 @@ object ClausePusher {
             contextStructureManager.getNominalContext(x)
           })
         edge.put(SuccPush(contextChannel, x, pSigma, state.core))
+        edge.synchronized { edge.notifyAll() }
       })
       /**THIS SHOULD probably be a push of its own */
       /** This will not activate for derived certain facts; which is good. */
@@ -177,6 +182,7 @@ object ClausePusher {
        //     for (a <- state.core) println(a + " ")
             contextStructureManager.contextRoundStarted()
             newEdge.put(PossibleGroundFactPush(contextChannel, v, p))
+            newEdge.synchronized { newEdge.notifyAll() }
           }
         case _ =>
       }
@@ -207,12 +213,14 @@ object ClausePusher {
         for (incomingEdge <- state.getAllRootPredecessors()) {
           contextStructureManager.contextRoundStarted()
           incomingEdge.put(QueryPush(nominal, IndexedSequence(clause)))
+          incomingEdge.synchronized { incomingEdge.notifyAll() }
         }
       } else {
         for (predicate <- clause.body) {
           state.getRootPredecessor(predicate).foreach { incomingEdge =>
             contextStructureManager.contextRoundStarted()
             incomingEdge.put(QueryPush(nominal, IndexedSequence(clause)))
+            incomingEdge.synchronized { incomingEdge.notifyAll() }
           }
         }
       }
@@ -233,6 +241,7 @@ object ClausePusher {
       // }
       contextStructureManager.contextRoundStarted()
       contextChannel.put(QueryPush(nominal, relevantClauses))
+      contextChannel.synchronized { contextChannel.notifyAll() }
     }
   }
 
@@ -255,6 +264,7 @@ object ClausePusher {
         })
       val core: Predicate = state.core.toSeq.head
       edge.put(CollPush(contextChannel, core))
+      edge.synchronized { edge.notifyAll() }
     }
     //This below is no longer necessary, because we propagate already all certain clauses to relevant contexts //
 //    /** If the equality is certain and we propagate from a nominal context, it must be propagated as a certain fact top -> A */
@@ -312,6 +322,7 @@ object ClausePusher {
       state.constantPredecessors.foreach { edge =>
         manager.contextRoundStarted()
         edge.put(CGCPush(ContextClause(unprocessedCGC.body, newHead)(state.ordering),state.core))
+        edge.synchronized { edge.notifyAll() }
       }
     }
   }
@@ -325,6 +336,7 @@ object ClausePusher {
       /** Send to all relevant contexts that mention this nominal */
         manager.contextRoundStarted()
         targetContext.put(CGCPush(ContextClause(clause.body, newHead)(state.ordering),state.core))
+        targetContext.synchronized { targetContext.notifyAll() }
     }
   }
 
@@ -336,7 +348,9 @@ object ClausePusher {
     for (constant <- constantsIntroducedInLastRound) {
      // if (state.isSelectedCore()) println("Requesting all CGCs in context with core " + state.core + " for constant " + constant)
       manager.contextRoundStarted()
-      manager.getNominalContext(constant).put(ConstantMentionedPush(contextChannel))
+      val nomcon = manager.getNominalContext(constant)
+      nomcon.put(ConstantMentionedPush(contextChannel))
+      nomcon.synchronized { nomcon.notifyAll() }
       /** To ensure that every nominal context O contains all CGCs that mention `o`, if such CGC is mentioned in another
         * (nominal) context, we propagate it to O. */
       state match {
@@ -344,7 +358,9 @@ object ClausePusher {
      //     if (state.isSelectedCore()) println("Also pushing constant exchange message to the same core")
           val coreConstant = nomState.getCoreConstant
           manager.contextRoundStarted()
-          manager.getNominalContext(constant).put(ConstantExchange(contextChannel,coreConstant))
+          val nomcon = manager.getNominalContext(constant)
+          nomcon.put(ConstantExchange(contextChannel,coreConstant))
+          nomcon.synchronized { nomcon.notifyAll() }
         }
         case _ =>
       }

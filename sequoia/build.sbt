@@ -1,7 +1,7 @@
 import sbt._
 import Keys._
 
-import CSOPlugin._
+//import CSOPlugin._
 
 import RepeatCommandPlugin._
 
@@ -102,7 +102,7 @@ lazy val commonSettings = repeatCommandSettings ++ Seq(
   // D  Print the duration that a test takes to execute
   // F  Do not truncate stack traces in failed tests
   testOptions in Test += Tests.Argument("-oD"), 
-  parallelExecution in Test := false,
+  parallelExecution in Test := true,
   logBuffered in Test := false,
   autoAPIMappings := true,
   // Do not publish the documentation from each project since they need to link to each other. Use unidoc on the root instead.
@@ -146,7 +146,7 @@ lazy val externalJavadocMapForOwlApi = Map(
 
 def isJarToEmbed(file: java.io.File): Boolean =
   file.getName match {
-    case name if name startsWith "cso" => true
+//    case name if name startsWith "cso" => true
     case name if name startsWith "jautomata" => true
     case name if name startsWith "scala" => true
     case name if name startsWith "balloontip" => true
@@ -201,12 +201,12 @@ lazy val macros        = (project in file("reasoner-macros")).
 
 lazy val kernel        = (project in file("reasoner-kernel")).
                           settings(commonSettings ++ documentationSettings(): _*).
-                          settings(inConfig(Compile)(Seq(
-                            manipulateBytecode := CSOPlugin.recompileHook.value
-                          )): _*).
-                          settings(inConfig(Test)(Seq(
-                            manipulateBytecode := CSOPlugin.recompileHook.value
-                          )): _*).
+                          // settings(inConfig(Compile)(Seq(
+                          //   manipulateBytecode := CSOPlugin.recompileHook.value
+                          // )): _*).
+                          // settings(inConfig(Test)(Seq(
+                          //   manipulateBytecode := CSOPlugin.recompileHook.value
+                          // )): _*).
                           enablePlugins(BuildInfoPlugin).
                           settings(
                             name := "Sequoia Kernel",

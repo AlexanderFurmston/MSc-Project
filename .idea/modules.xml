@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/parallel-sequoia.iml" filepath="$PROJECT_DIR$/.idea/parallel-sequoia.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sequoia/sequoia.iml" filepath="$PROJECT_DIR$/sequoia/sequoia.iml" />
-      <module fileurl="file://$PROJECT_DIR$/testing/testing.iml" filepath="$PROJECT_DIR$/testing/testing.iml" />
     </modules>
   </component>
 </project>

@@ -170,7 +170,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** Given a conjunction of known predicates, this method identifies the successor given by the _strategy_ of this
     * context structure, and then retrieves it or creates it; in the latter case, it initialises the first round */
-  def getSuccessor(K1: ImmutableSet[Predicate]): LinkedTransferQueue[InterContextMessage] = {
+  def getSuccessor(K1: ImmutableSet[Predicate]): LinkedTransferQueue[InterContextMessage] = synchronized {
     val core: ImmutableSet[Predicate] = strategy(K1)
     if (core.isEmpty) logger.warn(s"WARNING: trivial context is active! (K1 = $K1)")
     contexts.getOrElseUpdate(core, {
@@ -180,14 +180,16 @@ final class ContextStructureManager(ontology: DLOntology,
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
       val newContext: Thread = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      println("Starting new context", activeCount.get())
       contextRoundStarted()
+      println("Started", activeCount.get())
       newContext.start()
       edge
     })
   }
   /** Given a constant, retrieve or create the nominal context corresponding to that constant. If it is created,
     * the initialisation round is started.*/
-  protected[context] def getNominalContext(individual: Constant) : LinkedTransferQueue[InterContextMessage] = {
+  protected[context] def getNominalContext(individual: Constant) : LinkedTransferQueue[InterContextMessage] = synchronized {
     implicit val theOntology = ontology
     val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI.nominalConcept(individual.toString),CentralVariable))
     contexts.getOrElseUpdate(core, {
@@ -235,7 +237,7 @@ final class ContextStructureManager(ontology: DLOntology,
   /** -------------------- Saturation of the Context Structure (ON CREATION) ------------------- */
 
 
-  // synchronized {
+  synchronized {
     beginTime = System.currentTimeMillis
     /** This process creates a context for each relevant concept, and initialises such concepts) */
     implicit val theOntology = ontology
@@ -251,7 +253,7 @@ final class ContextStructureManager(ontology: DLOntology,
         edge
       })
     }
-  // }
+  }
    waitForSaturation
 }
 

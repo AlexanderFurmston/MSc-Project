@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="inc_compile_2.122">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/sequoia/reasoner-macros/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -243,6 +243,11 @@ object Context {
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
     while (true) {
       incoming.poll() match {
+        case null => { 
+          incoming.synchronized {
+            incoming.wait()
+          }
+        }
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
           state.hornPhaseActive = false
@@ -453,12 +458,9 @@ object Context {
 //            state.blockedCertainGroundFacts.getOrElseUpdate(IRI(IRI.concept2Nominal(origin)).uid, collection.mutable.Set[Int]()) ++= predicates
 //          }
 //        }
-
-
       }
-      contextStructureManager.contextRoundFinished()
-      Thread.`yield`()
     }
+    contextStructureManager.contextRoundFinished()
 
   })
 
