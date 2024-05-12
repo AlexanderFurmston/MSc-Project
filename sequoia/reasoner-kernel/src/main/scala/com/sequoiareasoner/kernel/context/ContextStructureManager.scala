@@ -90,7 +90,7 @@ final class ContextStructureManager(ontology: DLOntology,
   private[this] var hornPhaseActive: Boolean = true
   /** Counts the number of contexts that are currently active */
   /** THIS IS A HACK: this is automatically initialised with the number of classes to be classified */
-  private[this] val activeCount = new AtomicInteger(targetConcepts.size)
+  val activeCount = new AtomicInteger(targetConcepts.size) // !!! TODO : make private again
   /** Latch used for awaiting for and terminating the process that constructs the saturated context structure */
   //TODO: Make latch private again;
   val latch = new CountDownLatch(1)
@@ -101,13 +101,22 @@ final class ContextStructureManager(ontology: DLOntology,
   protected[context] def contextRoundStarted(): Unit =  activeCount.incrementAndGet
   protected[context] def contextRoundFinished(): Unit = {
     val count = activeCount.decrementAndGet
+    println("decrementing ac" + count)
+    println("?")
+    if (count == 0) println("!!")
     if (count < 0) {
+      println("ruhroh")
       throw new IllegalStateException
     }
     if (count == 0) {
+      println("!!!")
       totalTime = System.currentTimeMillis - beginTime
+      println("!!!!")
       logger.info(s"Saturation completed in $totalTime.")
+      println("!!!!!")
       activeLatch.countDown()
+      println("!!x!!")
+      println(secondLatch.getCount(), activeLatch.getCount())
     }
   }
   /** Wait until the Context structure is saturated */
@@ -115,12 +124,18 @@ final class ContextStructureManager(ontology: DLOntology,
  // HORN OPTIMISATION  /** Horn phase */
     latch.await()
 //    /** Non-horn phase */
-    hornPhaseActive = false
+    println("surely we get here")
+    synchronized { hornPhaseActive = false }
+    println("synced")
     activeCount.set(contexts.values.size)
-    synchronized {
-      for (context <- getAllContexts) context.put(StartNonHornPhase())
+    for (context <- getAllContexts) {
+      context.synchronized {
+        context.put(StartNonHornPhase())
+        context.notifyAll()
+      }
     }
     secondLatch.await()
+    println("past the 2nd latch")
  }
   /** Stop ASAP the construction of the context structure */
   def interrupt(): Unit = synchronized {
@@ -255,6 +270,7 @@ final class ContextStructureManager(ontology: DLOntology,
     }
   }
    waitForSaturation
+   println("gothere")
 }
 
 

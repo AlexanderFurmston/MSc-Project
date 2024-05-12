@@ -191,7 +191,7 @@ object Context {
               isEqualityReasoningEnabled: Boolean,
               order: ContextLiteralOrdering,
               contextStructureManager: ContextStructureManager,
-              incoming: LinkedTransferQueue[InterContextMessage]): Thread = new Thread(() => {
+              incoming: LinkedTransferQueue[InterContextMessage]): Thread = new Thread(() => { try {
 
 //    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
 //    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
@@ -242,12 +242,17 @@ object Context {
 
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
     while (true) {
-      incoming.poll() match {
-        case null => { 
-          incoming.synchronized {
-            incoming.wait()
-          }
+      var retrieved: InterContextMessage = null
+      incoming.synchronized {
+        if (incoming.peek() == null) incoming.wait()
+        retrieved = incoming.poll()
+        println("unwaited - ", retrieved, incoming.peek())
+      }
+      retrieved match {
+        case EndNonHornPhase() => {
+          println("tryna end") //!!! todo: remove
         }
+
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
           state.hornPhaseActive = false
@@ -459,9 +464,12 @@ object Context {
 //          }
 //        }
       }
+      contextStructureManager.contextRoundFinished()
+      println("I go sleep", retrieved) // !!! TODO remove print debugging
     }
-    contextStructureManager.contextRoundFinished()
+    println("finito")
 
+  } catch { case e: InterruptedException => }
   })
 
 

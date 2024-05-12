@@ -86,6 +86,8 @@ package object context {
 
   final case class StartNonHornPhase() extends InterContextMessage
 
+  final case class EndNonHornPhase() extends InterContextMessage
+
  /** Message to notify a context that it must add a tautology with a ground fact `predicate` and update so that its
    * predecessor `contextChannel` with edge `edgeLabel` also has this fact. This requires:
    * -The predicate itself `predicate`
