@@ -246,7 +246,7 @@ object Context {
       incoming.synchronized {
         if (incoming.peek() == null) incoming.wait()
         retrieved = incoming.poll()
-        println("unwaited - ", retrieved, incoming.peek())
+//        println("unwaited - ", retrieved, incoming.peek()) // !! todo: remove
       }
       retrieved match {
         case EndNonHornPhase() => {
@@ -465,7 +465,7 @@ object Context {
 //        }
       }
       contextStructureManager.contextRoundFinished()
-      println("I go sleep", retrieved) // !!! TODO remove print debugging
+      //      println("I go sleep", retrieved) // !!! TODO remove print debugging
     }
     println("finito")
 

@@ -20,10 +20,6 @@
 
 package com.sequoiareasoner.kernel.context
 
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.atomic.AtomicInteger
-import java.util.concurrent.LinkedTransferQueue
-
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index.{ArrayBuilders, ImmutableSet, NeighborPredClauseIndex, TotalIRIMultiMap, _}
 import com.sequoiareasoner.kernel.logging.Logger
@@ -34,6 +30,10 @@ import com.sequoiareasoner.kernel.taxonomy.Taxonomy
 import org.semanticweb.owlapi.model.OWLNamedIndividual
 
 import scala.collection.mutable
+import java.util.concurrent.CountDownLatch
+import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.LinkedTransferQueue
+import java.util.concurrent.ForkJoinPool
 
 /** Class that manages the context structure, including the introducing of new contexts according to a supplied strategy
   * function, and the termination of the procedure once all contexts have completed saturation. */
@@ -63,6 +63,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
   private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], LinkedTransferQueue[InterContextMessage]]
+  private[this] val contextExecutor = new ForkJoinPool();
 
   /** This map provides, for each nominal context O(x), the set of (other) contexts that mention o */
   private[this] val constantIndex = new mutable.AnyRefMap[Constant,collection.mutable.Set[ImmutableSet[Predicate]]]
@@ -169,7 +170,7 @@ final class ContextStructureManager(ontology: DLOntology,
                                  workedOffClauseIndex: ContextClauseIndex,
                                  edge: LinkedTransferQueue[InterContextMessage],
                                  ordering: ContextLiteralOrdering,
-                                 hornPhaseActive: Boolean): Thread = {
+                                 hornPhaseActive: Boolean): Runnable = {
    // Ignore this parameter for the moment. Require(ordering.verifyQuery(queryConcepts))
     val state = if (core.toSeq.head.iri.isInternalIndividual) {
       new NominalContextState(queryConcepts, core, rootContext, workedOffClauseIndex,
@@ -194,11 +195,11 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Thread = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
       println("Starting new context", activeCount.get())
       contextRoundStarted()
       println("Started", activeCount.get())
-      newContext.start()
+      contextExecutor.execute(newContext)
       edge
     })
   }
@@ -214,9 +215,9 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since nominal contexts have no query, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Thread = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
       contextRoundStarted()
-      newContext.start()
+      contextExecutor.execute(newContext)
       edge
     })
   }
@@ -262,9 +263,9 @@ final class ContextStructureManager(ontology: DLOntology,
         /** Creates the context index, which is a special case since these contexts are query contexts. */
         val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
         val edge = new LinkedTransferQueue[InterContextMessage]()
-        val newContext: Thread = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
+        val newContext: Runnable = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
           ContextLiteralOrdering(), hornPhaseActive)
-        newContext.start()
+        contextExecutor.execute(newContext)
         edge
       })
     }
