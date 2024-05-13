@@ -179,7 +179,8 @@ final class ContextStructureManager(ontology: DLOntology,
       new ContextState(queryConcepts, core, rootContext, workedOffClauseIndex, new NeighborPredClauseIndex,
         equalityOptimization, redundancyIndex, hornPhaseActive, ordering, ontology, contextStructureManager = this)
     }
-    Context.makeContext(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this, edge)
+    val c : ContextRunnable = new ContextRunnable
+    c.makeContext(state, ontology, enableEqualityReasoning, ordering, in_contextStructureManager = this, edge)
   }
 
   def getAllContexts = synchronized { contexts.values }

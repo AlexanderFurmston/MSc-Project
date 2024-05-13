@@ -4,7 +4,7 @@
 		module="sequoia-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20240512002459"
+		publication="20240513002629"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
