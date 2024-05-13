@@ -34,6 +34,7 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.LinkedTransferQueue
 import java.util.concurrent.ForkJoinPool
+import java.util.concurrent.Callable
 
 /** Class that manages the context structure, including the introducing of new contexts according to a supplied strategy
   * function, and the termination of the procedure once all contexts have completed saturation. */
@@ -62,8 +63,12 @@ final class ContextStructureManager(ontology: DLOntology,
 
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
-  private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], LinkedTransferQueue[InterContextMessage]]
+  private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], ContextRunnable]
   private[this] val contextExecutor = new ForkJoinPool();
+  private[this] val executor2 = new ForkJoinPool();
+  def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = {
+    executor2.execute(() => context.reSaturateUponMessage(message))
+  }
 
   /** This map provides, for each nominal context O(x), the set of (other) contexts that mention o */
   private[this] val constantIndex = new mutable.AnyRefMap[Constant,collection.mutable.Set[ImmutableSet[Predicate]]]
@@ -130,10 +135,7 @@ final class ContextStructureManager(ontology: DLOntology,
     println("synced")
     activeCount.set(contexts.values.size)
     for (context <- getAllContexts) {
-      context.synchronized {
-        context.put(StartNonHornPhase())
-        context.notifyAll()
-      }
+      context.reSaturateUponMessage(StartNonHornPhase())
     }
     secondLatch.await()
     println("past the 2nd latch")
@@ -168,9 +170,8 @@ final class ContextStructureManager(ontology: DLOntology,
                                  core: ImmutableSet[Predicate],
                                  rootContext: Boolean,
                                  workedOffClauseIndex: ContextClauseIndex,
-                                 edge: LinkedTransferQueue[InterContextMessage],
                                  ordering: ContextLiteralOrdering,
-                                 hornPhaseActive: Boolean): Runnable = {
+                                 hornPhaseActive: Boolean): Callable[ContextRunnable] = () => {
    // Ignore this parameter for the moment. Require(ordering.verifyQuery(queryConcepts))
     val state = if (core.toSeq.head.iri.isInternalIndividual) {
       new NominalContextState(queryConcepts, core, rootContext, workedOffClauseIndex,
@@ -179,47 +180,46 @@ final class ContextStructureManager(ontology: DLOntology,
       new ContextState(queryConcepts, core, rootContext, workedOffClauseIndex, new NeighborPredClauseIndex,
         equalityOptimization, redundancyIndex, hornPhaseActive, ordering, ontology, contextStructureManager = this)
     }
-    val c : ContextRunnable = new ContextRunnable
-    c.makeContext(state, ontology, enableEqualityReasoning, ordering, in_contextStructureManager = this, edge)
+    new ContextRunnable(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this)
   }
 
-  def getAllContexts = synchronized { contexts.values }
+  def getAllContexts: Iterable[ContextRunnable] = synchronized { contexts.values }
 
   /** Given a conjunction of known predicates, this method identifies the successor given by the _strategy_ of this
     * context structure, and then retrieves it or creates it; in the latter case, it initialises the first round */
-  def getSuccessor(K1: ImmutableSet[Predicate]): LinkedTransferQueue[InterContextMessage] = synchronized {
+  def getSuccessor(K1: ImmutableSet[Predicate]): ContextRunnable = synchronized {
     val core: ImmutableSet[Predicate] = strategy(K1)
     if (core.isEmpty) logger.warn(s"WARNING: trivial context is active! (K1 = $K1)")
     contexts.getOrElseUpdate(core, {
       /** If we create the context, then it is not a root context so the Index is a standard ContextClauseIndex */
       val contextIndex = new ContextClauseIndex
-      val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      val createNewContext: Callable[ContextRunnable] = buildContext(Set[Int](), core, rootContext = false, contextIndex, ordering, hornPhaseActive)
       println("Starting new context", activeCount.get())
       contextRoundStarted()
       println("Started", activeCount.get())
-      contextExecutor.execute(newContext)
-      edge
+      val context: ContextRunnable = contextExecutor.submit(createNewContext).get
+      executor2.execute(context.saturateAndPush())
+      context
     })
   }
   /** Given a constant, retrieve or create the nominal context corresponding to that constant. If it is created,
     * the initialisation round is started.*/
-  protected[context] def getNominalContext(individual: Constant) : LinkedTransferQueue[InterContextMessage] = synchronized {
+  protected[context] def getNominalContext(individual: Constant) : ContextRunnable = synchronized {
     implicit val theOntology = ontology
     val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI.nominalConcept(individual.toString),CentralVariable))
     contexts.getOrElseUpdate(core, {
       // System.out.println("NOMINAL NODE CREATED for core " + core + " !!")
       /** Since each nominal context is a root context, we introduce a root context index */
       val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI.nominalConcept(individual.toString)))
-      val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since nominal contexts have no query, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Runnable = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
+      val createNewContext: Callable[ContextRunnable] = buildContext(Set[Int](), core, rootContext = true, contextIndex, ordering, hornPhaseActive)
       contextRoundStarted()
-      contextExecutor.execute(newContext)
-      edge
+      val context: ContextRunnable = contextExecutor.submit(createNewContext).get
+      executor2.execute(context.saturateAndPush())
+      context
     })
   }
   protected[context] def getContextsWithNominal(individual: Constant): Iterable[ImmutableSet[Predicate]] = synchronized {
@@ -263,11 +263,14 @@ final class ContextStructureManager(ontology: DLOntology,
       contexts.put(core, {
         /** Creates the context index, which is a special case since these contexts are query contexts. */
         val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
-        val edge = new LinkedTransferQueue[InterContextMessage]()
-        val newContext: Runnable = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
+        val newContext: Callable[ContextRunnable] = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex,
           ContextLiteralOrdering(), hornPhaseActive)
-        contextExecutor.execute(newContext)
-        edge
+        println("building context")
+        val context = contextExecutor.submit(newContext).get
+        println("built now saturate")
+        executor2.execute(context.saturateAndPush())
+        println("saturated")
+        context
       })
     }
   }

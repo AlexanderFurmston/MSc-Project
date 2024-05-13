@@ -80,11 +80,11 @@ class NominalContextState(override val queryConcepts: Set[Int],
 
   /** PREDECESSOR OPERATIONS */  //--------------------------------------------------------------------------
 
-  val constantPredecessors = mutable.HashSet[LinkedTransferQueue[InterContextMessage]]()
-  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, LinkedTransferQueue[InterContextMessage]]
-  def getRootPredecessor(p: Predicate): Option[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.get(p)
-  def getAllRootPredecessors(): Iterable[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.values
-  def addRootPredecessor(incomingEdge: LinkedTransferQueue[InterContextMessage], edgeLabel: Predicate): Unit = {
+  val constantPredecessors = mutable.HashSet[ContextRunnable]()
+  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, ContextRunnable]
+  def getRootPredecessor(p: Predicate): Option[ContextRunnable] = rootPredecessors.get(p)
+  def getAllRootPredecessors(): Iterable[ContextRunnable] = rootPredecessors.values
+  def addRootPredecessor(incomingEdge: ContextRunnable, edgeLabel: Predicate): Unit = {
     rootPredecessors.getOrElseUpdate(edgeLabel, incomingEdge)
   }
 

@@ -156,7 +156,7 @@ object Context {
 
  @inline def saturateAndPush(state: ContextState, ontology: DLOntology, isEqualityReasoningEnabled: Boolean,
                              order: ContextLiteralOrdering, contextStructureManager: ContextStructureManager,
-                             incoming: LinkedTransferQueue[InterContextMessage], hornPhase: Boolean )  {
+                             incoming: ContextRunnable, hornPhase: Boolean )  {
     rulesToSaturation(state, ontology, isEqualityReasoningEnabled, order, hornPhase = hornPhase)
     // if (ontology.havocTriggered) contextStructureManager.interrupt
     /** Push certain ground clauses to all relevant contexts */

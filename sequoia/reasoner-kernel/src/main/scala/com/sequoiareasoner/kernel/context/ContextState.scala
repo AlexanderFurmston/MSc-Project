@@ -145,22 +145,22 @@ class ContextState(val queryConcepts: Set[Int],
   /** SUCCESSOR OPERATIONS */  //--------------------------------------------------------------------------
 
   /** This stores the successors of the context: for each function symbol f, we can get the edge channel to the corresponding successor." */
-  private[this] val successors = new mutable.LongMap[LinkedTransferQueue[InterContextMessage]]
-  private[this] val nominalCollapseSuccessors = new mutable.LongMap[LinkedTransferQueue[InterContextMessage]]
+  private[this] val successors = new mutable.LongMap[ContextRunnable]
+  private[this] val nominalCollapseSuccessors = new mutable.LongMap[ContextRunnable]
   /** Gets a successor corresponding to a given function term, creating it if required. Needs a function that specifies how
     * to create this new successor when required. */
-  def getSuccessorOrElseUpdate(t: Term, default: => LinkedTransferQueue[InterContextMessage]): LinkedTransferQueue[InterContextMessage] = t match {
+  def getSuccessorOrElseUpdate(t: Term, default: => ContextRunnable): ContextRunnable = t match {
     case FunctionalTerm(f) => successors.getOrElseUpdate(f, default)
     case OriginalIndividual(o) => nominalCollapseSuccessors.getOrElseUpdate(o,default)
     case o: ArtificialIndividual => nominalCollapseSuccessors.getOrElseUpdate(o.id,default)
     case _ => throw new IllegalArgumentException(s"Term $t is neither a functional term nor a constant.")
   }
   /** Gets all successors. */
-  def getSuccessors: Vector[LinkedTransferQueue[InterContextMessage]] =
+  def getSuccessors: Vector[ContextRunnable] =
      successors.values.toVector
   /** Get nominal successors of a root context where the root context may collapse into that nominal i.e. successor via
     * rule Coll */
-  def getNominalCollapseSuccessors: Vector[LinkedTransferQueue[InterContextMessage]] =
+  def getNominalCollapseSuccessors: Vector[ContextRunnable] =
     nominalCollapseSuccessors.values.toVector
 
 
@@ -199,14 +199,14 @@ class ContextState(val queryConcepts: Set[Int],
 //  def getRootPredecessor(p: Predicate): Option[UnboundedChannel[InterContextMessage]] = rootPredecessors.get(p)
 //  def getAllRootPredecessors(): Iterable[UnboundedChannel[InterContextMessage]] = rootPredecessors.values
  /** A list of predecessor context, together with the predicates that may be relevant for the Pred rule */
-  private[this] val predecessors = new mutable.AnyRefMap[(LinkedTransferQueue[InterContextMessage], Term), mutable.Set[Predicate]]
+  private[this] val predecessors = new mutable.AnyRefMap[(ContextRunnable, Term), mutable.Set[Predicate]]
 //  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, UnboundedChannel[InterContextMessage]]
   /** Method for obtaining all incoming edge labels */
-  def predecessorsGetAllEdgeLabels(targetEdge: LinkedTransferQueue[InterContextMessage]): Iterable[Term] = {
+  def predecessorsGetAllEdgeLabels(targetEdge: ContextRunnable): Iterable[Term] = {
     for { (edge, label) <- predecessors.keys if edge == targetEdge } yield label
   }
   /** Method for obtaining all predecessor contexts that have clauses with maximal predicates for all the predicates in the body of the given clause*/
-  def getRelevantContextStructurePredecessors(body: Array[Predicate]): Iterable[(LinkedTransferQueue[InterContextMessage], Term)] = {
+  def getRelevantContextStructurePredecessors(body: Array[Predicate]): Iterable[(ContextRunnable, Term)] = {
 /// Here if we use collect, scala chooses the wrong collect, and it messes everything up like uncle Tom on Thanksgiving dinner, so we need to use filter instead
    predecessors.keys.filter {
      case (context, term) if body.forall {
@@ -226,7 +226,7 @@ class ContextState(val queryConcepts: Set[Int],
   }
 
   /** Updates _predecessors_ with a new predicate in a (new or existing) predecessor */
-  def addContextStructurePredecessor(incomingEdge: LinkedTransferQueue[InterContextMessage], edgeLabel: Term,
+  def addContextStructurePredecessor(incomingEdge: ContextRunnable, edgeLabel: Term,
                                      p: Predicate, receivedCore: ImmutableSet[Predicate] = ImmutableSet.empty ): Boolean = {
     /** Sanity check */
     edgeLabel match {
