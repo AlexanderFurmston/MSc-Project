@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Sequoia-OWL-API-fat-jar1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/sequoia/reasoner-owl-api/target/scala-2.12/Sequoia-OWL-API-fat-jar.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

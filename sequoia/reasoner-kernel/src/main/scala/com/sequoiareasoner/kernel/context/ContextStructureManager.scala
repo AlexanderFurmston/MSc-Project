@@ -31,6 +31,10 @@ import com.sequoiareasoner.kernel.owl.model.{NamedIndividual, OWLClass}
 import com.sequoiareasoner.kernel.structural.DLOntology
 import com.sequoiareasoner.kernel.taxonomy.Taxonomy
 import io.cso._
+import zio.Runtime
+import zio.Unsafe
+import zio.Task
+import zio.ZIO
 import org.semanticweb.owlapi.model.OWLNamedIndividual
 
 import scala.collection.mutable
@@ -154,7 +158,7 @@ final class ContextStructureManager(ontology: DLOntology,
                                  workedOffClauseIndex: ContextClauseIndex,
                                  edge: UnboundedChannel[InterContextMessage],
                                  ordering: ContextLiteralOrdering,
-                                 hornPhaseActive: Boolean): Proc = {
+                                 hornPhaseActive: Boolean): Task[Unit] = {
    // Ignore this parameter for the moment. Require(ordering.verifyQuery(queryConcepts))
     val state = if (core.toSeq.head.iri.isInternalIndividual) {
       new NominalContextState(queryConcepts, core, rootContext, workedOffClauseIndex,
@@ -179,9 +183,9 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = UnboundedChannel[InterContextMessage]()
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Proc = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Task[Unit] = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
       contextRoundStarted()
-      fork(newContext)
+      newContext.fork
       edge
     })
   }
@@ -197,9 +201,9 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = UnboundedChannel[InterContextMessage]()
       /** Since nominal contexts have no query, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Proc = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Task[Unit] = buildContext(Set[Int](), core, rootContext = true, contextIndex, edge, ordering, hornPhaseActive)
       contextRoundStarted()
-      fork(newContext)
+      newContext.fork
       edge
     })
   }
@@ -234,8 +238,9 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** -------------------- Saturation of the Context Structure (ON CREATION) ------------------- */
 
-
-  synchronized {
+  val runtime = Runtime.default
+  // synchronized {
+  def f = {
     beginTime = System.currentTimeMillis
     /** This process creates a context for each relevant concept, and initialises such concepts) */
     implicit val theOntology = ontology
@@ -245,14 +250,18 @@ final class ContextStructureManager(ontology: DLOntology,
         /** Creates the context index, which is a special case since these contexts are query contexts. */
         val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
         val edge = UnboundedChannel[InterContextMessage]()
-        val newContext: Proc = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
+        val newContext: Task[Unit] = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex, edge,
           ContextLiteralOrdering(), hornPhaseActive)
-        fork(newContext)
+        newContext.fork
         edge
       })
     }
+    waitForSaturation
   }
-   waitForSaturation
+  // }
+  Unsafe.unsafe { implicit unsafe => 
+    runtime.unsafe.run(ZIO.attempt(f)).getOrThrowFiberFailure()
+  }
 }
 
 

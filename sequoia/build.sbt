@@ -98,6 +98,7 @@ lazy val commonSettings = repeatCommandSettings ++ Seq(
   javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint:all"),
   //libraryDependencies += "com.typesafe" % "config" % "1.0.0",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test",
+  libraryDependencies += "dev.zio" %% "zio" % "2.0.0",
   // Useful test options:
   // D  Print the duration that a test takes to execute
   // F  Do not truncate stack traces in failed tests
