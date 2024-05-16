@@ -30,10 +30,12 @@ import com.sequoiareasoner.kernel.taxonomy.Taxonomy
 import org.semanticweb.owlapi.model.OWLNamedIndividual
 
 import scala.collection.mutable
+import scala.collection.JavaConverters._
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.LinkedTransferQueue
 import java.util.concurrent.ForkJoinPool
+import java.util.concurrent.Executors
 import java.util.concurrent.Callable
 
 /** Class that manages the context structure, including the introducing of new contexts according to a supplied strategy
@@ -64,10 +66,10 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
   private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], ContextRunnable]
-  private[this] val contextExecutor = new ForkJoinPool();
+  private[this] val contextExecutor = Executors.newFixedThreadPool(10000);
   private[this] val executor2 = new ForkJoinPool();
   def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = {
-    executor2.execute(() => context.reSaturateUponMessage(message))
+    contextExecutor.execute(() => context.reSaturateUponMessage(message))
   }
 
   /** This map provides, for each nominal context O(x), the set of (other) contexts that mention o */
@@ -133,7 +135,7 @@ final class ContextStructureManager(ontology: DLOntology,
     println("surely we get here")
     synchronized { hornPhaseActive = false }
     println("synced")
-    activeCount.set(contexts.values.size)
+    activeCount.set(contexts.values.size) // todo: !!! removed since contexts do their own contextRoundStarted
     for (context <- getAllContexts) {
       context.reSaturateUponMessage(StartNonHornPhase())
     }
@@ -200,7 +202,7 @@ final class ContextStructureManager(ontology: DLOntology,
       contextRoundStarted()
       println("Started", activeCount.get())
       val context: ContextRunnable = contextExecutor.submit(createNewContext).get
-      executor2.execute(context.saturateAndPush())
+      contextExecutor.execute(context.saturateAndPush())
       context
     })
   }
@@ -218,7 +220,7 @@ final class ContextStructureManager(ontology: DLOntology,
       val createNewContext: Callable[ContextRunnable] = buildContext(Set[Int](), core, rootContext = true, contextIndex, ordering, hornPhaseActive)
       contextRoundStarted()
       val context: ContextRunnable = contextExecutor.submit(createNewContext).get
-      executor2.execute(context.saturateAndPush())
+      contextExecutor.execute(context.saturateAndPush())
       context
     })
   }
@@ -254,26 +256,70 @@ final class ContextStructureManager(ontology: DLOntology,
   /** -------------------- Saturation of the Context Structure (ON CREATION) ------------------- */
 
 
-  synchronized {
+  // synchronized {
     beginTime = System.currentTimeMillis
     /** This process creates a context for each relevant concept, and initialises such concepts) */
     implicit val theOntology = ontology
-    for (concept <- targetConcepts) {
+    // for (concept <- targetConcepts) {
+    //   val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI(concept),CentralVariable))
+    //   contexts.put(core, {
+    //     /** Creates the context index, which is a special case since these contexts are query contexts. */
+    //     val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
+    //     val newContext: Callable[ContextRunnable] = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex,
+    //       ContextLiteralOrdering(), hornPhaseActive)
+    //     println("building context")
+    //     val context = contextExecutor.submit(newContext).get
+    //     // executor2.execute(context.saturateAndPush())
+    //     context
+    //   })
+    // }
+
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+    val contextCreationJobs: Set[Callable[ContextRunnable]] = targetConcepts.map(concept => {
       val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI(concept),CentralVariable))
-      contexts.put(core, {
         /** Creates the context index, which is a special case since these contexts are query contexts. */
         val contextIndex = new RootContextClauseIndex(provedAtomicQueries.addKey(IRI(concept)))
         val newContext: Callable[ContextRunnable] = buildContext(queryConcepts = Set.empty[Int], core, rootContext = true, contextIndex,
           ContextLiteralOrdering(), hornPhaseActive)
         println("building context")
-        val context = contextExecutor.submit(newContext).get
-        println("built now saturate")
-        executor2.execute(context.saturateAndPush())
-        println("saturated")
-        context
-      })
+        newContext
+      }
+    )
+
+    println("activeCount: " + activeCount.get())
+    println("context creation jobs-creation done")
+    scala.io.StdIn.readLine()
+    val cs = contextExecutor.invokeAll(contextCreationJobs.asJava).asScala.map(x => x.get())
+    for (c <- cs) {
+      println("context")
+      println(c)
+      contexts.put(c.state.core, c)
     }
-  }
+
+    println("creation jobs done")
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+    val saturationJobs = cs.map(c => c.saturateAndPush())
+
+    println("saturation jobs-creation done")
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+    saturationJobs.foreach(x => contextExecutor.execute(x))
+
+
+    
+    
+    println("done")
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+    println("afterinput")
+    
+
+
+
+
+  // }
    waitForSaturation
    println("gothere")
 }
