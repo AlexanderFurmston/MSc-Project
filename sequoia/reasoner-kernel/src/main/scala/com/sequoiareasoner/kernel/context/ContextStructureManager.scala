@@ -66,10 +66,11 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
   private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], ContextRunnable]
-  private[this] val contextExecutor = Executors.newFixedThreadPool(10000);
+  private[this] val contextExecutor = Executors.newFixedThreadPool(8);
   private[this] val executor2 = new ForkJoinPool();
-  def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = {
-    contextExecutor.execute(() => context.reSaturateUponMessage(message))
+  def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = { // !!! todo: experiment with sync here
+    val task: java.util.concurrent.Callable[Unit] = () => { context.reSaturateUponMessage(message) }
+    contextExecutor.submit(task)
   }
 
   /** This map provides, for each nominal context O(x), the set of (other) contexts that mention o */
@@ -109,8 +110,8 @@ final class ContextStructureManager(ontology: DLOntology,
   protected[context] def contextRoundStarted(): Unit =  activeCount.incrementAndGet
   protected[context] def contextRoundFinished(): Unit = {
     val count = activeCount.decrementAndGet
-    println("decrementing ac" + count)
-    println("?")
+    // println("decrementing ac" + count)
+    // println("?")
     if (count == 0) println("!!")
     if (count < 0) {
       println("ruhroh")
@@ -202,7 +203,7 @@ final class ContextStructureManager(ontology: DLOntology,
       contextRoundStarted()
       println("Started", activeCount.get())
       val context: ContextRunnable = contextExecutor.submit(createNewContext).get
-      contextExecutor.execute(context.saturateAndPush())
+      contextExecutor.submit(context.saturateAndPush())
       context
     })
   }
@@ -220,7 +221,7 @@ final class ContextStructureManager(ontology: DLOntology,
       val createNewContext: Callable[ContextRunnable] = buildContext(Set[Int](), core, rootContext = true, contextIndex, ordering, hornPhaseActive)
       contextRoundStarted()
       val context: ContextRunnable = contextExecutor.submit(createNewContext).get
-      contextExecutor.execute(context.saturateAndPush())
+      contextExecutor.submit(context.saturateAndPush())
       context
     })
   }
@@ -276,6 +277,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
     println("activeCount: " + activeCount.get())
     scala.io.StdIn.readLine()
+
     val contextCreationJobs: Set[Callable[ContextRunnable]] = targetConcepts.map(concept => {
       val core: ImmutableSet[Predicate] = ImmutableSet(Concept(IRI(concept),CentralVariable))
         /** Creates the context index, which is a special case since these contexts are query contexts. */
@@ -286,33 +288,48 @@ final class ContextStructureManager(ontology: DLOntology,
         newContext
       }
     )
-
     println("activeCount: " + activeCount.get())
     println("context creation jobs-creation done")
     scala.io.StdIn.readLine()
+    
     val cs = contextExecutor.invokeAll(contextCreationJobs.asJava).asScala.map(x => x.get())
-    for (c <- cs) {
-      println("context")
-      println(c)
-      contexts.put(c.state.core, c)
-    }
-
+    for (c <- cs) contexts.put(c.state.core, c)
     println("creation jobs done")
     println("activeCount: " + activeCount.get())
     scala.io.StdIn.readLine()
-    val saturationJobs = cs.map(c => c.saturateAndPush())
 
+    val saturationJobs = cs.map(c => c.saturateAndPush())
     println("saturation jobs-creation done")
     println("activeCount: " + activeCount.get())
     scala.io.StdIn.readLine()
-    saturationJobs.foreach(x => contextExecutor.execute(x))
 
-
-    
-    
-    println("done")
+    contextExecutor.invokeAll(saturationJobs.asJava).asScala.map(x => x.get())
+    // contextExecutor.shutdown() // await termination of saturation tasks !!! todo: check if need this
+    println("saturation jobs done")
     println("activeCount: " + activeCount.get())
     scala.io.StdIn.readLine()
+
+    hornPhaseActive = false
+    val nonHornTasks = getAllContexts.toList.map(c =>
+      (() => c.reSaturateUponMessage(StartNonHornPhase())): java.util.concurrent.Callable[Unit]
+    )
+    println("non horn jobs-creation done")
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+
+    try { 
+      contextExecutor.invokeAll(nonHornTasks.asJava).asScala.map(x => x.get())
+    } catch {
+      case e: org.semanticweb.owlapi.reasoner.ReasonerInterruptedException => println("Exception in non horn phase: " + e)
+    }
+    println("non horn jobs done")
+    println("activeCount: " + activeCount.get())
+    scala.io.StdIn.readLine()
+
+
+
+
+
     println("afterinput")
     
 
@@ -320,7 +337,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
 
   // }
-   waitForSaturation
+  //  waitForSaturation
    println("gothere")
 }
 

@@ -12,6 +12,8 @@ import com.sequoiareasoner.kernel.context.RuleSaturator._
 import com.sequoiareasoner.kernel.context.ClausePusher._
 import com.sequoiareasoner.kernel.context.inferenceRule._
 
+import java.util.concurrent.Callable
+
 class ContextRunnable(
     val state: ContextState,
     val ontology: DLOntology,
@@ -54,7 +56,7 @@ class ContextRunnable(
 
     println("ContextRunnable creation finished")
 
-    def saturateAndPush(): Runnable = () => {
+    def saturateAndPush(): Callable[Unit] = () => {
       /** Step 3: perform all remaining inferences */
       Context.saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, this, state.hornPhaseActive)
 
