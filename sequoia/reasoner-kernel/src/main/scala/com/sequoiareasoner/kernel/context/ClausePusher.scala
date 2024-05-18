@@ -116,7 +116,6 @@ object ClausePusher {
           contextStructureManager.getSuccessor(K1)
         })
       // TODO: Undo the addition of the core to the SuccPush message
-      println("127 activeCOunt" + contextStructureManager.activeCount.get + "\n\n") // !!! todo: remove printdebugging
       contextStructureManager.messageContext(edge, SuccPush(contextChannel, t, pSigma, state.core))
     }
   }
@@ -156,7 +155,6 @@ object ClausePusher {
         state.getSuccessorOrElseUpdate(v, {
           contextStructureManager.getNominalContext(v)
         })
-      println("170 activeCOunt" + contextStructureManager.activeCount.get + "\n\n") // !!! todo: remove printdebugging
       contextStructureManager.messageContext(edge, SuccPush(contextChannel, v, pSigma, state.core))
       nominals._2.foreach(x => {
         val sigma = new ForwardsInterContextMapping(x,comesFromNominalCore)
@@ -167,7 +165,6 @@ object ClausePusher {
           state.getSuccessorOrElseUpdate(x, {
             contextStructureManager.getNominalContext(x)
           })
-        println("184 activeCOunt" + contextStructureManager.activeCount.get + "\n\n") // !!! todo: remove printdebugging
         contextStructureManager.messageContext(edge, SuccPush(contextChannel, x, pSigma, state.core))
       })
       /**THIS SHOULD probably be a push of its own */
