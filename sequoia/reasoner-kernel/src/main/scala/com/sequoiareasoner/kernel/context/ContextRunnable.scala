@@ -20,10 +20,6 @@ class ContextRunnable(
     val isEqualityReasoningEnabled: Boolean,
     val order: ContextLiteralOrdering,
     val contextStructureManager: ContextStructureManager) {
-
-    /** Do contextRoundStarted here so we don't need to do it in lots of other places */
-    // contextStructureManager.contextRoundStarted()
-
     /** Step 1: apply the Core rule */
     if (state.core.exists( p => ontology.isNothing(p) )) {
       state.processCandidateConclusion(ContextClause(ArrayBuilders.emptyPredicateArray, ArrayBuilders.emptyLiteralArray)(order), inferenceRule.Core)
@@ -55,16 +51,11 @@ class ContextRunnable(
     def saturateAndPush(): Callable[Unit] = () => {
       /** Step 3: perform all remaining inferences */
       Context.saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, this, state.hornPhaseActive)
-
-      /** Step 4: mark the context as in sleeping mode */
-      contextStructureManager.contextRoundFinished()
     }
 
 
-    /** Step 5: Separated into a separate method - receive a message and start a new saturation round */
+    /** Step 4: Separated into a separate method - receive a message and start a new saturation round */
     def reSaturateUponMessage(message: InterContextMessage): Unit = this.synchronized {
-      contextStructureManager.contextRoundStarted()
-
       message match {
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
@@ -233,7 +224,6 @@ class ContextRunnable(
           state match {
             case nomState: NominalContextState => {
               nomState.constantPredecessors.add(originContext)
-              /** Next line includes the contextRoundStarted */
               pushWorkedOffCertainGroundClauses(nomState,contextStructureManager,originContext,ontology)
             }
             case _ =>
@@ -250,14 +240,11 @@ class ContextRunnable(
             case nomState: NominalContextState if nomState.getCoreConstant.id == coreConstant.id =>
             case _ => {
               if (state.addConstantToMentionedConstantSet(coreConstant)) {
-                contextStructureManager.contextRoundStarted()
                 contextStructureManager.messageContext(originContext, ConstantMentionedPush(this))
               }
             }
           }
         }
       }
-
-      contextStructureManager.contextRoundFinished()
     }
 }
