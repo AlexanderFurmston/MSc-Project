@@ -24,8 +24,6 @@ class ContextRunnable(
     /** Do contextRoundStarted here so we don't need to do it in lots of other places */
     // contextStructureManager.contextRoundStarted()
 
-    println("ContextRunnable creation")
-
     /** Step 1: apply the Core rule */
     if (state.core.exists( p => ontology.isNothing(p) )) {
       state.processCandidateConclusion(ContextClause(ArrayBuilders.emptyPredicateArray, ArrayBuilders.emptyLiteralArray)(order), inferenceRule.Core)
@@ -54,8 +52,6 @@ class ContextRunnable(
       }
     }
 
-    println("ContextRunnable creation finished")
-
     def saturateAndPush(): Callable[Unit] = () => {
       /** Step 3: perform all remaining inferences */
       Context.saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, this, state.hornPhaseActive)
@@ -66,7 +62,7 @@ class ContextRunnable(
 
 
     /** Step 5: Separated into a separate method - receive a message and start a new saturation round */
-    def reSaturateUponMessage(message: InterContextMessage): Unit = {
+    def reSaturateUponMessage(message: InterContextMessage): Unit = this.synchronized {
       contextStructureManager.contextRoundStarted()
 
       message match {
