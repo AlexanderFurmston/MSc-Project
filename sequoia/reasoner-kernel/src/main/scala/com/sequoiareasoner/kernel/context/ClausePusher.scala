@@ -4,7 +4,6 @@ import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index.{ImmutableSet, IndexedSequence}
 import com.sequoiareasoner.kernel.owl.iri.IRI
 import com.sequoiareasoner.kernel.structural.DLOntology
-import java.util.concurrent.LinkedTransferQueue
 
 import scala.collection.mutable
 

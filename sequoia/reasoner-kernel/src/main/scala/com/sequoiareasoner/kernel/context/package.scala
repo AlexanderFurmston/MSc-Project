@@ -22,7 +22,6 @@ package com.sequoiareasoner.kernel
 
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index.{ImmutableSet, IndexedSequence}
-import java.util.concurrent.LinkedTransferQueue
 
 /** Package containing relevant methods for the entire package context. */
 package object context {

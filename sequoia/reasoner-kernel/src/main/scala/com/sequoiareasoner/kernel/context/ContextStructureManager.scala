@@ -31,11 +31,7 @@ import org.semanticweb.owlapi.model.OWLNamedIndividual
 
 import scala.collection.mutable
 import scala.collection.JavaConverters._
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.atomic.AtomicInteger
-import java.util.concurrent.LinkedTransferQueue
 import java.util.concurrent.ForkJoinPool
-import java.util.concurrent.Executors
 import java.util.concurrent.Callable
 
 /** Class that manages the context structure, including the introducing of new contexts according to a supplied strategy
@@ -66,7 +62,7 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
   private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], ContextRunnable]
-  private[this] val contextExecutor = new ForkJoinPool() //Executors.newFixedThreadPool(8);
+  private[this] val contextExecutor = new ForkJoinPool() // Defaults to number of processors -1
   def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = {
     val task: java.util.concurrent.Callable[Unit] = () => { context.reSaturateUponMessage(message) }
     contextExecutor.submit(task)
@@ -99,9 +95,7 @@ final class ContextStructureManager(ontology: DLOntology,
   
   /** Stop ASAP the construction of the context structure */
   def interrupt(): Unit = synchronized {
-    if (ontology.havocTriggered) {
-      contextExecutor.shutdownNow()
-    }
+    if (ontology.havocTriggered) contextExecutor.shutdownNow()
   }
 
 
@@ -231,10 +225,10 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** Non-Horn phase */
   hornPhaseActive = false
-  val nonHornTasks = getAllContexts.toList.map(c =>
+  val nonHornJobs = getAllContexts.toList.map(c =>
     (() => c.reSaturateUponMessage(StartNonHornPhase())): java.util.concurrent.Callable[Unit]
   )
-  contextExecutor.invokeAll(nonHornTasks.asJava)
+  contextExecutor.invokeAll(nonHornJobs.asJava)
   while (!contextExecutor.isQuiescent() || contextExecutor.getActiveThreadCount() > 0) {}
   println("non horn jobs done")
 

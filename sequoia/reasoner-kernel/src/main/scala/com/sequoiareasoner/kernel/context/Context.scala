@@ -27,7 +27,6 @@ import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.logging.DerivationObserver
 import com.sequoiareasoner.kernel.owl.iri.IRI
 
-import java.util.concurrent.LinkedTransferQueue
 import scala.language.postfixOps
 import com.sequoiareasoner.kernel.context.RuleSaturator._
 import com.sequoiareasoner.kernel.context.ClausePusher._

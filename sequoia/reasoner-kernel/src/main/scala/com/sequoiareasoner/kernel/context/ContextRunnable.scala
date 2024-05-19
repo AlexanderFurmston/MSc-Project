@@ -48,8 +48,8 @@ class ContextRunnable(
       }
     }
 
+    /** Step 3: perform all remaining inferences */
     def saturateAndPush(): Callable[Unit] = () => {
-      /** Step 3: perform all remaining inferences */
       Context.saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, this, state.hornPhaseActive)
     }
 
