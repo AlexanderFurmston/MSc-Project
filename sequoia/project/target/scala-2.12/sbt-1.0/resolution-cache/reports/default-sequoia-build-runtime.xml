@@ -9,7 +9,7 @@
 		extra-sbtVersion="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20240516215827"/>
+		date="20240530215021"/>
 	<dependencies>
 		<module organisation="de.heikoseeberger" name="sbt-header">
 			<revision name="4.0.0" status="release" pubdate="20171116190505" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="92">

@@ -48,6 +48,8 @@ class ContextRunnable(
       }
     }
 
+    var active = false
+
     /** Step 3: perform all remaining inferences */
     def saturateAndPush(): Callable[Unit] = () => {
       Context.saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, this, state.hornPhaseActive)
@@ -55,7 +57,14 @@ class ContextRunnable(
 
 
     /** Step 4: Separated into a separate method - receive a message and start a new saturation round */
-    def reSaturateUponMessage(message: InterContextMessage): Unit = this.synchronized {
+    def reSaturateUponMessage(message: InterContextMessage): Unit = {
+      active.synchronized {
+        if (active) {
+          contextStructureManager.messageContext(this, message)
+          return
+        }
+        else active = true
+      }
       message match {
         case StartNonHornPhase() => {
           /** When the Horn Phase optimisation is activated, this message reactivates contexts and kickstarts the non-Horn phase */
@@ -106,7 +115,7 @@ class ContextRunnable(
               * propagating workedOffClauses. HOWEVER, if A -> A has been added, this is a guarantee that A IS NOT PART OF THE CORE,
               * AND THERE WAS NO CLAUSE WITH A IN THE BODY BEFORE, because any A in the body appears only via A -> A. This
               * ensures that propagating workedofff clauses at this point would be irrelevant, because none of them would match the required
-              * condition.
+             * condition.
               *
               * Incidentally, this is what Andrew said: Push the worked off pred clauses first before
               * pushPredClausesDerivedInLastRound to avoid repetition.
@@ -246,5 +255,6 @@ class ContextRunnable(
           }
         }
       }
+      active = false
     }
 }
