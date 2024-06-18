@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Sequoia-OWL-API-fat-jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/Sequoia-OWL-API-fat-jar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

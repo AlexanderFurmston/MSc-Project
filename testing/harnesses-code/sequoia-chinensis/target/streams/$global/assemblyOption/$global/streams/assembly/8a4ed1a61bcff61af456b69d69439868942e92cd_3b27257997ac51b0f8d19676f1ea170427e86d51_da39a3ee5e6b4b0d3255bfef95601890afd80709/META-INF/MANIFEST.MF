@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sameb
+Build-Jdk: 1.8.0-google-v7
+Bundle-ManifestVersion: 2
+Export-Package: com.google.inject.multibindings;version="1.4"
+Import-Package: com.google.common.base;version="19.0",com.google.commo
+ n.collect;version="19.0",com.google.common.primitives;version="19.0",
+ javax.inject
+Bundle-Version: 4.1.0
+Bundle-SymbolicName: com.google.inject.multibindings
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-DocURL: https://github.com/google/guice
+Fragment-Host: com.google.inject
+Bundle-Description: Guice is a lightweight dependency injection framew
+ ork for Java 6 and above
+Bundle-Copyright: Copyright (C) 2006 Google Inc.
+Bundle-Vendor: Google, Inc.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Name: guice-multibindings
+

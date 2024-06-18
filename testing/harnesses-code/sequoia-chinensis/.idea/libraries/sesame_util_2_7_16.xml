@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sesame-util-2.7.16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/sesame-util-2.7.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

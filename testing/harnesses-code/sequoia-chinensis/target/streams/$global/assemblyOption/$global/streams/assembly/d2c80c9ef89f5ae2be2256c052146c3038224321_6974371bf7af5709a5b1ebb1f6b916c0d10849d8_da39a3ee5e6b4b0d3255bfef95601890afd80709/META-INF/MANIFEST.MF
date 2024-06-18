@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Sequoia OWL API Bindings
+Implementation-Version: 0.6.1-alpha
+Specification-Vendor: com.sequoiareasoner
+Specification-Title: Sequoia OWL API Bindings
+Implementation-Vendor-Id: com.sequoiareasoner
+Specification-Version: 0.6.1-alpha
+Implementation-Vendor: com.sequoiareasoner
+

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-Description: JSON-LD Java integration module for Sesame
+Bundle-License: https://raw.github.com/jsonld-java/jsonld-java/master/
+ LICENCE
+Bundle-SymbolicName: com.github.jsonld-java.sesame
+Built-By: peter
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1415930434891
+Import-Package: com.fasterxml.jackson.core;version="2.3",com.fasterxml
+ .jackson.databind;version="2.3",com.github.jsonldjava.core,com.github
+ .jsonldjava.sesame,com.github.jsonldjava.utils,org.openrdf.model,org.
+ openrdf.model.impl,org.openrdf.model.vocabulary,org.openrdf.rio,org.o
+ penrdf.rio.helpers
+Tool: Bnd-0.0.357
+Export-Package: com.github.jsonldjava.sesame;uses:="com.github.jsonldj
+ ava.utils,org.openrdf.model,com.fasterxml.jackson.core,com.github.jso
+ nldjava.core,org.openrdf.rio.helpers,org.openrdf.rio,com.fasterxml.ja
+ ckson.databind,org.openrdf.model.impl,org.openrdf.model.vocabulary"
+Bundle-Version: 0.5.1
+Bundle-Name: JSONLD Java :: Sesame Integration
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_25
+

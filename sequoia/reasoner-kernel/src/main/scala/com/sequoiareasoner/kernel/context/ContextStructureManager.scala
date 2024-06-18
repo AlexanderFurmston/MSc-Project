@@ -62,10 +62,11 @@ final class ContextStructureManager(ontology: DLOntology,
 
   /** This map provides, for each set of predicates, a channel to the context that has that set as its core */
   private[this] val contexts = new mutable.AnyRefMap[ImmutableSet[Predicate], ContextRunnable]
-  private[this] val contextExecutor = new ForkJoinPool(Runtime.getRuntime().availableProcessors(), java.util.concurrent.ForkJoinPool.defaultForkJoinWorkerThreadFactory, null, true) // Defaults to number of processors -1
+  // private[this] val contextExecutor = new ForkJoinPool() // Defaults to number of processors -1
+  private[this] val contextExecutor = new ActorExecutionService()
   def messageContext(context: ContextRunnable, message: InterContextMessage): Unit = {
-    val task: java.util.concurrent.Callable[Unit] = () => { context.reSaturateUponMessage(message) }
-    contextExecutor.submit(task)
+    val task: Runnable = () => { context.reSaturateUponMessage(message) }
+    contextExecutor.executeWithPartition(task, context.state.core.toString)
   }
 
   /** This map provides, for each nominal context O(x), the set of (other) contexts that mention o */
