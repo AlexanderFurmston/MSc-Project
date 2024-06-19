@@ -169,7 +169,7 @@ final class ContextStructureManager(ontology: DLOntology,
                                  workedOffClauseIndex: ContextClauseIndex,
                                  edge: LinkedTransferQueue[InterContextMessage],
                                  ordering: ContextLiteralOrdering,
-                                 hornPhaseActive: Boolean): Thread = {
+                                 hornPhaseActive: Boolean): Context = {
    // Ignore this parameter for the moment. Require(ordering.verifyQuery(queryConcepts))
     val state = if (core.toSeq.head.iri.isInternalIndividual) {
       new NominalContextState(queryConcepts, core, rootContext, workedOffClauseIndex,
@@ -178,7 +178,7 @@ final class ContextStructureManager(ontology: DLOntology,
       new ContextState(queryConcepts, core, rootContext, workedOffClauseIndex, new NeighborPredClauseIndex,
         equalityOptimization, redundancyIndex, hornPhaseActive, ordering, ontology, contextStructureManager = this)
     }
-    Context.makeContext(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this, edge)
+    Context(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this, edge)
   }
 
   def getAllContexts = synchronized { contexts.values }
@@ -194,7 +194,7 @@ final class ContextStructureManager(ontology: DLOntology,
       val edge = new LinkedTransferQueue[InterContextMessage]()
       /** Since this is not a root context, the query is empty */
       val ordering = ContextLiteralOrdering(Set[Int]())
-      val newContext: Thread = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
+      val newContext: Context = buildContext(Set[Int](), core, rootContext = false, contextIndex, edge, ordering, hornPhaseActive)
       println("Starting new context", activeCount.get())
       contextRoundStarted()
       println("Started", activeCount.get())

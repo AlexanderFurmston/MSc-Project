@@ -161,3 +161,55 @@ Caused by: java.nio.file.NoSuchFileException: /home/pigeon/Downloads/msc/MSc-Pro
 2024.06.19 17:43:15 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
 2024.06.19 17:43:17 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.78s
 2024.06.19 17:43:17 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:43:19 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.85s
+2024.06.19 17:44:07 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:44:09 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.26s
+2024.06.19 17:48:26 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:48:29 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.04s
+2024.06.19 17:54:36 WARN  Using indexes to guess the definition of Thread
+Jun 19, 2024 5:55:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 331
+2024.06.19 17:55:26 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:55:28 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.07s
+2024.06.19 17:57:20 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:57:22 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.21s
+Jun 19, 2024 5:58:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 704
+2024.06.19 17:58:36 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 17:58:38 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.2s
+2024.06.19 17:59:52 WARN  Using indexes to guess the definition of ContextState
+2024.06.19 17:59:54 WARN  Using indexes to guess the definition of ContextState
+2024.06.19 17:59:55 WARN  Using indexes to guess the definition of ContextState
+2024.06.19 18:10:32 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 18:10:34 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.16s
+2024.06.19 18:10:52 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 18:10:53 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.69s
+2024.06.19 18:12:35 WARN  Using indexes to guess the definition of InterContextMessage
+2024.06.19 18:12:38 WARN  Using indexes to guess the definition of InterContextMessage
+2024.06.19 18:13:01 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 18:13:04 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.36s
+2024.06.19 18:13:14 INFO  compiling reasoner-kernel_f4dd477a3a (67 scala sources)
+2024.06.19 18:13:16 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.76s
+2024.06.19 18:13:44 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:13:46 INFO  time: indexed workspace in 2.46s
+2024.06.19 18:13:46 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.46s
+2024.06.19 18:13:46 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:13:51 INFO  time: compiled reasoner-kernel_f4dd477a3a in 4.28s
+2024.06.19 18:14:51 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:14:53 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.25s
+2024.06.19 18:20:05 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:20:07 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.24s
+2024.06.19 18:20:50 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:20:52 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.07s
+2024.06.19 18:22:24 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:22:26 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.18s
+2024.06.19 18:23:02 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+Jun 19, 2024 6:23:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1658
+2024.06.19 18:23:04 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.23s
+2024.06.19 18:23:04 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:23:06 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.91s
+2024.06.19 18:23:12 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:23:13 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.79s
+2024.06.19 18:32:14 INFO  compiling reasoner-kernel_f4dd477a3a (69 scala sources)
+2024.06.19 18:32:17 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.12s

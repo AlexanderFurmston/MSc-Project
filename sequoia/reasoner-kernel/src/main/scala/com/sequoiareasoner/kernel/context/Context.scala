@@ -33,11 +33,22 @@ import com.sequoiareasoner.kernel.context.RuleSaturator._
 import com.sequoiareasoner.kernel.context.ClausePusher._
 import com.sequoiareasoner.kernel.context.inferenceRule._
 
+import akka.actor.ActorRef
+import akka.actor.ActorSystem
+import akka.actor.Props
+import akka.actor.UntypedActor
+
 /** Class implementing saturation for a context.
   *
   * @author Andrew Bate <code@andrewbate.com>
   */
-object Context {
+class Context(
+  state: ContextState,
+  ontology: DLOntology,
+  isEqualityReasoningEnabled: Boolean,
+  order: ContextLiteralOrdering,
+  contextStructureManager: ContextStructureManager,
+  incoming: LinkedTransferQueue[InterContextMessage]) extends UntypedActor {
 
   private[this] def processResultsBuffer(state: ContextState, inferenceRuleType: InferenceRule): Unit = {
     while (state.resultsBuffer.nonEmpty) {
@@ -181,28 +192,16 @@ object Context {
 
   /** --------------------------------------------- CONTEXT CREATOR -------------------------------------*/
 
-  /** Builds a context (as a procedure) based on a context state, an ontology, an order, the context structure manager,
-    * and an incoming edge. This context is an independent process, that listens to other processes, and when it
-    * receives an update, it saturated.*/
+    //    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
+    //    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
+    //      state.processCandidateInference(clause,inferenceRule.Hyper)
+    //    }
 
-  // TODO: Optimisation: If derive Horn clause containing t1 == t2 in head and t1 > t2, then rewrite every t1 to t2 immediately.
-  def makeContext(state: ContextState,
-              ontology: DLOntology,
-              isEqualityReasoningEnabled: Boolean,
-              order: ContextLiteralOrdering,
-              contextStructureManager: ContextStructureManager,
-              incoming: LinkedTransferQueue[InterContextMessage]): Thread = new Thread(() => { try {
-
-//    /** Step 0: Import all certain ground facts derived so far clauses; add them straight to the redundancy index set */
-//    if (!state.isNominalContext) for (clause <- contextStructureManager.getCertainGroundFacts(order)) {
-//      state.processCandidateInference(clause,inferenceRule.Hyper)
-//    }
-
-    //DEBUG
-//   println("Creating context with core: ")
-//    for (cu <- state.core) {
-//      println(cu)
-//    }
+        //DEBUG
+    //   println("Creating context with core: ")
+    //    for (cu <- state.core) {
+    //      println(cu)
+    //    }
 
     /** Initialisation Phase */
 
@@ -241,14 +240,8 @@ object Context {
     contextStructureManager.contextRoundFinished()
 
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
-    while (true) {
-      var retrieved: InterContextMessage = null
-      incoming.synchronized {
-        if (incoming.peek() == null) incoming.wait()
-        retrieved = incoming.poll()
-        println("unwaited - ", retrieved, incoming.peek())
-      }
-      retrieved match {
+    def onReceive(message: InterContextMessage): Unit = {
+      message match {
         case EndNonHornPhase() => {
           println("tryna end") //!!! todo: remove
         }
@@ -465,12 +458,8 @@ object Context {
 //        }
       }
       contextStructureManager.contextRoundFinished()
-      println("I go sleep", retrieved) // !!! TODO remove print debugging
+      println("I go sleep" + retrieved) // !!! TODO remove print debugging
     }
-    println("finito")
-
-  } catch { case e: InterruptedException => }
-  })
 
 
 }
