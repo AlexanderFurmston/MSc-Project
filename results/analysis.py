@@ -13,7 +13,6 @@ for line in lines:
     if '[SUCCESS]' in line and parts[-2].isdigit(): time = int(parts[-2])
     elif 'TIMEOUT' in line: time = 600_000
     
-    print(parts)
     if "OLD" in parts[1]:
         old_results[problem_number] = time
     else:
@@ -42,8 +41,14 @@ plt.xlabel('Old time / new time (ms)')
 plt.ylabel('Frequency')
 plt.show()
 
-# filter out problems where old version takes < 3000ms
+# filter out problems where old version takes <= 3000ms
 FILTER = 3000
+print(f"Problems taking >3s and <timeout: {[
+    problem_number
+    for problem_number in differences
+    if old_results[problem_number] > FILTER and old_results[problem_number] < 600_000
+
+]}")
 filtered_differences = {
     problem_number: differences[problem_number]
     for problem_number in differences
@@ -54,6 +59,7 @@ filtered_mults = {
     for problem_number in mults
     if old_results[problem_number] > FILTER
 }
+
 
 # Plot the differences distribution again
 plt.hist(np.clip(list(filtered_differences.values()), bins[0], bins[-1]), bins=bins)
