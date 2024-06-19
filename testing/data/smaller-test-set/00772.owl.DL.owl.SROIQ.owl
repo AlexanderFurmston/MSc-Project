@@ -1,0 +1,3104 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_signal_pair"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimental_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_time_point"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_parameter"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture_component_descriptor"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_operating_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_signal_pair"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector_signal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_parameter"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_operating_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_matrix"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_identifier"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hardware"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#instrument_component"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_processing_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_output_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_processing_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_processing_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_part_of"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_output_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_4700_TOF_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_4700_TOF_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_4700_TOF_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_Voyager_DE_Pro_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_Voyager_DE_Pro_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ABI_Voyager_DE_Pro_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Agilent_HPLC"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#high_performance_liquid_chromatograph"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Agilent_HPLC_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Agilent_mass_spectrometer_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Applied_Bio_Systems_mass_spectrometer_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_IV_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fourier_transform_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_IV_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_IV_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_Q_FT_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_tandem_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_Q_FT_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_APEX_Q_FT_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_BioTOF_Q_quadrupole_time_of_flight_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_BioTOF_Q_quadrupole_time_of_flight_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_BioTOF_Q_quadrupole_time_of_flight_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_Daltomics_mass_spectrometer_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ESI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#standard_ESI_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCT_ion_trap_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCT_ion_trap_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCT_ion_trap_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCTplus_ion_trap_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCTplus_ion_trap_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_HCTplus_ion_trap_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_TOF_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_TOF_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_autoflex_TOF_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire4000_ion_trap_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire4000_ion_trap_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire4000_ion_trap_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire6000_ion_trap_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire6000_ion_trap_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_esquire6000_ion_trap_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microQTOF_quadrupole_time_of_flight_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microQTOF_quadrupole_time_of_flight_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microQTOF_quadrupole_time_of_flight_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microflex_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microflex_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_microflex_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_omniflex_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_omniflex_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_omniflex_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_TOF_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_TOF_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Bruker_ultraflex_TOF_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#CARBANK_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#CCSD_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#CHEBI_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#DNA_molecule"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gene"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#DNA_nucleotide_sequence"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#DNA_nucleotide_sequence"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ESI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Electron_Multiplier_Tube_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_ASC_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LCQ_classic_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_ASC_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LCQ_classic_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LCQ_classic_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_FT_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_tandem_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_ASC_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_FT_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_FT_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_linear_ion_trap_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_ASC_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_linear_ion_trap_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_LTQ_linear_ion_trap_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#GPS_Explorer_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Applied_Bio_Systems_mass_spectrometer_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#GycO_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chromatography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_analytical_scale_fraction_collector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fraction_collector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_autosampler"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_buffer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_identifier"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solution"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimental_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram_XML_format_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram_text_format_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_chromatogram"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#instrument_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detection_wavelength"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#length_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector_signal"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimentally_measured_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_diode_array_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_excitation_wavelength"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#length_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimentally_measured_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_flowrate"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#flowrate_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fluorenscence_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fraction_collector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fraction_number"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#index_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_program"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_operating_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_time_point"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_time_point"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_operating_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_injection_loop_volume"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#volume_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_manual_injector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_micro_autosampler"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_autosampler"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_micro_well_plate_autosampler"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_autosampler"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_microscale_MALDI_spotter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fraction_collector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_microscale_fraction_collector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_fraction_collector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_multiwavelength_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_operating_parameter_collection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+            <ObjectUnionOf>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_program"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_gradient_time_point"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_parameter"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_refractive_index_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_standard_autosampler"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_autosampler"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_standard_well_plate_autosampler"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_autosampler"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_instrumental_operating_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_time_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_time_signal_pair"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_experimental_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_vacuum_degasser"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_variable_wavelength_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_detector"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#KEGG_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#LINUCS_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI_source"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_detector"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#TOF_analyzer"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI_matrix"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_molecule"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_TOF_type"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#TOF_analyzer"/>
+            </ObjectAllValuesFrom>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_focus_mass"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_interscan_delay"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_mass_range_max"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_mass_range_min"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_mode"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrumental_operating_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrument_setup_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_scan_time"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_component"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#instrument_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_operating_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_detector"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_experimentally_measured_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_format_conversion_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrument_setup_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_operating_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrumental_operating_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrumental_operating_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_compress_value_option"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_iterations_per_ensemble_member_value"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_number_of_ensemble_members"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_peak_width"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_startmass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_maxent3_value"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_min_peak_width_at_half_height_mass_measure_value"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_operating_parameter_collection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+            <ObjectUnionOf>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_operating_parameter_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_polynomial_order_mass_measure_value"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_converted_format"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_raw_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_raw_data"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_scan_number"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#index_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_smooth_window_mass_measure_value"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_smoothing_algorithm"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_component"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_capillary_voltage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electrical_potential_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_laser_intensity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#laser_pulse_intensity_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_matrix"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI_matrix"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_number_of_laser_shots"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_MALDI_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_cone_voltage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_ESI_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electrical_potential_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrumental_operating_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_instrument_setup_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_source_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_spectrum_format"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_time_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_time_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_ms_search_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_database_search_input_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_peptide_score"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_score"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_protein_score"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_score"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_query_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#index_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_score"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#score"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_search"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_classification"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_correlation"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_agent"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_experimental_data_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_sequence_database"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_operating_parameter_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_database_search_input_parameter_collection"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Mascot_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Masslynx_Micromass_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_mass_spectrometer_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Masslynx_proteinlynx_denovo_sequencing_results_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_MALDI_micro_MX_MALDI_TOF_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MALDI-TOF_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_MALDI_micro_MX_MALDI_TOF_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_MALDI_micro_MX_MALDI_TOF_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_QTOF_2_quadrupole_time_of_flight_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_QTOF_2_quadrupole_time_of_flight_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#micromass_pkl_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_QTOF_2_quadrupole_time_of_flight_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_micro_quadrupole_time_of_flight_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_micro_quadrupole_time_of_flight_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#micromass_pkl_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_micro_quadrupole_time_of_flight_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_ultima_quadrupole_time_of_flight_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Finnigan_Sequest_DTA_ms-ms_peak_list"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_ultima_quadrupole_time_of_flight_ms_raw_data"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#micromass_pkl_ms-ms_peak_list"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Q_TOF_ultima_quadrupole_time_of_flight_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_micro_triple_quadrupole_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#triple_quadrupole_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_micro_triple_quadrupole_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_micro_triple_quadrupole_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_premier_triple_quadrupole_mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#triple_quadrupole_mass_spectrometer"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_premier_triple_quadrupole_ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_Quatro_premier_triple_quadrupole_ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_native_format"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Micromass_mass_spectrometer_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#N-glycosylation_consensus_presence"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Nano_ESI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ESI_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#PDB_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#PEAKS_denovo_sequencing_results_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#PerSeptive_PKS_51_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_5AA_15_norm_txt_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_ALL_txt_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_FINAL_notused_peptides_pep_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_FINAL_pro_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_FINAL_used_peptides_pep_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_TcAnnotsNormNC_gtn_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_analysis"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#confidence_analysis"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_filtering"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_summarization"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_experimental_data_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_operating_parameter_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_input_parameter_collection"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_fasta_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_input_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_norm_notused_peptides_pep_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_norm_pro_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_norm_used_peptides_pep_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis_output_data_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_report_txt_file"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ProValt_output_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Proteinlynx_micromass_MALDI_data_processing_parameters_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Proteinlynx_micromass_electrospray_data_processing_parameters_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Proteinlynx_micromass_ms-ms_survey_data_processing_parameters_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#REFSEQ_polynucleotide_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#polynucleotide_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#REFSEQ_protein_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#RNA_nucleotide_sequence"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Sciex_API_III_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_concept_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_instance_ID"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#SemURI_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#annotation_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Sequest"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_ms_search_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Sequest_database_search_input_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Sequest_search"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_classification"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_correlation"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_agent"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Sequest"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Sequest_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Spectrum_mill_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Agilent_mass_spectrometer_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#TOF_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ThermoElectron_mass_spectrometer_data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ThermoFinnigan_ESI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#standard_ESI_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Turbo_Sequest_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ThermoElectron_mass_spectrometer_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#UNIPROT_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#URL_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#annotation_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#UV_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Xtandem"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_ms_search_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Xtandem_database_search_input_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_processing_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#absolute_amount"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#absolute_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#absolute_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#absolute_volume"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#absolute_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#amino_acid_sequence"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_data_simulation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#annotation_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#antibody_affinity_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#archaea"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#procaryotic_organism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#bacteria"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#procaryotic_organism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#binary_HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_component_separation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample_preparation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <ObjectUnionOf>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+                    </ObjectUnionOf>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample_preparation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#sample_preparation"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generates_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_sample_preparation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#sample_preparation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_source_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biomolecule"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#calculated_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#capillary_HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#cell"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#cell_culture"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_sample_preparation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#cell_harvesting"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_sample_preparation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_abstracts_accession_number"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_agent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chromatography"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_component_separation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#components_identification"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#components_quantification"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#computational_task"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#concentration_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#confidence_analysis"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_operating_parameter_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis_parameter_collection"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#contour_plot"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#graphical_data_representation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#creation_timestamp"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#cyclotron_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_classification"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_correlation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#URL_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_filtering"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_format_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#computational_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_simulation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#computational_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_sorting"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_summarization"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_ms_search_application"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_data_processing_application"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+            <ObjectUnionOf>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence_data_collection"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_HTML_dataset"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Mascot_data"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_record"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_dat_dataset"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Mascot_data"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_record"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_peptide_summary_dataset"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_HTML_dataset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_protein_summary_dataset"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_HTML_dataset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_result_Mascot_record"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Mascot_data"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_peptide_score"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#Mascot_protein_score"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#amino_acid_sequence"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimental_mass_to_charge_ratio"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experimental_chemical_mass"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_chemical_mass"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#oligopeptide"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#peptide_modification"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#spectral_count"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Mascot_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Sequest_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_results_Spectrum_Mill_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#database_search_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#denovo_sequencing_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#dialysis"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_component_separation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_contour_plot"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_histogram"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_x-y-plot"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electric_sector_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electrical_charge_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electrical_potential_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#potential_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#elemental_composition"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#elemental_composition_calculation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_data_simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#encoding_format_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#enzyme"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_agent"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#enzyme_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#eucaryotic_organism"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#event_timestamp"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimental_ion_abundance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_abundance"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimental_ion_charge"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_charge"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimental_isoelectric_point"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isoelectric_point"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimental_mass_to_charge_ratio"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_experimentally_measured_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_to_charge_ratio"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#filtration"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_component_separation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#flourescence_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#flowrate_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fluorescence_activated_cell_sorter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fourier_transform_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fragment_ion"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fragment_peptide_C_terminus_index"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#fragment_peptide_N_terminus_index"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_experimental_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_data_collection"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gene"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_fragment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biomolecule"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#polynucleotide_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_structure_format_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#representation_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#graphical_data_representation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hardware"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#high_performance_liquid_chromatograph"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_component"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#histogram"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#graphical_data_representation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_tandem_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hybrid_task"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#index_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#inorganic_solvent_molecule"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent_molecule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#instrument_component"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hardware"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_abundance"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_charge"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#electrical_charge_units"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_experimental_chemical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_experimental_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_experimental_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_experimental_monoisotopic_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_experimental_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_theoretical_chemical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_theoretical_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_theoretical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_theoretical_monoisotopic_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_theoretical_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_trap_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isocratic_HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isoelectric_point"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isotopic_distribution_calculation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_data_simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#laser_pulse_intensity_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#lectin_affinity_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#lectin_affinity_chromatography"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chromatography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#length_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#life-cycle_form"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#magnetic_sector_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#manufacturer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_percent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_spectrometer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_instrument"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_component"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_to_charge_ratio"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_volume_percent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Thing"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_timestamp"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#creation_timestamp"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#modification_timestamp"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#meta_data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#URL_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#micromass_pkl_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture_component_descriptor"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture_component_descriptor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_associated_data_collection"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_identifier"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#modification_timestamp"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#timestamp"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molarity"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mole_fraction"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_data_simulation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_description"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experiemental_monoisotopic_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experimental_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experimental_chemical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experimental_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_experimental_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_fragment"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence_data_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_associated_data_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_chemical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_monoisotopic_mass"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_theoretical_mass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_processed_data"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_output_data_collection"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_data_filtering"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_filtering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_data_recording"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#raw_data_recording"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_data_simulation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#analytical_data_simulation"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+                <ObjectUnionOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#elemental_composition"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_mass"/>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_processed_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_raw_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_output_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mzXML_ms_raw_data"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_raw_data_converted_format"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms_raw_data"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mzXMLtoOther_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#encoding_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#nanoflow_HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#normal-phase_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#oligopeptide"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biomolecule"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#polynucleotide_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <ObjectUnionOf>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#DNA_nucleotide_sequence"/>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#RNA_nucleotide_sequence"/>
+                    </ObjectUnionOf>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organ"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organic_solvent_molecule"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_organic_molecule"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent_molecule"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organism"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parent_ion"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#peptide_modification"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#peptide_sequence_format_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#representation_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#person"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_task"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#computational_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_mass_spectrum_histogram"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_histogram"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_raw_chromatogram"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_x-y-plot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#plot_raw_mass_spectrum"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#draw_x-y-plot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#polynucleotide_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#potential_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#power_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#procaryotic_organism"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_time_parameter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#process_associated_parameter"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#temporal_parameter"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#processed_gel_electrophoresis_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_experimental_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biomolecule"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#glycan_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#polynucleotide_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <ObjectUnionOf>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#DNA_nucleotide_sequence"/>
+                        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#RNA_nucleotide_sequence"/>
+                    </ObjectUnionOf>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_accession_number"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein_sequence_database"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#proteolytic_enzyme"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#enzyme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#pure_substance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_aggregate"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_analyzer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_analyzer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quadrupole_time_of_flight_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quantification"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quantification_paramter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#calculated_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quaternary_HPLC_pump"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_pump"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#raw2mzXML_data_processing_parameter_collection"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_format_conversion_parameter_collection"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#MS_spectrum_format"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#raw2mzXML_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#encoding_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#raw_data_recording"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#raw_gel_image_electrophoresis_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#gel_electrophoresis_experimental_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#representation_format_transformation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_format_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#reversed-phase_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#salt"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isoelectric_point"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#sample_preparation"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#score"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#calculated_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#search_and_replacement"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#size_exclusion_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#size_exclusion_chromatography"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chromatography"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_molecule"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_organic_molecule"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_molecule"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solid_mixture"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solution"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mixture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#pure_substance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent_molecule"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#small_molecule"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isoelectric_point"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecular_sequence"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#source_cell"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_source_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#cell"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#source_life-cycle-stage"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_source_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#life-cycle_form"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#source_organ"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_source_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organ"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#source_organism"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_source_parameter"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#organism"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#spectral_count"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#quantification_paramter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#standard_ESI_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ESI_source"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis_output_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#statistical_analysis_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#strong_anion_exchange_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#strong_cation_exchange_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_accession_number"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_identifier"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_amount"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_associated_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_identifier"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_time_of_flight_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+        <ObjectIntersectionOf>
+            <Class IRI="Thing"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_timestamp"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#event_timestamp"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#temporal_parameter"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#theoretical_ion_abundance"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_abundance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#theoretical_ion_charge"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ion_charge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#theoretical_isoelectric_point"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#isoelectric_point"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#theoretical_mass_to_charge_ratio"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#mass_to_charge_ratio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#time_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#timestamp"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#temporal_parameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tissue"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#triple_quadrupole_mass_spectrometer"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tandem_mass_spectrometer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#trypsin"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#proteolytic_enzyme"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#tryptic_peptide"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#oligopeptide"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generated_by_proteolytic_enzyme"/>
+                <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#trypsin"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#volume_percent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#component_amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#volume_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#weak_anion_exchange_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#weak_cation_exchange_HPLC_column"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#HPLC_column"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#x-y_plot"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#graphical_data_representation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#xml_ms-ms_peak_list"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#ms-ms_peak_list"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nothing"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_part_of"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generated_by_proteolytic_enzyme"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_effect_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generates_material_continuant"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_cause_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_file_URL"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_provenance_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_participant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_experimental_data_collection"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_operating_parameter_collection"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_meta_data_file_URL"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_provenance_property"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_cause_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_solvent"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_task_part"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_part"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_part_of"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task_part_of"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#part_of"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#part_of"/>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_part"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_manufactured_by"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_part_of"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_part"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_task_part"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_part_of"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#part_of"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task_part_of"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generated_by_proteolytic_enzyme"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#oligopeptide"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generates_material_continuant"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_agent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_biological_source"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biochemical_sample"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#molecule"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_meta_data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_processing_application"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hardware"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#person"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_parent_protein"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#oligopeptide"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_solvent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_task_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_timestamp"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#chemical_entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_manufactured_by"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#hardware"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#parameter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generated_by_proteolytic_enzyme"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#proteolytic_enzyme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#generates_material_continuant"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_agent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_biological_source"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#biological_continuant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_file_URL"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_data_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data_collection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_experimental_data_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#experimentally_measured_data_collection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_input_operating_parameter_collection"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#operating_parameter_collection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_material_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_meta_data_file_URL"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#meta_data_file_URL"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_output_data"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_parent_protein"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#protein"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_precursor_object"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#data"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_solvent"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#solvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_task_part"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_timestamp"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#timestamp"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#has_units"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#physical_units"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_described_by"/>
+        <ObjectUnionOf>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_associated_data_collection"/>
+            <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#substance_parameter"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#is_manufactured_by"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#manufacturer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#refers_to_material_continuant"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#material_continuant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task_part_of"/>
+        <Class IRI="http://lsdis.cs.uga.edu/projects/glycomics/propreo#task"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 0.1.0) http://owlapi.sourceforge.net -->
+

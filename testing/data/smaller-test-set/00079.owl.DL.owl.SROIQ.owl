@@ -1,0 +1,2365 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Company"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+            <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+            <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Restrictricted"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+            <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+            <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Government"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Developer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Instittue"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Mathematical"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Models"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Numerical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Numerical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Numerical"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Mathematical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Organization"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Developer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#University"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nothing"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Instittue"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ARPA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Company"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ATS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BASINS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BFHYDRO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#C3PO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-IMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CORMIX3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Availability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DELFT3D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Instittue"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DELFT_Hydraulics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Instittue"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Denmark"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#University"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Drexel_University"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ECOM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Instittue"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EDF-DRD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ELCIRC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Government"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Scheme"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Explicit_Schem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Method"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Difference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Method"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Method"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Volume"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GEMSS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GenScn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Scheme"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Implicite_Schem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Company"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#JE_Edinger_Associates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#J_Hamrick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#J_Westerink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#University"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lancaster_University"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#M_Piasecki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ND_Katopodes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Netherlands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#POM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#POMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Availability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUODDY"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RL_Doneker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ROMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#R_Luettich"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Availability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Restrictricted"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SHORECIRC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Company"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Scheme"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Semi_Implicite_Schem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC-2D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-3D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional_Baroclinic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional_Barotropic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional_Depth_Average"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional_Vertical_Flow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Government"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Government"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UnTRIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Individual"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#V_Casulli"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WMS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEM2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#J_Westerink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#R_Luettich"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Difference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ADCIRC"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ARPA"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ATS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BASINS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BASINS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BFHYDRO"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BLTM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual71"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#BRANCH"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#C3PO"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual33"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Volume"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-ICM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-R1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual66"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-RIV1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ATS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#JE_Edinger_Associates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Difference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CE-QUAL-W2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual40"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ARPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual60"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-IMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-IMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual60"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CH3D-WES"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual48"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CORMIX3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CORMIX3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RL_Doneker"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CORMIX3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CORMIX3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DAFLOW"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DELFT3D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DELFT_Hydraulics"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Netherlands"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Denmark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DR3M"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual63"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DYNHYD5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Drexel_University"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ECOM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual58"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EDF-DRD"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#France"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#J_Hamrick"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EFDC"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual54"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ELCIRC"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual53"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FEQ"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual69"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FESWMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Difference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#FourPt"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GEMSS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GEMSS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#JE_Edinger_Associates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GEMSS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GEMSS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#GenScn"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-6"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-6"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-6"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-6"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-HMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HSPF"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#JE_Edinger_Associates"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#J_Westerink"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lancaster_University"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-11"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual51"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-21"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual57"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Difference"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#DHI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MIKE-SHE"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual65"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#MMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#M_Piasecki"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ND_Katopodes"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTEQ"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#OTIS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#POM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#POMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual43"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Dimension_Not_Applicable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#PRMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual68"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUAL2E"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual45"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#QUODDY"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM10"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual62"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM11"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM11"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual67"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RAM2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual56"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RL_Doneker"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMA4"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual61"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#HEC-RAS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#RMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual31"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ROMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#R_Luettich"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Finite_Element"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SED2D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SHORECIRC"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual20"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual50"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SNTEMP"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual52"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSG"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SSTEMP"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual72"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual47"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#SWMM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual70"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Commercial"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EDF-DRD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TELEMAC-2D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual59"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lancaster_University"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Watershed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TOPMODEL"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual49"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Restrictricted"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#V_Casulli"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Two_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-2D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#TRIM-3D"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#One_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UNET"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USACE"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USGS"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#USA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UnTRIM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Restrictricted"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UnTRIM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#V_Casulli"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UnTRIM"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#UnTRIM"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual55"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#V_Casulli"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Italy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#EPA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#CoastalArea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Estuary"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Lake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Reservoir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Three_Dimensional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WASP5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual46"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#WMS"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual44"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Public"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#M_Piasecki"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ND_Katopodes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ChannelNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#wbsModel"/>
+        <NamedIndividual IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#River"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Developer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationScheme"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModel"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#ModelingSystems"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasAvailability"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Availability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasCountry"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDeveloper"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Developer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasDomain"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Domain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationMethod"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Method"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasIntegrationScheme"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Integration_Scheme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModel"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#hasModelDimension"/>
+        <Class IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#Model_Dimension"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#infoPage"/>
+        <Class IRI="auxiliarDataRangeClass2"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 0.1.0) http://owlapi.sourceforge.net -->
+

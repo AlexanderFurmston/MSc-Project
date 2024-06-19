@@ -1,0 +1,1596 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Aunt"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Woman"/>
+            <ObjectUnionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasNephew"/>
+                </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasNiece"/>
+                </ObjectMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Brother"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Man"/>
+            <Class IRI="http://a.com/ontology#Sibling"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Child"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Person"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Daugther"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Child"/>
+            <Class IRI="http://a.com/ontology#Woman"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Father"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Man"/>
+            <Class IRI="http://a.com/ontology#Parent"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Gender"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="http://a.com/ontology#Male"/>
+            <NamedIndividual IRI="http://a.com/ontology#Female"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+                <NamedIndividual IRI="http://a.com/ontology#Male"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Mother"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Parent"/>
+            <Class IRI="http://a.com/ontology#Woman"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Nephew"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Man"/>
+            <ObjectUnionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasAunt"/>
+                </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasUncle"/>
+                </ObjectMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Niece"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Woman"/>
+            <ObjectUnionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasAunt"/>
+                </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasUncle"/>
+                </ObjectMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Parent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Person"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Person"/>
+        <ObjectUnionOf>
+            <Class IRI="http://a.com/ontology#Man"/>
+            <Class IRI="http://a.com/ontology#Woman"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Relative"/>
+        <ObjectUnionOf>
+            <Class IRI="http://a.com/ontology#Aunt"/>
+            <Class IRI="http://a.com/ontology#Child"/>
+            <Class IRI="http://a.com/ontology#Nephew"/>
+            <Class IRI="http://a.com/ontology#Niece"/>
+            <Class IRI="http://a.com/ontology#Parent"/>
+            <Class IRI="http://a.com/ontology#Sibling"/>
+            <Class IRI="http://a.com/ontology#Uncle"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Sibling"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Person"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Sister"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Sibling"/>
+            <Class IRI="http://a.com/ontology#Woman"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Son"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Child"/>
+            <Class IRI="http://a.com/ontology#Man"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Uncle"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Man"/>
+            <ObjectUnionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasNephew"/>
+                </ObjectMinCardinality>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="http://a.com/ontology#hasNiece"/>
+                </ObjectMinCardinality>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://a.com/ontology#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+                <NamedIndividual IRI="http://a.com/ontology#Female"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Aunt"/>
+        <Class IRI="http://a.com/ontology#Relative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Nephew"/>
+        <Class IRI="http://a.com/ontology#Relative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Nephew"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+            <NamedIndividual IRI="http://a.com/ontology#Male"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Niece"/>
+        <Class IRI="http://a.com/ontology#Relative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Niece"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+            <NamedIndividual IRI="http://a.com/ontology#Female"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Relative"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Uncle"/>
+        <Class IRI="http://a.com/ontology#Relative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://a.com/ontology#Uncle"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+            <NamedIndividual IRI="http://a.com/ontology#Male"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nothing"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error4"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error5"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <Class abbreviatedIRI="rdf:List"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rdf:first"/>
+            <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rdf:rest"/>
+            <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+            <Class IRI="auxiliarDataRangeClass2"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+            <Class IRI="auxiliarDataRangeClass2"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+            <Class IRI="auxiliarDataRangeClass2"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#arguments"/>
+            <Class abbreviatedIRI="rdf:List"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#builtin"/>
+            <Class IRI="http://www.w3.org/2003/11/swrl#Builtin"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#arguments"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#builtin"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#classPredicate"/>
+            <Class IRI="Class"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#classPredicate"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#dataRange"/>
+            <Class abbreviatedIRI="rdfs:Datatype"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#dataRange"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error3"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument2"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+            <Class IRI="DatatypeProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error6"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument2"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Imp"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#body"/>
+            <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Imp"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#head"/>
+            <Class IRI="http://www.w3.org/2003/11/swrl#AtomList"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Imp"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#body"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Imp"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#head"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error2"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument2"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+            <Class IRI="ObjectProperty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+        <Class IRI="http://org.semanticweb.owlapi/error#Error1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+        <Class IRI="http://www.w3.org/2003/11/swrl#Atom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument2"/>
+            <Class IRI="Thing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://a.com/ontology#Aunt"/>
+        <Class IRI="http://a.com/ontology#Uncle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://a.com/ontology#Brother"/>
+        <Class IRI="http://a.com/ontology#Sister"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://a.com/ontology#Daugther"/>
+        <Class IRI="http://a.com/ontology#Son"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://a.com/ontology#Nephew"/>
+        <Class IRI="http://a.com/ontology#Niece"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F07"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F08"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Woman"/>
+        <NamedIndividual IRI="http://a.com/ontology#F10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Gender"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Man"/>
+        <NamedIndividual IRI="http://a.com/ontology#M10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://a.com/ontology#Gender"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F01"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F01"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#F02"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F02"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F02"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F04"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F04"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#F05"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F05"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F05"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F07"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F07"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F08"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F08"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#F09"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F09"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F09"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#F10"/>
+        <NamedIndividual IRI="http://a.com/ontology#Female"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#F10"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="http://a.com/ontology#F02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="http://a.com/ontology#F01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#F05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#M05"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#F04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#M01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+        <NamedIndividual IRI="http://a.com/ontology#F09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+        <NamedIndividual IRI="http://a.com/ontology#F08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M03"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="http://a.com/ontology#F03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M05"/>
+        <NamedIndividual IRI="http://a.com/ontology#M02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M05"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M05"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+        <NamedIndividual IRI="http://a.com/ontology#M09"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+        <NamedIndividual IRI="http://a.com/ontology#F10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+        <NamedIndividual IRI="http://a.com/ontology#M04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+        <NamedIndividual IRI="http://a.com/ontology#F07"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M07"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual20"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+        <NamedIndividual IRI="http://a.com/ontology#M10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+        <NamedIndividual IRI="http://a.com/ontology#F06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M09"/>
+        <NamedIndividual IRI="http://a.com/ontology#M06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M09"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M09"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <NamedIndividual IRI="http://a.com/ontology#M10"/>
+        <NamedIndividual IRI="http://a.com/ontology#M08"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <NamedIndividual IRI="http://a.com/ontology#M10"/>
+        <NamedIndividual IRI="http://a.com/ontology#Male"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <NamedIndividual IRI="http://a.com/ontology#M10"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#abs"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#add"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addDayTimeDurationToDate"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addDayTimeDurationToDateTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addDayTimeDurationToTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addDayTimeDurations"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addYearMonthDurationToDate"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addYearMonthDurationToDateTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#addYearMonthDurations"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#anyURI"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#booleanNot"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#ceiling"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#contains"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#containsIgnoreCase"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#cos"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#date"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#dateTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#dayTimeDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#divide"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#divideDayTimeDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#divideYearMonthDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#empty"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#endsWith"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#equal"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#first"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#floor"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#integerDivide"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#length"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#lessThan"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#listConcat"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#listIntersection"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#listSubtraction"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#lowerCase"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#matches"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#member"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#mod"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#multiply"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#multiplyDayTimeDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#multiplyYearMonthDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#normalizeSpace"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#notEqual"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#pow"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#replace"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#resolveURI"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#rest"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#round"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#roundHalfToEven"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#sin"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#startsWith"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#stringEqualIgnoreCase"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#stringLength"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#sublist"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#maxArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#substring"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#minArgs"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#substring"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#substringAfter"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#substringBefore"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtract"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDateTimesYieldingDayTimeDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDateTimesYieldingYearMonthDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDates"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDayTimeDurationFromDate"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDayTimeDurationFromDateTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDayTimeDurationFromTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractDayTimeDurations"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractTimes"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractYearMonthDurationFromDate"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractYearMonthDurationFromDateTime"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#subtractYearMonthDurations"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#tan"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#time"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#translate"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#unaryMinus"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#unaryPlus"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#upperCase"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrlb#args"/>
+        <NamedIndividual IRI="http://www.w3.org/2003/11/swrlb#yearMonthDuration"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#argument1"/>
+        <AnonymousIndividual nodeID="_:genid3327"/>
+        <NamedIndividual IRI="http://a.com/ontology#y"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/11/swrl#propertyPredicate"/>
+        <AnonymousIndividual nodeID="_:genid3328"/>
+        <NamedIndividual IRI="http://a.com/ontology#hasSister"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasBrother"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasDaughter"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasFather"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasMother"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasSister"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://a.com/ontology#hasSon"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasFather"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasMother"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasAunt"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasBrother"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasDaughter"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasFather"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasMother"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasNephew"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasNiece"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasSister"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasSon"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#hasUncle"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasAunt"/>
+        <Class IRI="http://a.com/ontology#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasBrother"/>
+        <Class IRI="http://a.com/ontology#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasChild"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasConsort"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasDaughter"/>
+        <Class IRI="http://a.com/ontology#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasFather"/>
+        <Class IRI="http://a.com/ontology#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasMother"/>
+        <Class IRI="http://a.com/ontology#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasNephew"/>
+        <Class IRI="http://a.com/ontology#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasNiece"/>
+        <Class IRI="http://a.com/ontology#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasParent"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasSex"/>
+        <Class IRI="http://a.com/ontology#Gender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasSibling"/>
+        <Class IRI="http://a.com/ontology#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasSister"/>
+        <Class IRI="http://a.com/ontology#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasSon"/>
+        <Class IRI="http://a.com/ontology#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#hasUncle"/>
+        <Class IRI="http://a.com/ontology#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://a.com/ontology#name"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 0.1.0) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,2419 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TAXON-XREF"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLTYPE"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TISSUE"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROL-TYPE"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual47"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DIRECTION"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-DATA"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-FORMAT"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complexAssembly"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE-VALUE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalInteraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROL-TYPE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalInteraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SPONTANEOUS"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+                <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-G-PRIME-O"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#IONIC-STRENGTH"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PH"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PMG"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TEMPERATURE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <ObjectUnionOf>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EVIDENCE-CODE"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM"/>
+            </ObjectMinCardinality>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM-TYPE"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANT"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+            <ObjectUnionOf>
+                <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+                <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#K-PRIME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#IONIC-STRENGTH"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PH"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PMG"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TEMPERATURE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#modulation"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#modulation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#modulation"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#modulation"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STEP-INTERACTIONS"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalInteraction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalInteraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TITLE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#YEAR"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RELATIONSHIP-TYPE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-TYPE"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-BEGIN"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-END"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceParticipant"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#POSITION-STATUS"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-POSITION"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CHEMICAL-FORMULA"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#MOLECULAR-WEIGHT"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#transport"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#transportWithBiochemicalReaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#transportWithBiochemicalReaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#transport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB-VERSION"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID-VERSION"/>
+            <Class IRI="auxiliarDataRangeClass3"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Nothing"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complexAssembly"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#modulation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complexAssembly"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#transport"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#externalReferenceUtilityClass"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#bioSource1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#relationshipXref1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceFeature1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceParticipant"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceParticipant"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceParticipant"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceSite1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref9"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#bioSource1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual63"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TAXON-XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#bioSource1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#LEFT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#LEFT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RIGHT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RIGHT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SPONTANEOUS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AVAILABILITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual64"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#biochemicalReaction1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DIRECTION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#catalysis1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#relationshipXref1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual44"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TERM"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual72"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TERM"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual89"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#physicalEntityParticipant2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual78"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#bioSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual62"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#bioSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual40"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual45"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual49"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual61"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual70"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual41"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TITLE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual71"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#YEAR"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual43"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual69"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual85"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual88"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual83"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual51"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TITLE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#YEAR"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual80"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref4"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref4"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#publicationXref5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#relationshipXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#relationshipXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual81"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RELATIONSHIP-TYPE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#relationshipXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual79"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceFeature1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceSite1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-TYPE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceFeature1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#openControlledVocabulary1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#protein1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-FEATURE-LIST"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceFeature1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceParticipant3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceSite1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#POSITION-STATUS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceSite1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-POSITION"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#sequenceSite1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual77"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual50"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual50"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule1"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#dataSource1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual48"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#smallMolecule2"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref1"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual82"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual42"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref2"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual74"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual73"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref3"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual84"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref4"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref4"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref5"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual86"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref6"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual46"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref6"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual20"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref7"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref7"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref9"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual34"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <NamedIndividual IRI="http://www.biopax.org/examples/biopax-example-reactome-CHK2-ATM.owl#unificationXref9"/>
+        <NamedIndividual IRI="auxiliarLiteralIndividual87"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COFACTOR"/>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#LEFT"/>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RIGHT"/>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AVAILABILITY"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLTYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CHEMICAL-FORMULA"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COFACTOR"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#utilityClass"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMPONENTS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE-VALUE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROL-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#control"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB-VERSION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-G"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-G-PRIME-O"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-H"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-S"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DIRECTION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#catalysis"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EC-NUMBER"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EVIDENCE"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EVIDENCE-CODE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-LOCATION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID-VERSION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#INTERACTION-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalInteraction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#IONIC-STRENGTH"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#K-PRIME"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#KEQ"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#biochemicalReaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#LEFT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#MOLECULAR-WEIGHT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NEXT-STEP"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#complex"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PATHWAY-COMPONENTS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PH"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PMG"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#POSITION-STATUS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RELATIONSHIP-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#relationshipXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RIGHT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dna"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#protein"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#rna"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-FEATURE-LIST"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceParticipant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-BEGIN"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-END"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceInterval"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-POSITION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SOURCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SPONTANEOUS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#conversion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STEP-INTERACTIONS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#smallMolecule"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-DATA"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-FORMAT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TAXON-XREF"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TEMPERATURE"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TERM"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TISSUE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TITLE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#URL"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#YEAR"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#publicationXref"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AUTHORS"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#AVAILABILITY"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLTYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CELLULAR-LOCATION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CHEMICAL-FORMULA"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COFACTOR"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMMENT"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#COMPONENTS"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#confidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONFIDENCE-VALUE"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROL-TYPE"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="auxiliarLiteralIndividual59"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual57"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual58"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual47"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual55"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual56"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual53"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual54"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual52"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual60"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLED"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#CONTROLLER"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DATA-SOURCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#dataSource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DB-VERSION"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-G"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#deltaGprimeO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-G-PRIME-O"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-H"/>
+        <Class IRI="auxiliarDataRangeClass6"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DELTA-S"/>
+        <Class IRI="auxiliarDataRangeClass6"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#DIRECTION"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="auxiliarLiteralIndividual39"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual68"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual66"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual67"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual65"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EC-NUMBER"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EVIDENCE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#evidence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EVIDENCE-CODE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#experimentalForm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#EXPERIMENTAL-FORM-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-LOCATION"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#FEATURE-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ID-VERSION"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#INTERACTION-TYPE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#IONIC-STRENGTH"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#K-PRIME"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#KEQ"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#kPrime"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#LEFT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#MOLECULAR-WEIGHT"/>
+        <Class IRI="auxiliarDataRangeClass6"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NAME"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#NEXT-STEP"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#ORGANISM"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#bioSource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PARTICIPANTS"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#entity"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PATHWAY-COMPONENTS"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathwayStep"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PH"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PHYSICAL-ENTITY"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#PMG"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#POSITION-STATUS"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="auxiliarLiteralIndividual8"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual7"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual6"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RELATIONSHIP-TYPE"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#RIGHT"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#physicalEntityParticipant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-FEATURE-LIST"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceFeature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-BEGIN"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-INTERVAL-END"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#sequenceSite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SEQUENCE-POSITION"/>
+        <Class IRI="auxiliarDataRangeClass7"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SHORT-NAME"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SOURCE"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SPONTANEOUS"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="auxiliarLiteralIndividual75"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual21"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual76"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STEP-INTERACTIONS"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#interaction"/>
+            <Class IRI="http://www.biopax.org/release/biopax-level2.owl#pathway"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STOICHIOMETRIC-COEFFICIENT"/>
+        <Class IRI="auxiliarDataRangeClass6"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#chemicalStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-DATA"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#STRUCTURE-FORMAT"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="auxiliarLiteralIndividual33"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual31"/>
+            <NamedIndividual IRI="auxiliarLiteralIndividual32"/>
+        </ObjectOneOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#SYNONYMS"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TAXON-XREF"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#unificationXref"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TEMPERATURE"/>
+        <Class IRI="auxiliarDataRangeClass4"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TERM"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TISSUE"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#openControlledVocabulary"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#TITLE"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#URL"/>
+        <Class IRI="auxiliarDataRangeClass5"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#XREF"/>
+        <Class IRI="http://www.biopax.org/release/biopax-level2.owl#xref"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.biopax.org/release/biopax-level2.owl#YEAR"/>
+        <Class IRI="auxiliarDataRangeClass2"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 0.1.0) http://owlapi.sourceforge.net -->
+
