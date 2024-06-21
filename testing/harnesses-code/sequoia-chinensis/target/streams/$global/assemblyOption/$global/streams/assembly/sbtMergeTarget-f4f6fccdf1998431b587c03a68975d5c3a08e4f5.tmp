@@ -1,0 +1,14 @@
+com.github.jsonldjava.sesame.SesameJSONLDParserFactory
+org.semanticweb.owlapi.rio.RioFunctionalSyntaxParserFactory
+org.semanticweb.owlapi.rio.RioManchesterSyntaxParserFactory
+org.semanticweb.owlapi.rio.RioOWLXMLParserFactory
+org.semarglproject.sesame.rdf.rdfa.SesameRDFaParserFactory
+org.openrdf.rio.binary.BinaryRDFParserFactory
+org.openrdf.rio.n3.N3ParserFactory
+org.openrdf.rio.nquads.NQuadsParserFactory
+org.openrdf.rio.ntriples.NTriplesParserFactory
+org.openrdf.rio.rdfjson.RDFJSONParserFactory
+org.openrdf.rio.rdfxml.RDFXMLParserFactory
+org.openrdf.rio.trig.TriGParserFactory
+org.openrdf.rio.trix.TriXParserFactory
+org.openrdf.rio.turtle.TurtleParserFactory
