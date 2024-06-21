@@ -27,7 +27,6 @@ import com.sequoiareasoner.arrayops._
 import com.sequoiareasoner.kernel.logging.DerivationObserver
 import com.sequoiareasoner.kernel.owl.iri.IRI
 
-import java.util.concurrent.LinkedTransferQueue
 import scala.language.postfixOps
 import com.sequoiareasoner.kernel.context.RuleSaturator._
 import com.sequoiareasoner.kernel.context.ClausePusher._
@@ -47,8 +46,9 @@ class Context(
   ontology: DLOntology,
   isEqualityReasoningEnabled: Boolean,
   order: ContextLiteralOrdering,
-  contextStructureManager: ContextStructureManager,
-  incoming: LinkedTransferQueue[InterContextMessage]) extends UntypedActor {
+  contextStructureManager: ContextStructureManager) extends UntypedActor {
+
+  def actorRef: ActorRef = this.contextStructureManager.contexts.get(state.core).get
 
   private[this] def processResultsBuffer(state: ContextState, inferenceRuleType: InferenceRule): Unit = {
     while (state.resultsBuffer.nonEmpty) {
@@ -167,7 +167,7 @@ class Context(
 
  @inline def saturateAndPush(state: ContextState, ontology: DLOntology, isEqualityReasoningEnabled: Boolean,
                              order: ContextLiteralOrdering, contextStructureManager: ContextStructureManager,
-                             incoming: LinkedTransferQueue[InterContextMessage], hornPhase: Boolean )  {
+                             hornPhase: Boolean) {
     rulesToSaturation(state, ontology, isEqualityReasoningEnabled, order, hornPhase = hornPhase)
     // if (ontology.havocTriggered) contextStructureManager.interrupt
     /** Push certain ground clauses to all relevant contexts */
@@ -181,10 +181,10 @@ class Context(
       case nomState: NominalContextState => pushQueryClausesDerivedInLastRound(nomState, contextStructureManager)
       case _ =>
     }
-    pushSuccClausesDerivedInLastRound(state, ontology, contextStructureManager, incoming)
-    pushRootSuccClausesDerivedInLastRound(state, ontology, contextStructureManager, incoming)
-    if (state.isRootContext) pushRootCollapsesDerivedInLastRound(state,ontology,contextStructureManager,incoming)
-    pushRequestAllCGCsForConstantsIntroducedInLastRound(state,contextStructureManager,incoming)
+    pushSuccClausesDerivedInLastRound(state, ontology, contextStructureManager, actorRef)
+    pushRootSuccClausesDerivedInLastRound(state, ontology, contextStructureManager, actorRef)
+    if (state.isRootContext) pushRootCollapsesDerivedInLastRound(state,ontology,contextStructureManager,actorRef)
+    pushRequestAllCGCsForConstantsIntroducedInLastRound(state,contextStructureManager,actorRef)
   }
 
 
@@ -234,13 +234,13 @@ class Context(
     }
 
     /** Step 3: perform all remaining inferences */
-    saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, incoming, state.hornPhaseActive)
+    saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, state.hornPhaseActive)
 
     /** Step 4: mark the context as in sleeping mode */
     contextStructureManager.contextRoundFinished()
 
     /** Step 5: wake the context up if a new message is received, and start a new saturation round*/
-    def onReceive(message: InterContextMessage): Unit = {
+    def onReceive(message: Any): Unit = { // Although message: Any, it should actually be an InterContextMessage
       message match {
         case EndNonHornPhase() => {
           println("tryna end") //!!! todo: remove
@@ -259,12 +259,12 @@ class Context(
           }
 
           /** We directly saturate; new clauses added in the step just above, and old, non-Horn ones in the todo.nonHornUnprocessed should now be processed */
-          saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, incoming, state.hornPhaseActive)
+          saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, state.hornPhaseActive)
         }
 
 
         /** Message received: SuccPush - a clause pushed from a predecessor context.  */
-        case SuccPush(contextChannel: LinkedTransferQueue[InterContextMessage],
+        case SuccPush(contextChannel: ActorRef,
         edgeLabel: Term,
         predicate: Predicate, parentCore: ImmutableSet[Predicate]) =>
           //if (state.isSelectedCore2() && state.isSelectedPredicate(predicate) && state.isSelectedCore(parentCore)) {
@@ -306,7 +306,7 @@ class Context(
             pushWorkedOffPredClauses(state, contextStructureManager, contextChannel, edgeLabel, predicate, parentCore)
           }
           if (fired || hasUnblocked) {
-            saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, incoming, state.hornPhaseActive)
+            saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, state.hornPhaseActive)
           }
 
         /** Message received: PredPush - a clause pushed from a successor, which can be resolved with clauses in this
@@ -323,7 +323,7 @@ class Context(
             processResultsBuffer(state,Pred)
           }
           saturateAndPush(state, ontology, isEqualityReasoningEnabled, order,
-            contextStructureManager, incoming, state.hornPhaseActive)
+            contextStructureManager, state.hornPhaseActive)
 
         case QueryPush(nominal: Constant, queryClauses: IndexedSequence[ContextClause]) =>
           queryClauses foreach { clause =>
@@ -335,10 +335,10 @@ class Context(
             processResultsBuffer(state,Query)
           }
           saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager,
-            incoming, state.hornPhaseActive)
+            state.hornPhaseActive)
 
         /** Message received: A(o) -> A(o) from a predecessor context.  */
-        case PossibleGroundFactPush(contextChannel: LinkedTransferQueue[InterContextMessage], edgeLabel: Term,
+        case PossibleGroundFactPush(contextChannel: ActorRef, edgeLabel: Term,
         predicate: Predicate) =>
           predicate match {
             /** Let us exclude propagations of type conceptFor:a(a), since these may not always be prevented by the optimisation,
@@ -364,14 +364,14 @@ class Context(
               }
               if (clauseAdded || hasUnblocked) {
                 saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager,
-                  incoming, state.hornPhaseActive)
+                  state.hornPhaseActive)
               }
           }
 
          /** If a potential collapse to a nominal `o` is detected in a query context with core A(x), we push the
             * clause A(x) -> A(x) to the corresponding nominal context for `o`, and add an edge labelled `A(x)` from
             * that query context, to the nominal context for `o`. This is the detection of such push in a nominal context. */
-        case CollPush(contextChannel: LinkedTransferQueue[InterContextMessage], edgeLabel: Predicate) => {
+        case CollPush(contextChannel: ActorRef, edgeLabel: Predicate) => {
           state match {
             case nomState: NominalContextState => {
               /** The corresponding root predecessor is added */
@@ -381,7 +381,7 @@ class Context(
               /** If the clause is added, we need to update indices and start round */
               if (clauseAdded) {
                 if (state.isSelectedCore()) DerivationObserver.eqSuccFired(state.core, ContextClause(Array(edgeLabel), Array(edgeLabel))(order)) //DEBUG
-                saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, incoming, state.hornPhaseActive)
+                saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, state.hornPhaseActive)
               } else {
               /** If no clause is added, we need to see if we can propagate anything back, except if certain fact, which does not propagate */
                 pushWorkedOffQueryClauses(nomState, contextStructureManager, contextChannel, edgeLabel)
@@ -402,7 +402,7 @@ class Context(
           val clauseAdded = state.processCandidateConclusion(processedClause, CertainGroundClause)
           if (clauseAdded) {
             if (state.isSelectedCore())  DerivationObserver.cgcFired(state.core,clause,originCore)
-            saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, incoming, state.hornPhaseActive)
+            saturateAndPush(state, ontology, isEqualityReasoningEnabled, order, contextStructureManager, state.hornPhaseActive)
           }
         }
 
@@ -431,7 +431,7 @@ class Context(
             case _ => {
               if (state.addConstantToMentionedConstantSet(coreConstant)) {
                 contextStructureManager.contextRoundStarted()
-                originContext.put(ConstantMentionedPush(incoming))
+                originContext ! ConstantMentionedPush(actorRef)
               }
             }
           }
@@ -458,7 +458,6 @@ class Context(
 //        }
       }
       contextStructureManager.contextRoundFinished()
-      println("I go sleep" + retrieved) // !!! TODO remove print debugging
     }
 
 

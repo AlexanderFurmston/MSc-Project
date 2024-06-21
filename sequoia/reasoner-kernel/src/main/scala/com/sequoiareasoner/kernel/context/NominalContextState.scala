@@ -27,9 +27,10 @@ import com.sequoiareasoner.kernel.index._
 import com.sequoiareasoner.kernel.owl.iri.IRI
 import com.sequoiareasoner.kernel.structural.DLOntology
 
-import java.util.concurrent.LinkedTransferQueue
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
+
+import akka.actor.ActorRef
 
 /** Class that combines all data structures used to maintain the state of the derivation within a context.
   * Special case for when you have a nominal context. */
@@ -80,11 +81,11 @@ class NominalContextState(override val queryConcepts: Set[Int],
 
   /** PREDECESSOR OPERATIONS */  //--------------------------------------------------------------------------
 
-  val constantPredecessors = mutable.HashSet[LinkedTransferQueue[InterContextMessage]]()
-  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, LinkedTransferQueue[InterContextMessage]]
-  def getRootPredecessor(p: Predicate): Option[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.get(p)
-  def getAllRootPredecessors(): Iterable[LinkedTransferQueue[InterContextMessage]] = rootPredecessors.values
-  def addRootPredecessor(incomingEdge: LinkedTransferQueue[InterContextMessage], edgeLabel: Predicate): Unit = {
+  val constantPredecessors = mutable.HashSet[ActorRef]()
+  private[this] val rootPredecessors = new mutable.AnyRefMap[Predicate, ActorRef]
+  def getRootPredecessor(p: Predicate): Option[ActorRef] = rootPredecessors.get(p)
+  def getAllRootPredecessors(): Iterable[ActorRef] = rootPredecessors.values
+  def addRootPredecessor(incomingEdge: ActorRef, edgeLabel: Predicate): Unit = {
     rootPredecessors.getOrElseUpdate(edgeLabel, incomingEdge)
   }
 

@@ -22,7 +22,8 @@ package com.sequoiareasoner.kernel
 
 import com.sequoiareasoner.kernel.clauses._
 import com.sequoiareasoner.kernel.index.{ImmutableSet, IndexedSequence}
-import java.util.concurrent.LinkedTransferQueue
+
+import akka.actor.ActorRef
 
 /** Package containing relevant methods for the entire package context. */
 package object context {
@@ -74,12 +75,12 @@ package object context {
     * probably unnecessary, as the label can be deduced from the predicate).
     * -The predicate `predicate` to which the rule is applied.
     * -The `core` of the predecessor, for debugging purposes (and consequently we pass the empty one by default). */
-  final case class SuccPush(contextChannel: LinkedTransferQueue[InterContextMessage],
+  final case class SuccPush(contextChannel: ActorRef,
                             edgeLabel: Term,
                             predicate: Predicate,
                             core: ImmutableSet[Predicate] = ImmutableSet.empty) extends InterContextMessage
 
-  final case class MiniSuccPush(contextChannel: LinkedTransferQueue[InterContextMessage], predicate: Predicate) extends InterContextMessage
+  final case class MiniSuccPush(contextChannel: ActorRef, predicate: Predicate) extends InterContextMessage
 
   /** Message to notify a context that a set of certain ground fact `clauses` has been derived */
   final case class CertainGroundFactPush(predicates: Set[Int], origin: Int) extends InterContextMessage
@@ -93,14 +94,14 @@ package object context {
    * -The predicate itself `predicate`
    * -The edge to the predecessor `contextChannel` for updating the index of predecessors.
    * -The edge label of the predecessor for updating the index of predecessors. */
-  final case class PossibleGroundFactPush(contextChannel: LinkedTransferQueue[InterContextMessage],
+  final case class PossibleGroundFactPush(contextChannel: ActorRef,
                                           edgeLabel: Term,
                                           predicate: Predicate) extends InterContextMessage
 
 
   /** Message to notify a nominal context that some root context `contextChannel` may collapse into it,
     *  so the core of that root context `edgeLabel` must be added as a tautology (and the index updated). */
-  final case class CollPush(contextChannel: LinkedTransferQueue[InterContextMessage],
+  final case class CollPush(contextChannel: ActorRef,
                             edgeLabel: Predicate) extends InterContextMessage
  /** This clause propagates certain, function-free ground clauses from nominal contexts to other contexts that mention
    * the nominal corresponding to this context. */
@@ -108,11 +109,11 @@ package object context {
 
   /** This rule propagates certain, function-free ground clauses from nominal contexts to other contexts that mention
    * the nominal corresponding to this context. */
-  final case class ConstantMentionedPush(originContext: LinkedTransferQueue[InterContextMessage]) extends InterContextMessage
+  final case class ConstantMentionedPush(originContext: ActorRef) extends InterContextMessage
 
   /** This message is sent from a nominal context with core `O`, which mentions constant `a`, to nominal context `A`,
     * and tells it that it should act as if `o` had been mentioned in `A`. */
-  final case class ConstantExchange(originContext: LinkedTransferQueue[InterContextMessage], originConstant: Constant) extends InterContextMessage
+  final case class ConstantExchange(originContext: ActorRef, originConstant: Constant) extends InterContextMessage
 
 
   /** FOR DEBUGGING. A message to notify a context that it should print its core. */

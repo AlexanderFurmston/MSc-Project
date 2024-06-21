@@ -1,10 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/src/main/scala/com/sequoiareasoner/kernel/context/Context.scala:461:29: too many arguments (2) for method println: (x: Any)Unit[0m
-[0m[[0m[31merror[0m] [0m[0m      println("I go sleep", retrieved) // !!! TODO remove print debugging[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/src/main/scala/com/sequoiareasoner/kernel/context/ContextStructureManager.scala:181:5: not found: value Context[0m
-[0m[[0m[31merror[0m] [0m[0m    Context.makeContext(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this, edge)[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/src/main/scala/com/sequoiareasoner/kernel/context/ContextStructureManager.scala:181:77: not found: value contextStructureManager[0m
-[0m[[0m[31merror[0m] [0m[0m    Context.makeContext(state, ontology, enableEqualityReasoning, ordering, contextStructureManager = this, edge)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 8 inliner warnings; re-run enabling -opt-warnings for details, or try -help[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
