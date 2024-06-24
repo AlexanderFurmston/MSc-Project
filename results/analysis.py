@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open('copyresults.txt', 'r') as f:
+with open('AkkaBodgeResults.txt', 'r') as f:
     lines = f.readlines()
 
 
@@ -9,14 +9,15 @@ new_results = {}
 old_results = {}
 for line in lines:
     parts = line.split(",")
-    problem_number = int(parts[0][85:89])
+    problem_number = int(parts[0][74:78])
     if '[SUCCESS]' in line and parts[-2].isdigit(): time = int(parts[-2])
     elif 'TIMEOUT' in line: time = 600_000
     
-    if "OLD" in parts[1]:
+    if "sequoia-chinensis-harness-assembly" in parts[1]:
         old_results[problem_number] = time
-    else:
+    elif "AKKABODGE" in parts[1]:
         new_results[problem_number] = time
+    else: continue
 
 differences = {
     problem_number: old_results[problem_number] - new_results[problem_number]
@@ -31,7 +32,7 @@ mults = {
 # Plot the differences distribution 
 bins = [i for i in range(-10_000, 50_000, 1000)]
 plt.hist(np.clip(list(differences.values()), bins[0], bins[-1]), bins=bins)
-plt.xlabel('New time - old time (ms)')
+plt.xlabel('Old time - new time (ms)')
 plt.ylabel('Frequency')
 plt.show()
 # Plot the multiples distribution
@@ -63,7 +64,7 @@ filtered_mults = {
 
 # Plot the differences distribution again
 plt.hist(np.clip(list(filtered_differences.values()), bins[0], bins[-1]), bins=bins)
-plt.xlabel('Time difference (ms)')
+plt.xlabel('Old time - new time (ms)')
 plt.ylabel('Frequency')
 plt.show()
 # Plot the multiples distribution
