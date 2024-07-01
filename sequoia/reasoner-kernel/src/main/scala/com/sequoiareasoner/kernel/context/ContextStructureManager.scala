@@ -232,6 +232,7 @@ final class ContextStructureManager(ontology: DLOntology,
   contextExecutor.invokeAll(nonHornJobs.asJava)
   while (!contextExecutor.isQuiescent() || contextExecutor.getActiveThreadCount() > 0) {}
   println("non horn jobs done")
+  println("Number of contexts created: " + contexts.size)
 
 }
 
