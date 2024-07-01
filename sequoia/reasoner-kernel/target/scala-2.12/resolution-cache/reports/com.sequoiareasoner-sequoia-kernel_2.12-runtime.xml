@@ -7,10 +7,10 @@
 		revision="0.6.1-alpha"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20240618155856"/>
+		date="20240701111112"/>
 	<dependencies>
 		<module organisation="com.sequoiareasoner" name="sequoia-macros_2.12">
-			<revision name="0.6.1-alpha" status="integration" pubdate="20240618155854" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="0.6.1-alpha" status="integration" pubdate="20240701111112" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.sequoiareasoner" name="sequoia-kernel_2.12" conf="compile, runtime" rev="0.6.1-alpha" rev-constraint-default="0.6.1-alpha" rev-constraint-dynamic="0.6.1-alpha" callerrev="0.6.1-alpha"/>
 				<artifacts>

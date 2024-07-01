@@ -4,7 +4,7 @@
 		module="sequoia-macros_2.12"
 		revision="0.6.1-alpha"
 		status="integration"
-		publication="20240618155854"
+		publication="20240701111112"
 	>
 		<description>
 		Sequoia Macros

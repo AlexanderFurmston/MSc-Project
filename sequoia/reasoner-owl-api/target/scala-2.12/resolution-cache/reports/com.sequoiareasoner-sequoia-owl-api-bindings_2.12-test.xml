@@ -7,7 +7,7 @@
 		revision="0.6.1-alpha"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20240618155856"/>
+		date="20240701111112"/>
 	<dependencies>
 		<module organisation="net.sourceforge.owlapi" name="owlapi-apibinding">
 			<revision name="4.5.0" status="release" pubdate="20171013080300" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="11">
@@ -103,7 +103,7 @@
 				<metadata-artifact status="no" details="" size="9667" time="0" location="/home/pigeon/.ivy2/cache/com.github.jsonld-java/jsonld-java/ivy-0.5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.pom"/>
 				<caller organisation="com.github.jsonld-java" name="jsonld-java-sesame" conf="compile, runtime" rev="0.5.1" rev-constraint-default="0.5.1" rev-constraint-dynamic="0.5.1" callerrev="0.5.1"/>
 				<artifacts>
-					<artifact name="jsonld-java" type="jar" ext="jar" status="successful" details="" size="121115" time="76" location="/home/pigeon/.ivy2/cache/com.github.jsonld-java/jsonld-java/jars/jsonld-java-0.5.1.jar">
+					<artifact name="jsonld-java" type="jar" ext="jar" status="no" details="" size="121115" time="0" location="/home/pigeon/.ivy2/cache/com.github.jsonld-java/jsonld-java/jars/jsonld-java-0.5.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -776,7 +776,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sequoiareasoner" name="sequoia-kernel_2.12">
-			<revision name="0.6.1-alpha" status="integration" pubdate="20240618155856" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, test, runtime" position="1">
+			<revision name="0.6.1-alpha" status="integration" pubdate="20240701111112" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, test, runtime" position="1">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.sequoiareasoner" name="sequoia-owl-api-bindings_2.12" conf="test, compile, runtime" rev="0.6.1-alpha" rev-constraint-default="0.6.1-alpha" rev-constraint-dynamic="0.6.1-alpha" callerrev="0.6.1-alpha"/>
 				<artifacts>
@@ -784,7 +784,7 @@
 			</revision>
 		</module>
 		<module organisation="com.sequoiareasoner" name="sequoia-macros_2.12">
-			<revision name="0.6.1-alpha" status="integration" pubdate="20240618155854" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+			<revision name="0.6.1-alpha" status="integration" pubdate="20240701111112" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.sequoiareasoner" name="sequoia-kernel_2.12" conf="compile, test, runtime" rev="0.6.1-alpha" rev-constraint-default="0.6.1-alpha" rev-constraint-dynamic="0.6.1-alpha" callerrev="0.6.1-alpha"/>
 				<artifacts>

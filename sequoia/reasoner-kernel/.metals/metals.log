@@ -3499,3 +3499,68 @@ INFO: Unsupported notification method: $/setTrace
 2024.07.01 10:18:17 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.75s
 2024.07.01 10:18:17 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
 2024.07.01 10:18:19 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.96s
+2024.07.01 10:18:44 INFO  Shutting down server
+2024.07.01 10:18:44 INFO  shutting down Metals
+2024.07.01 10:18:44 INFO  Shut down connection with build server.
+2024.07.01 10:18:44 INFO  BSP server: Jul 01, 2024 10:18:44 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+2024.07.01 10:18:44 INFO  BSP server: WARNING: Notification threw an exception: {
+2024.07.01 10:18:44 INFO  BSP server:   "jsonrpc": "2.0",
+2024.07.01 10:18:44 INFO  BSP server:   "method": "build/exit",
+2024.07.01 10:18:44 INFO  BSP server:   "params": null
+2024.07.01 10:18:44 INFO  BSP server: }
+2024.07.01 10:18:44 INFO  BSP server: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2024.07.01 10:18:44 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)
+2024.07.01 10:18:44 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)
+2024.07.01 10:18:44 INFO  BSP server: Caused by: java.lang.reflect.InvocationTargetException
+2024.07.01 10:18:44 INFO  BSP server: 	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
+2024.07.01 10:18:44 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+2024.07.01 10:18:44 INFO  BSP server: 	... 13 more
+2024.07.01 10:18:44 INFO  BSP server: Caused by: java.lang.RuntimeException: BSP server not initialized yet
+2024.07.01 10:18:44 INFO  BSP server: 	at scala.sys.package$.error(package.scala:27)
+2024.07.01 10:18:44 INFO  BSP server: 	at scala.build.bsp.BloopSession$Reference.get(BloopSession.scala:70)
+2024.07.01 10:18:44 INFO  BSP server: 	at scala.build.bsp.BspImpl.$anonfun$11(BspImpl.scala:477)
+2024.07.01 10:18:44 INFO  BSP server: 	at scala.build.bsp.BuildServerProxy.onBuildExit(BuildServerProxy.scala:29)
+2024.07.01 10:18:44 INFO  BSP server: 	... 15 more
+2024.07.01 10:18:44 INFO  BSP server: 
+2024.07.01 10:18:44 INFO  Exiting server
+2024.07.01 10:18:51 INFO  Started: Metals version 1.3.2 in folders '/home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1ac0a310]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4093aa53]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1ac0a310]
+2024.07.01 10:18:51 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.01 10:18:52 INFO  Attempting to connect to the build server...
+2024.07.01 10:18:52 INFO  Running BSP server List(/home/pigeon/.local/share/coursier/bin/.scala-cli.aux, bsp, --json-options, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-options-v2.json, --json-launcher-options, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-launcher-options.json, --envs-file, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-envs.json, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel)
+2024.07.01 10:18:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.metals/bsp.trace.json or /home/pigeon/.cache/metals/bsp.trace.json
+2024.07.01 10:18:52 INFO  time: Connected to build server in 0.69s
+2024.07.01 10:18:52 INFO  Connected to Build server: scala-cli v1.3.2
+2024.07.01 10:18:52 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:18:55 INFO  time: indexed workspace in 3.07s
+2024.07.01 10:18:56 INFO  time: compiled reasoner-kernel_f4dd477a3a in 3.42s
+2024.07.01 10:18:56 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+Jul 01, 2024 10:18:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2024.07.01 10:19:00 INFO  time: compiled reasoner-kernel_f4dd477a3a in 3.61s
+2024.07.01 10:19:00 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:19:01 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.46s
+2024.07.01 10:29:09 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:29:11 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2s
+Jul 01, 2024 10:35:08 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 62
+2024.07.01 14:43:41 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+Jul 01, 2024 2:43:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 143
+2024.07.01 14:43:43 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.1s

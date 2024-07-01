@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/testing/test-code/src/main/scala/Test.scala:78:12: not enough arguments for method log: (file: java.io.File, reasoner: String, outputBuffer: java.io.BufferedWriter, message: String, contextCount: Int)Unit.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter contextCount.[0m
+[0m[[0m[31merror[0m] [0m[0m        log(file, reasoner, outputBuffer, result.toString)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/testing/test-code/src/main/scala/Test.scala:86:16: not enough arguments for method log: (file: java.io.File, reasoner: String, outputBuffer: java.io.BufferedWriter, message: String, contextCount: Int)Unit.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter contextCount.[0m
+[0m[[0m[31merror[0m] [0m[0m            log(file, reasoner, outputBuffer, time.toString)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pigeon/Downloads/msc/MSc-Project/testing/test-code/src/main/scala/Test.scala:90:16: not enough arguments for method log: (file: java.io.File, reasoner: String, outputBuffer: java.io.BufferedWriter, message: String, contextCount: Int)Unit.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter contextCount.[0m
+[0m[[0m[31merror[0m] [0m[0m            log(file, reasoner, outputBuffer, secondResult)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

@@ -52,8 +52,8 @@ object sequoiaChinensis {
   var extraOntologies: List[java.io.File] = List() 
 
   // Get Test Result Entry 
-  def entry(entryName: String, success: Boolean, time: String, hash: String, errmsg: String): String = {
-    "<test>" + entryName + "</test>" + "<success>" + success.toString + "</success>" + "<time>" + time + "</time>" + "<hash>" + hash + "</hash>" + "<errmsg>" + errmsg + "</errmsg>"
+  def entry(entryName: String, success: Boolean, time: String, hash: String, errmsg: String, contextCount: Int): String = {
+    "<test>" + entryName + "</test>" + "<success>" + success.toString + "</success>" + "<time>" + time + "</time>" + "<hash>" + hash + "</hash>" + "<errmsg>" + errmsg + "</errmsg>" + "<contextCount>" + contextCount.toString + "</contextCount>"
   }
 
   // Utilities
@@ -117,17 +117,17 @@ object sequoiaChinensis {
     mainOntology match {
       case Some(ontology: java.io.File) => {
         // Main Ontology  
-        val (btSuccess: Boolean, btTime: String, btHash: String, btErrorMsg: String) = testOntologies(ontology)
-          results = results :+ entry(basicTest,btSuccess,btTime,btHash,btErrorMsg) 
-          if (debug) System.out.println(entry(basicTest,btSuccess,btTime,btHash,btErrorMsg)) 
+        val (btSuccess: Boolean, btTime: String, btHash: String, btErrorMsg: String, btContextCount: Int) = testOntologies(ontology)
+          results = results :+ entry(basicTest,btSuccess,btTime,btHash,btErrorMsg,btContextCount) 
+          if (debug) System.out.println(entry(basicTest,btSuccess,btTime,btHash,btErrorMsg,btContextCount)) 
         // Extra Ontologies 
         for (dataset <- extraOntologies) {
-          val (tSuccess: Boolean, tTime: String, tHash: String, tErrorMsg: String) = testOntologies(ontology,dataset)
-          results = results :+ entry(dataset.toString,tSuccess,tTime,tHash,tErrorMsg)
-          if (debug) System.out.println(entry(dataset.toString,tSuccess,tTime,tHash,tErrorMsg))
+          val (tSuccess: Boolean, tTime: String, tHash: String, tErrorMsg: String, tContextCount: Int) = testOntologies(ontology,dataset)
+          results = results :+ entry(dataset.toString,tSuccess,tTime,tHash,tErrorMsg,tContextCount)
+          if (debug) System.out.println(entry(dataset.toString,tSuccess,tTime,tHash,tErrorMsg,tContextCount))
         }
       }
-      case None => results = results :+ entry(basicTest,false,"","","Input file " + inputFileName + " not found.")
+      case None => results = results :+ entry(basicTest,false,"","","Input file " + inputFileName + " not found.", 0)
     }
    
     // Print Output and Exit //
@@ -141,7 +141,7 @@ object sequoiaChinensis {
 
 
   // Method for testing ontologies //
-  def testOntologies(mainOntology: java.io.File, sideOntology: java.io.File = new java.io.File("<none>") ): (Boolean,String,String,String) = {
+  def testOntologies(mainOntology: java.io.File, sideOntology: java.io.File = new java.io.File("<none>") ): (Boolean,String,String,String,Int) = {
 
     if (debug) System.out.println("///// TESTING ONTOLOGIES " + mainOntology.getName + " AND " + sideOntology.getName + "//////")
 
@@ -158,7 +158,7 @@ object sequoiaChinensis {
     } catch {
       case e: Throwable => {
         if (debug) e.printStackTrace
-        return(false,"","","Main ontology could not be loaded to manager")
+        return(false,"","","Main ontology could not be loaded to manager",0)
       }
     }
     if (debug) System.out.println("Main ontology loaded to manager")
@@ -194,7 +194,7 @@ object sequoiaChinensis {
     } catch {
       case e: Throwable => {
         if (debug) e.printStackTrace
-        return (false,"","","Ontology could not be loaded to reasoner")
+        return (false,"","","Ontology could not be loaded to reasoner",0)
       }
     }
     if (debug) System.out.println("Ontology loaded to reasoner.")
@@ -209,6 +209,7 @@ object sequoiaChinensis {
     var time: String = "" 
     var hash: String = ""
     var havoc: Boolean = false 
+    var contextCount: Int = 0
      
     if (debug) System.out.println("Starting " + testType + " test with reasoner...")
     try {
@@ -217,14 +218,17 @@ object sequoiaChinensis {
 	// havoc = reasoner.havocTriggered
         if (printTime) time = ((System.currentTimeMillis - startTime).toInt).toString
         if (debug) System.out.println("Consistency checked.")
+        contextCount = reasoner.getInternalReasoner.getmanager.getAllContexts.size
         reasoner.dispose
-        if (!havoc) return (true,time,hash,"") else return (false,time,"","NOMINALHAVOC")
+        if (!havoc) return (true,time,hash,"",reasoner.getInternalReasoner.getmanager.getAllContexts.size) else return (false,time,"","NOMINALHAVOC",0)
       }
       else {
         reasoner.precomputeInferences(org.semanticweb.owlapi.reasoner.InferenceType.CLASS_HIERARCHY)
 	// havoc = reasoner.havocTriggered
 	if (debug) System.out.println("Ontology classified")
         if (printTime) time = ((System.currentTimeMillis - startTime).toInt).toString
+        System.out.println("Contexts created (SeqChin) " + reasoner.getInternalReasoner.getmanager.getAllContexts.size)
+        contextCount = reasoner.getInternalReasoner.getmanager.getAllContexts.size
         if (hashClassification) {
           import java.util
           var gens = new util.ArrayList[InferredAxiomGenerator[_ <: OWLAxiom]]
@@ -248,13 +252,13 @@ object sequoiaChinensis {
 		  }
 		}
         reasoner.dispose
-        if (!havoc) return (true,time,hash,"") else return (false,time,"","NOMINALHAVOC")
+        if (!havoc) return (true,time,hash,"",contextCount) else return (false,time,"","NOMINALHAVOC",contextCount)
       }
     } catch {
       case e: Throwable => {
         if (debug) e.printStackTrace
         reasoner.dispose
-        return(false,"","","Reasoner produced an exception")
+        return(false,"","","Reasoner produced an exception",0)
       }
     }
   }

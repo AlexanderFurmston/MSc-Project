@@ -151,24 +151,25 @@ class Reasoner(config: ReasonerConfiguration,
     * class taxonomy including nominal concepts. Future versions will allow to
     * initialise the manager with a single consistency check, then add stuff to
     * it as new queries are required. */
-  private[this] lazy val contextStructureForTaxonomies: ContextStructureManager = {
-    def getRedundancyIndex: ContextClauseRedundancyIndex =
-      if (config.enableTrieRedundancyIndex) new TrieContextClauseRedundancyIndex
-      else new BasicContextClauseRedundancyIndex
-    def getEqualityOptimization: EqualityOptimization =
-//D      if (config.enableEqualitySimplifyReflect) new SimplifyReflectEqualityOptimization
-//D      else EqualityOptimizationDisabled
+    private[this] lazy val contextStructureForTaxonomies: ContextStructureManager = {
+      def getRedundancyIndex: ContextClauseRedundancyIndex =
+        if (config.enableTrieRedundancyIndex) new TrieContextClauseRedundancyIndex
+        else new BasicContextClauseRedundancyIndex
+        def getEqualityOptimization: EqualityOptimization =
+          //D      if (config.enableEqualitySimplifyReflect) new SimplifyReflectEqualityOptimization
+          //D      else EqualityOptimizationDisabled
           EqualityOptimizationDisabled
-    // Here query set is empty. Instead, the query should be the set of internal atomic concepts for each atomic concept.
-    //: To compensate for this, the order has a "is internal iri" test that makes unary internal atoms smaller.
-//    val query = dlOntology.getConceptsToClassify.zipAll(Set[Set[Int]](), 0, Set[Int]()).toMap
-    // Optimisation v29
-    val selectedOntology = if (dlOntologyTBoxOnly.containsNominals || dlOntology.getCanABoxProduceInconsistency) dlOntology else dlOntologyTBoxOnly
-    val result = new ContextStructureManager(selectedOntology, getRedundancyIndex, config.enableEqualityReasoning,
-      getEqualityOptimization, ExpansionStrategies.safeCentralStrategy, selectedOntology.getConceptsToClassify, logger)
-    _isTaxonomyPrecomputed = true
-    result
-  }
+          // Here query set is empty. Instead, the query should be the set of internal atomic concepts for each atomic concept.
+          //: To compensate for this, the order has a "is internal iri" test that makes unary internal atoms smaller.
+          //    val query = dlOntology.getConceptsToClassify.zipAll(Set[Set[Int]](), 0, Set[Int]()).toMap
+          // Optimisation v29
+          val selectedOntology = if (dlOntologyTBoxOnly.containsNominals || dlOntology.getCanABoxProduceInconsistency) dlOntology else dlOntologyTBoxOnly
+          val result = new ContextStructureManager(selectedOntology, getRedundancyIndex, config.enableEqualityReasoning,
+          getEqualityOptimization, ExpansionStrategies.safeCentralStrategy, selectedOntology.getConceptsToClassify, logger)
+          _isTaxonomyPrecomputed = true
+          result
+        }
+        def getmanager = contextStructureForTaxonomies
   private[this] var _isTaxonomyPrecomputed = false
   def isTaxonomyPrecomputed: Boolean = _isTaxonomyPrecomputed
 

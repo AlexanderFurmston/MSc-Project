@@ -9,28 +9,28 @@
 		extra-sbtVersion="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20240617162151"/>
+		date="20240701111950"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.3" status="release" pubdate="20170725114444" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+			<revision name="2.12.3" status="release" pubdate="20170725114444" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="successful" details="" size="1804" time="58" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.3.xml" searched="true" original-local-location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3.pom"/>
+				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3.pom"/>
 				<caller organisation="org.scalactic" name="scalactic_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="3.0.1"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="jar" ext="jar" status="successful" details="" size="3567871" time="1024" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar">
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3567871" time="0" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.3" status="release" pubdate="20170725114730" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+			<revision name="2.12.3" status="release" pubdate="20170725114730" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="successful" details="" size="1594" time="55" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.3.xml" searched="true" original-local-location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.pom"/>
+				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.pom"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="2.12.3"/>
 				<caller organisation="org.scalactic" name="scalactic_2.12" conf="default, compile, runtime, master" rev="2.12.3" rev-constraint-default="2.12.3" rev-constraint-dynamic="2.12.3" callerrev="3.0.1"/>
 				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="successful" details="" size="5246851" time="2506" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar">
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5246851" time="0" location="/home/pigeon/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -251,24 +251,24 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.ant" name="ant">
-			<revision name="1.9.9" status="release" pubdate="20170202184004" resolver="public" artresolver="public" homepage="http://ant.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+			<revision name="1.9.9" status="release" pubdate="20170202184004" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="9625" time="47" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant/ivy-1.9.9.xml" searched="true" original-local-location="/home/pigeon/.ivy2/cache/org.apache.ant/ant/ivy-1.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="3217" time="0" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant/ivy-1.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9.pom"/>
 				<caller organisation="org.pantsbuild" name="jarjar" conf="default, compile, runtime, master" rev="1.9.9" rev-constraint-default="1.9.9" rev-constraint-dynamic="1.9.9" callerrev="1.6.5"/>
 				<artifacts>
-					<artifact name="ant" type="jar" ext="jar" status="successful" details="" size="2047763" time="1175" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant/jars/ant-1.9.9.jar">
+					<artifact name="ant" type="jar" ext="jar" status="no" details="" size="2047763" time="0" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant/jars/ant-1.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/ant/ant/1.9.9/ant-1.9.9.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.ant" name="ant-launcher">
-			<revision name="1.9.9" status="release" pubdate="20170202184411" resolver="public" artresolver="public" homepage="http://ant.apache.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+			<revision name="1.9.9" status="release" pubdate="20170202184411" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ant.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="2335" time="45" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.9.xml" searched="true" original-local-location="/home/pigeon/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9.pom"/>
+				<metadata-artifact status="no" details="" size="2789" time="0" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant-launcher/ivy-1.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9.pom"/>
 				<caller organisation="org.apache.ant" name="ant" conf="compile, runtime" rev="1.9.9" rev-constraint-default="1.9.9" rev-constraint-dynamic="1.9.9" callerrev="1.9.9"/>
 				<artifacts>
-					<artifact name="ant-launcher" type="jar" ext="jar" status="successful" details="" size="18394" time="726" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.9.9.jar">
+					<artifact name="ant-launcher" type="jar" ext="jar" status="no" details="" size="18394" time="0" location="/home/pigeon/.ivy2/cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.9.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.9.9/ant-launcher-1.9.9.jar"/>
 					</artifact>
 				</artifacts>

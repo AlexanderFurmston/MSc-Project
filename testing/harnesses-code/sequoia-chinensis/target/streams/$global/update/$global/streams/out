@@ -254,90 +254,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m:: downloading artifacts ::[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] jline#jline;2.14.5!jline.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0msettings loaded (4ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
-[0m[[0m[0mdebug[0m] [0m[0msettings loaded (5ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
-[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
-[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
-[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
-[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
-[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
-[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
-[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0msettings loaded (5ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
-[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
-[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
-[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.0/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0msettings loaded (8ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0msettings loaded (8ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
-[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
-[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
-[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
-[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
-[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
-[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
-[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
-[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 31ms :: artifacts dl 11ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 44ms :: artifacts dl 2ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 compile produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-compile.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 runtime produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-runtime.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 test produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-test.xml[0m
@@ -349,5 +269,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 plugin produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-plugin.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 pom produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-pom.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for org.davala#sequoia-chinensis-harness_2.12;0.1.0 scala-tool produced in /home/pigeon/Downloads/msc/MSc-Project/testing/harnesses-code/sequoia-chinensis/target/scala-2.12/resolution-cache/reports/org.davala-sequoia-chinensis-harness_2.12-scala-tool.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0m	resolve done (31ms resolve - 11ms download)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	resolve done (44ms resolve - 2ms download)[0m
 [0m[[0m[0minfo[0m] [0m[0mDone updating.[0m

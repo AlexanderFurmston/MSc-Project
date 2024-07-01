@@ -4684,71 +4684,81 @@
 [0m[[0m[0mdebug[0m] [0m[0m	resolved ivy file produced in cache[0m
 [0m[[0m[0mdebug[0m] [0m[0m:: downloading artifacts ::[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.4!scalactic_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.22!slf4j-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-turtle;2.7.16!sesame-rio-turtle.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-rdfxml;2.7.16!sesame-rio-rdfxml.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.5!scala-xml_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-io#commons-io;2.5!commons-io.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-trix;2.7.16!sesame-rio-trix.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-trig;2.7.16!sesame-rio-trig.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.0.4!scala-parser-combinators_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-rdfjson;2.7.16!sesame-rio-rdfjson.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.4.20!akka-actor_2.12.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.github.jsonld-java#jsonld-java-sesame;0.5.1!jsonld-java-sesame.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-sesame;0.6.1!semargl-sesame.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.5!scala-xml_2.12.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.4.20!akka-actor_2.12.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-util;2.7.16!sesame-util.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.4!scalatest_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-codec#commons-codec;1.6!commons-codec.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-apibinding;4.5.0!owlapi-apibinding.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.tukaani#xz;1.6!xz.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject#guice;4.1.0!guice.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] aopalliance#aopalliance;1.0!aopalliance.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.3.3!jackson-core.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m		tried /home/pigeon/.ivy2/local/com.github.jsonld-java/jsonld-java/0.5.1/jars/jsonld-java.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-n3;2.7.16!sesame-rio-n3.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-api;4.5.0!owlapi-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.3.3!jackson-databind.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m		tried https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-core;0.6.1!semargl-core.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject.extensions#guice-assistedinject;4.1.0!guice-assistedinject.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-parsers;4.5.0!owlapi-parsers.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-nquads;2.7.16!sesame-rio-nquads.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.github.jsonld-java#jsonld-java-sesame;0.5.1!jsonld-java-sesame.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-util;2.7.16!sesame-util.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-impl;4.5.0!owlapi-impl.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-model;2.7.16!sesame-model.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient-cache;4.2.5!httpclient-cache.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-rdfa;0.6.1!semargl-rdfa.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-api;2.7.16!sesame-rio-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-oboformat;4.5.0!owlapi-oboformat.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject.extensions#guice-multibindings;4.1.0!guice-multibindings.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sf.trove4j#trove4j;3.0.3!trove4j.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.2.5!httpclient.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-languages;2.7.16!sesame-rio-languages.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-tools;4.5.0!owlapi-tools.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-rdf;0.6.1!semargl-rdf.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.1!jsr305.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.3.0!jackson-annotations.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.guava#guava;20.0!guava.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-ntriples;2.7.16!sesame-rio-ntriples.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-binary;2.7.16!sesame-rio-binary.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-rio;4.5.0!owlapi-rio.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-datatypes;2.7.16!sesame-rio-datatypes.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.7!jcl-over-slf4j.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.2.4!httpcore.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.3.3!jackson-core.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-fixers;4.5.0!owlapi-fixers.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-parsers;4.5.0!owlapi-parsers.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-datatypes;2.7.16!sesame-rio-datatypes.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-turtle;2.7.16!sesame-rio-turtle.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-api;4.5.0!owlapi-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-sesame;0.6.1!semargl-sesame.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-binary;2.7.16!sesame-rio-binary.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-trig;2.7.16!sesame-rio-trig.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.22!slf4j-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-n3;2.7.16!sesame-rio-n3.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-oboformat;4.5.0!owlapi-oboformat.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-io#commons-io;2.5!commons-io.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject#guice;4.1.0!guice.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.github.jsonld-java#jsonld-java;0.5.1!jsonld-java.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-nquads;2.7.16!sesame-rio-nquads.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-tools;4.5.0!owlapi-tools.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.tukaani#xz;1.6!xz.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject.extensions#guice-assistedinject;4.1.0!guice-assistedinject.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to /home/pigeon/.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-ntriples;2.7.16!sesame-rio-ntriples.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] aopalliance#aopalliance;1.0!aopalliance.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.inject.extensions#guice-multibindings;4.1.0!guice-multibindings.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-codec#commons-codec;1.6!commons-codec.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-rdfjson;2.7.16!sesame-rio-rdfjson.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-model;2.7.16!sesame-model.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.1!jsr305.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-core;0.6.1!semargl-core.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-rdfxml;2.7.16!sesame-rio-rdfxml.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-api;2.7.16!sesame-rio-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-languages;2.7.16!sesame-rio-languages.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.openrdf.sesame#sesame-rio-trix;2.7.16!sesame-rio-trix.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sf.trove4j#trove4j;3.0.3!trove4j.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-rdfa;0.6.1!semargl-rdfa.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] net.sourceforge.owlapi#owlapi-rio;4.5.0!owlapi-rio.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient-cache;4.2.5!httpclient-cache.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.semarglproject#semargl-rdf;0.6.1!semargl-rdf.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.guava#guava;20.0!guava.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.7!jcl-over-slf4j.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.2.5!httpclient.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.3.0!jackson-annotations.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] jline#jline;2.14.5!jline.jar[0m
-[0m[[0m[0minfo[0m] [0m[0mdownloading https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public: downloading https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public: downloading https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar.sha1[0m
-[0m[[0m[0mdebug[0m] [0m[0msha1 OK for https://repo1.maven.org/maven2/com/github/jsonld-java/jsonld-java/0.5.1/jsonld-java-0.5.1.jar[0m
-[0m[[0m[0minfo[0m] [0m[0m	[SUCCESSFUL ] com.github.jsonld-java#jsonld-java;0.5.1!jsonld-java.jar (76ms)[0m
-[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 411ms :: artifacts dl 83ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.2.4!httpcore.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.3.3!jackson-databind.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to /home/pigeon/.ivy2/cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/home/pigeon/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (5ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: /home/pigeon/.ivy2/cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 324ms :: artifacts dl 11ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha compile produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-compile.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha runtime produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-runtime.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha test produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-test.xml[0m
@@ -4760,5 +4770,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha plugin produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-plugin.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha pom produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-pom.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.sequoiareasoner#sequoia-owl-api-bindings_2.12;0.6.1-alpha scala-tool produced in /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-owl-api/target/scala-2.12/resolution-cache/reports/com.sequoiareasoner-sequoia-owl-api-bindings_2.12-scala-tool.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0m	resolve done (411ms resolve - 83ms download)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	resolve done (324ms resolve - 11ms download)[0m
 [0m[[0m[0minfo[0m] [0m[0mDone updating.[0m
