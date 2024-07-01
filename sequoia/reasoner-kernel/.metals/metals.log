@@ -3475,3 +3475,27 @@ scala.meta.tokenizers.TokenizeException: <input>:66: error: unclosed quoted iden
 2024.06.18 17:24:14 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.1s
 2024.06.18 17:24:16 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
 2024.06.18 17:24:18 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.5s
+2024.07.01 10:17:55 INFO  Started: Metals version 1.3.2 in folders '/home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@50915308]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@2fbad647]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@50915308]
+2024.07.01 10:17:55 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.01 10:17:56 INFO  Attempting to connect to the build server...
+2024.07.01 10:17:56 INFO  Running BSP server List(/home/pigeon/.local/share/coursier/bin/.scala-cli.aux, bsp, --json-options, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-options-v2.json, --json-launcher-options, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-launcher-options.json, --envs-file, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.scala-build/ide-envs.json, /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel)
+2024.07.01 10:17:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/pigeon/Downloads/msc/MSc-Project/sequoia/reasoner-kernel/.metals/bsp.trace.json or /home/pigeon/.cache/metals/bsp.trace.json
+2024.07.01 10:17:57 INFO  BSP server: Starting compilation server
+2024.07.01 10:17:58 INFO  time: Connected to build server in 2.72s
+2024.07.01 10:17:58 INFO  Connected to Build server: scala-cli v1.3.2
+2024.07.01 10:17:59 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:18:03 INFO  time: indexed workspace in 4.85s
+Jul 01, 2024 10:18:09 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.01 10:18:10 INFO  time: compiled reasoner-kernel_f4dd477a3a in 10s
+2024.07.01 10:18:10 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:18:14 INFO  time: compiled reasoner-kernel_f4dd477a3a in 4.33s
+2024.07.01 10:18:14 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:18:17 INFO  time: compiled reasoner-kernel_f4dd477a3a in 2.75s
+2024.07.01 10:18:17 INFO  compiling reasoner-kernel_f4dd477a3a (71 scala sources)
+2024.07.01 10:18:19 INFO  time: compiled reasoner-kernel_f4dd477a3a in 1.96s

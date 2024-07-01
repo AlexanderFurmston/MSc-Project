@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open('AkkaBodgeResults.txt', 'r') as f:
+with open('AkkaSeqSmallResults.txt', 'r') as f:
     lines = f.readlines()
 
 
@@ -13,9 +13,9 @@ for line in lines:
     if '[SUCCESS]' in line and parts[-2].isdigit(): time = int(parts[-2])
     elif 'TIMEOUT' in line: time = 600_000
     
-    if "sequoia-chinensis-harness-assembly" in parts[1]:
+    if "AKKABODGE" in parts[1]:
         old_results[problem_number] = time
-    elif "AKKABODGE" in parts[1]:
+    elif "AKKAsequoia" in parts[1]:
         new_results[problem_number] = time
     else: continue
 
